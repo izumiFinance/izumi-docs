@@ -1,3 +1,5 @@
+.. _price:
+
 Price of erc20 token
 =====================
 

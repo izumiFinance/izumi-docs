@@ -1,3 +1,5 @@
+.. _fetch_liquidities:
+
 fetch liquidities
 ================================
 
