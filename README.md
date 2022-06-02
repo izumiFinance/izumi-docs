@@ -1,7 +1,7 @@
 # iZUMi-docs
 
 <div align="center">
-  <a href="https://izumi.finance"> 
+  <a href="https://developer.izumi.finance"> 
     <img width="450px" height="auto" 
     src="image/logo.png">
   </a>
