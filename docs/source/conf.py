@@ -15,15 +15,16 @@
 # sys.path.insert(0, os.path.abspath('.'))
 
 
+import sphinx_rtd_theme
+
 # -- Project information -----------------------------------------------------
 
-project = 'Lumache'
-copyright = '2022, Graziella'
-author = 'Graziella'
+project = 'iZUMi'
+copyright = '2021-2022 @iZUMi.finance'
+author = 'iZUMi Group'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
-
 
 # -- General configuration ---------------------------------------------------
 
@@ -48,10 +49,33 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'furo'
+html_theme = 'sphinx_rtd_theme'
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+
+html_theme_options = {
+    'collapse_navigation': False,
+    'logo_only': True,
+    # 'description': '',
+    # 'github_user': '',
+    # 'github_repo': '',
+    # 'github_type': '',
+    # 'sidebar_width': '220px',
+    # 'page_width': '980px',
+    # 'travis_button': True,
+    # 'link': '#3782BE',
+    # 'link_hover': '#3782BE',
+}
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_logo = '_static/images/logo.png'
+
+
+html_css_files = [
+    'css/style.css',
+]
 
 epub_show_urls = 'footnote'
