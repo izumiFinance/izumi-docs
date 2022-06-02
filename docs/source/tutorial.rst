@@ -7,3 +7,4 @@ Tutorial
 
    installation
    concepts/concepts
+   liquidity_manager/liquidity_manager
