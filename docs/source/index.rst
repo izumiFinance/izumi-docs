@@ -1,15 +1,9 @@
-iziswap-sdk
-===========
-
-**iziswap-sdk** is typescripe library which is used for interacting 
-
-with iZiSwap contracts,including core contracts (iZiSwapPool, iZiSwapFactory) 
-
-and prephery contracts
-(LiquidityManager, LimitOrderManager, Swap, Quoter)
+iZMUMi Developer Docs
+=======================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
 
-   tutorial
+   iZiSwap/index
+
    

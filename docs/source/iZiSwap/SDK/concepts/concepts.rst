@@ -9,3 +9,4 @@ some very important concepts for understanding examples
 
    amount
    price
+   point
