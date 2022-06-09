@@ -1,4 +1,4 @@
-iZMUMi Developer Docs
+iZUMi Developer Docs
 =======================
 
 .. toctree::
