@@ -7,3 +7,4 @@ Tutorial
 
    concepts/concepts
    liquidity_manager/liquidity_manager
+   quoter_and_swap/quoter_and_swap
