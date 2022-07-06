@@ -10,16 +10,16 @@ here, we provide a simple example for creating a new liquidity
 .. code-block:: typescript
     :linenos:
 
-    import {BaseChain, ChainId, initialChainTable, PriceRoundingType} from '../../src/base/types'
+    import {BaseChain, ChainId, initialChainTable, PriceRoundingType} from 'iziswap-sdk/lib/base/types'
     import {privateKey} from '../../.secret'
     import Web3 from 'web3';
-    import { getPointDelta, getPoolContract, getPoolState } from '../../src/pool/funcs';
-    import { getPoolAddress, getLiquidityManagerContract } from '../../src/liquidityManager/view';
-    import { amount2Decimal, fetchToken } from '../../src/base/token/token';
-    import { pointDeltaRoundingDown, pointDeltaRoundingUp, priceDecimal2Point } from '../../src/base/price';
+    import { getPointDelta, getPoolContract, getPoolState } from 'iziswap-sdk/lib/pool/funcs';
+    import { getPoolAddress, getLiquidityManagerContract } from 'iziswap-sdk/lib/liquidityManager/view';
+    import { amount2Decimal, fetchToken } from 'iziswap-sdk/lib/base/token/token';
+    import { pointDeltaRoundingDown, pointDeltaRoundingUp, priceDecimal2Point } from 'iziswap-sdk/lib/base/price';
     import { BigNumber } from 'bignumber.js'
-    import { calciZiLiquidityAmountDesired } from '../../src/liquidityManager/calc';
-    import { getMintCall } from '../../src/liquidityManager/liquidity';
+    import { calciZiLiquidityAmountDesired } from 'iziswap-sdk/lib/liquidityManager/calc';
+    import { getMintCall } from 'iziswap-sdk/lib/liquidityManager/liquidity';
 
 the detail of these imports can be viewed in following content
 

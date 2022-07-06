@@ -17,14 +17,15 @@ first some base imports
 .. code-block:: typescript
     :linenos:
 
-    import {BaseChain, ChainId, initialChainTable, PriceRoundingType} from '../../src/base/types'
-    import {privateKey} from '../../.secret' // where you store your privateKey
+    import {BaseChain, ChainId, initialChainTable} from 'iziswap-sdk/lib/base/types'
+    import {privateKey} from '../../.secret'
     import Web3 from 'web3';
-    import { getPointDelta, getPoolContract, getPoolState } from '../../src/pool/funcs';
-    import { getPoolAddress, getLiquidityManagerContract } from '../../src/liquidityManager/view';
-    import { amount2Decimal, fetchToken, getErc20TokenContract } from '../../src/base/token/token';
-    import { pointDeltaRoundingDown, pointDeltaRoundingUp, priceDecimal2Point } from '../../src/base/price';
+    import { amount2Decimal, fetchToken, getErc20TokenContract } from 'iziswap-sdk/lib/base/token/token';
     import { BigNumber } from 'bignumber.js'
+    import { getQuoterContract, quoterSwapChainWithExactInput } from 'iziswap-sdk/lib/quoter/funcs';
+    import { QuoterSwapChainWithExactInputParams } from 'iziswap-sdk/lib/quoter/types';
+    import { getSwapChainWithExactInputCall, getSwapContract } from 'iziswap-sdk/lib/swap/funcs';
+    import { SwapChainWithExactInputParams } from 'iziswap-sdk/lib/swap/types';
 
 second, some imports for quoter and swap
 

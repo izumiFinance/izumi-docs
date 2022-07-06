@@ -15,11 +15,11 @@ before we use function of **fetchLiquiditiesOfAccount()**, we should import some
 .. code-block:: typescript
     :linenos:
 
-    import {BaseChain, ChainId, initialChainTable } from '../../src/base/types'
+    import {BaseChain, ChainId, initialChainTable } from 'iziswap-sdk/lib/base/types'
     import {privateKey} from '../../.secret'
-    import Web3 from 'web3';
-    import { getLiquidityManagerContract, fetchLiquiditiesOfAccount } from '../../src/liquidityManager/view';
-    import { fetchToken } from '../../src/base/token/token';
+    import Web3 from 'web3'
+    import { getLiquidityManagerContract, fetchLiquiditiesOfAccount } from 'iziswap-sdk/lib/liquidityManager/view';
+    import { fetchToken } from 'iziswap-sdk/lib/base/token/token';
 
 the detail of these imports can be viewed in following content
 
