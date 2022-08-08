@@ -279,6 +279,8 @@ here, after we calling `calciZiLiquidityAmountDesired`,
 we get a `BigNumber` stored in `maxTestB`,
 which is corresponding undecimal amount of tokenB ( token named testB)
 
+.. _liquidity_manager_mint_calling:
+
 9. get mint calling
 -------------------
 
