@@ -164,7 +164,7 @@ only fields in **BaseState** are used in this example
 
 to compute undecimal-amount of token in minting, we will take use of **state.currentPoint**
 
-7.  compute boundary point of liquidity on the pool
+6.  compute boundary point of liquidity on the pool
 ---------------------------------------------------------
 
 boundary point is **leftPoint** and **rightPoint** of liquidity, according to :ref:`price` , we know that **point** on the pool and **decimal price** can be transformed from each other
@@ -231,7 +231,7 @@ besides, about **leftPoint** and **rightPoint** we must garrentee following ineq
     rightPoint <= pool.rightMostPt()
     rightPoint - leftPoint < 400000
 
-1. specify or compute tokenA's and tokenB's max undecimal amount in this mint (optional)
+7. specify or compute tokenA's and tokenB's max undecimal amount in this mint (optional)
 ----------------------------------------------------------------------------------------
 
 sometimes, our app's user wants to know the amount of tokenA when he fill amount of tokenB or amount of tokenB when he fill tokenA.
@@ -281,7 +281,7 @@ which is corresponding undecimal amount of tokenB ( token named testB)
 
 .. _liquidity_manager_mint_calling:
 
-9. get mint calling
+8. get mint calling
 -------------------
 
 first, construct necessary params and gasPrice for mint calling
@@ -325,7 +325,7 @@ function **getMintCall** returns 2 object, **mintCalling** and **options**
 
 after get **mintCalling** and **options**, we can estimate gas for mint
 
-10. estimate gas (optional)
+9. estimate gas (optional)
 ---------------------------
 of course you can skip this step if you donot want to limit gas
 
@@ -335,7 +335,7 @@ of course you can skip this step if you donot want to limit gas
     const gasLimit = await mintCalling.estimateGas(options)
     console.log('gas limit: ', gasLimit)
 
-11. finally, send transaction!
+10. finally, send transaction!
 ------------------------------
 
 for metamask or other explorer's wallet provider, you can easily write 
