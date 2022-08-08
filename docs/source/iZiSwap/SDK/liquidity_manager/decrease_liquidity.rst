@@ -5,6 +5,7 @@ in this example, we first fetch all liquidities of an account,
 then select one of it and decrease (or called withdraw) some liquidity
 
 1. fetch liquidities
+--------------------
 
 .. code-block:: typescript
     :linenos:
