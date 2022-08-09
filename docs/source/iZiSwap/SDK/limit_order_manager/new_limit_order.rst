@@ -25,7 +25,7 @@ here, we provide a simple example for creating a new limit order
 
 the detail of these imports can be viewed in following content
 
-.. _base_obj_mint:
+.. _limit_order_base_obj_mint:
 
 2. specify which chain, rpc url, web3, and account
 --------------------------------------------------
@@ -53,10 +53,10 @@ here
 
 **rpc** is the rpc url on the chain you specified
 
-.. _LiquidityManagerContract_forMint:
+.. _LimitOrderManagerContract_forNew:
 
-3. get web3.eth.Contract object of liquidityManager
----------------------------------------------------
+3. get web3.eth.Contract object of limitOrderManager
+----------------------------------------------------
 
 .. code-block:: typescript
     :linenos:
@@ -107,7 +107,24 @@ the TokenInfoFormatted fields used in sdk currently are only **symbol**, **addre
         addTime?: Date;
         // not necessary for sdk, you can fill either true/false/undefined
         custom: boolean;
+        // this field usually undefined.
+        // wrap token address of this token if this token has transfer fee.
+        // this field only has meaning when you want to use sdk of box to deal with problem of transfer fee
+        wrapTokenAddress?: string;
     }
+
+notice that, usually we set **TokenInfoFormatted.wrapTokenAddress** as undefined.
+
+following paragraph corresponding to box and wrap token you can just **skip** it if you do not consider token with transfer fee.
+
+only if we want to use **box** and the token has transfer fee, we should set the **wrapTokenAddress** field.
+if we donot want to use **box** or the token has no transfer fee, **TokenInfoFormatted.wrapTokenAddress** should be undefined.
+:ref:`box<box>` is designed to deal with problem of erc20 token with ":ref:`transfer fee<transfer_fee>`".
+there is a problem that in iZiSwap we can not mint or trade or add limit order with tokens which have transfer fee.
+to deal with this problem, we can deploy a :ref:`Wrap Token<wrap_token>` which can be transformed from origin erc20 token.
+wrap token has no transfer fee, transfer fee only charged when user transform origin token to wrap token or wrap token to origin token.
+and we can mint or add limit order or trade with such wrap tokens instead of origin token in iZiSwap.
+for sdk of box, see :ref:`here<box>` for more infomation.
 
 
 5. compute sellPoint (price) and sell amount

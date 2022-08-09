@@ -64,6 +64,8 @@ in the above code, **quoterSwapChainWithExactInput** will return amount of token
 
 here we take example of paying token **testA** to acquire token **testB**
 
+.. _quoter_swap_chain_with_exact_input_query:
+
 3. use quoter to pre-query amount of token **testB** acquired
 -------------------------------------------------------------
 

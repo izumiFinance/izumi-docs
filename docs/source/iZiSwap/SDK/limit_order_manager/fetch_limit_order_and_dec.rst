@@ -63,7 +63,7 @@ second, get calling for decreasing the limit order
     )
 
 
-1.  estimate gas (optional)
+3.  estimate gas (optional)
 ---------------------------
 of course you can skip this step if you donot want to limit gas.
 

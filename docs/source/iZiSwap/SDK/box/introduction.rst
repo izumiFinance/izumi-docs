@@ -1,6 +1,8 @@
 Introduction
 =============================
 
+.. _transfer_fee:
+
 Transfer Fee
 --------------
 
@@ -9,6 +11,8 @@ for some erc-20 token, fee may be charged during token transfer.
 we cannot mint or add limit order or exchange them directly on iziswap.
 
 to deal with this problem, we can deploy **Wrap Token** contract (similar to wETH and wBNB) for each such **"transfer fee"** token.
+
+.. _wrap_token:
 
 Wrap Token
 --------------

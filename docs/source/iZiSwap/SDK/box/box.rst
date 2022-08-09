@@ -1,4 +1,5 @@
 
+.. _box:
 
 box
 -----------------------------
@@ -12,3 +13,7 @@ here we provide some simple examples of using sdk of **Box** to mint or swap
 
    introduction
    mint
+   add_liquidity
+   collect
+   dec_liquidity_and_collect
+   swap_with_exact_input
