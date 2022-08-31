@@ -3,7 +3,7 @@
 Installation
 ------------
 
-To use iziswap-sk, first install it using pip:
+To use iZiSwap-sdk, first install it using pip:
 
 .. code-block:: console
 

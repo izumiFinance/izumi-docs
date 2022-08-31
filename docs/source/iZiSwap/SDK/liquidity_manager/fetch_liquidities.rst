@@ -3,7 +3,7 @@
 fetch liquidities
 ================================
 
-here, we provide a simple example to fetch nft-liquidities of iZi swap from user's address
+here, we provide a simple example to fetch nft-liquidities of iZiSwap from user's address
 
 by calling **fetchLiquiditiesOfAccount()**
 

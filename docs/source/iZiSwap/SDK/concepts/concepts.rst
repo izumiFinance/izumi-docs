@@ -1,9 +1,9 @@
 
 
-Some Important Concepts
+Some important concepts
 -----------------------
 
-some very important concepts for understanding examples
+some very important concepts for understanding the examples.
 
 .. toctree::
 

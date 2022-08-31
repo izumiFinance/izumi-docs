@@ -1,4 +1,4 @@
-Amount of erc20 Token
+Amount of ERC20 Token
 =====================
 
 here, we describe concepts about amount.

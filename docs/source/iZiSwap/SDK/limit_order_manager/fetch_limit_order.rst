@@ -3,7 +3,7 @@
 fetch limit order
 ================================
 
-here, we provide a simple example to fetch limit orders of iZi swap from user's address
+here, we provide a simple example to fetch limit orders of iZiSwap from an user's address
 
 by calling **fetchLimitOrderOfAccount()**
 
@@ -157,4 +157,4 @@ here,
         active: boolean
     }
 
-after this step, we have successfully fetched all limit orders of the user
+after this step, we have successfully fetched all limit orders of the user.

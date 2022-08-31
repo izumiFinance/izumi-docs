@@ -114,7 +114,7 @@ notice that, usually we set **TokenInfoFormatted.wrapTokenAddress** as undefined
 following paragraph corresponding to box and wrap token you can just **skip** it if you do not consider token with transfer fee.
 
 only if we want to use **box** and the token has transfer fee, we should set the **wrapTokenAddress** field.
-if we donot want to use **box** or the token has no transfer fee, **TokenInfoFormatted.wrapTokenAddress** should be undefined.
+if we don't want to use **box** or the token has no transfer fee, **TokenInfoFormatted.wrapTokenAddress** should be undefined.
 :ref:`box<box>` is designed to deal with problem of erc20 token with ":ref:`transfer fee<transfer_fee>`".
 there is a problem that in iZiSwap we can not mint or trade or add limit order with tokens which have transfer fee.
 to deal with this problem, we can deploy a :ref:`Wrap Token<wrap_token>` which can be transformed from origin erc20 token.
@@ -286,8 +286,8 @@ the params are following:
     * @param currentPoint: number, current point on the swap pool
     * @param amount: BigNumber, undecimal amount of one token
     * @param amountIsTokenA: boolean, true for amount is tokenA's undecimal amount, false for tokenB
-    * @param tokenA: TokenInfoFormatted, tokenA infomation
-    * @param tokenB: TokenInfoFormatted, tokenB infomation
+    * @param tokenA: TokenInfoFormatted, tokenA information
+    * @param tokenB: TokenInfoFormatted, tokenB information
     */
    calciZiLiquidityAmountDesired(leftPoint, rightPoint, currentPoint, amount, amountIsTokenA, tokenA, tokenB):
 
@@ -381,4 +381,4 @@ otherwise, if you are runing codes in console, you could use following code
     const tx = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
     console.log('tx: ', tx)
 
-after this step, we have successfully minted the liquidity (if no revert occured)
+after this step, we have successfully minted the liquidity (if no revert occurred)

@@ -3,7 +3,7 @@
 examples of LimitOrderManager
 -----------------------------
 
-some simple examples of using LimitOrderManager to manage limit orders
+base examples for using LimitOrderManager to manage limit orders
 
 .. toctree::
    :maxdepth: 1

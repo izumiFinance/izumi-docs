@@ -3,7 +3,7 @@
 collect limit order
 ================================
 
-here, we provide a simple example to fetch limit orders of iZi swap from user's address, and select one of them to collect
+here, we provide a simple example to fetch limit orders of iZiSwap from an user's address, and select one of them to collect
 
 1. fetch limit orders
 ---------------------
@@ -70,7 +70,7 @@ second, get calling of decrease the limit order
 
 3.  estimate gas (optional)
 ---------------------------
-of course you can skip this step if you donot want to limit gas.
+of course you can skip this step if you don't want to limit gas.
 
 .. code-block:: typescript
     :linenos:
@@ -87,7 +87,7 @@ for metamask or other explorer's wallet provider, you can easily write
 
     await collectLimitOrderCalling.send({...options, gas: gasLimit})
 
-otherwise, if you are runing codes in console, you could use following code
+otherwise, if you run codes in console, you could use following code
 
 .. code-block:: typescript
     :linenos:
@@ -104,4 +104,4 @@ otherwise, if you are runing codes in console, you could use following code
     // nonce += 1;
     const tx = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
 
-after this step, we have successfully collect a limitorder (if no revert occured)
+after this step, we have successfully collect a limit order (if no revert occurred).
