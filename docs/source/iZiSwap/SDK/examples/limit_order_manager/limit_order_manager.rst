@@ -1,6 +1,6 @@
 
 
-examples of LimitOrderManager
+LimitOrderManager
 -----------------------------
 
 base examples for using LimitOrderManager to manage limit orders

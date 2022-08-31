@@ -1,6 +1,6 @@
 
 
-Some important concepts
+Concepts
 -----------------------
 
 some very important concepts for understanding the examples.

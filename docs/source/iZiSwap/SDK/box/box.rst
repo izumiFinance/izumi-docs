@@ -1,7 +1,7 @@
 
 .. _box:
 
-box
+Extension: Box
 -----------------------------
 
 **Box** is a contract we provide to easily mint (including add, withdraw and collect) or swap with tokens which have transfer fee.
@@ -9,11 +9,7 @@ we provide sdk to call box's interfaces.
 here we provide some simple examples for using SDK of **Box** to mint or swap.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    introduction
-   mint
-   add_liquidity
-   collect
-   dec_liquidity_and_collect
-   swap_with_exact_input
+   examples/index

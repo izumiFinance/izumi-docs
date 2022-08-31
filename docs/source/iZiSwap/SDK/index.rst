@@ -9,7 +9,7 @@ and periphery contracts
 (LiquidityManager, LimitOrderManager, Swap, Quoter)
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 3
 
    installation
    tutorial
