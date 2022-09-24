@@ -47,7 +47,7 @@ mainnet
       - 0x9Bf8399c9f5b777cbA2052F83E213ff59e51612B
 
 
-2. Aurora (chainId: 1313161554) (updated on 2022.09.09):
+2. Aurora (chainId: 1313161554) (updated on 2022.09.23):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -58,35 +58,42 @@ mainnet
       - Address
     * - Core
       - factory
-      - 0x110dE362cc436D7f54210f96b8C7652C2617887D
+      - 0x156d8a0bE25FA232bb637Fc76255bCd00dEae9E9
     * -
       - swapX2YModule 
-      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+      - 0x9Bf8399c9f5b777cbA2052F83E213ff59e51612B
     * -
       - swapY2XModule 
-      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+      - 0x12a76434182c8cAF7856CE1410cD8abfC5e2639F
     * -
       - liquidityModule
-      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+      - 0xBd3bd95529e0784aD973FD14928eEDF3678cfad8
     * -
       - limitOrderModule
-      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+      - 0xCFD8A067e1fa03474e79Be646c5f6b6A27847399
     * - 
       - flashModule
-      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+      - 0xAD1F11FBB288Cd13819cCB9397E59FAAB4Cdc16F
 
     * - Periphery
-      - quoter 
-      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
+      - quoter (without limit)
+      - 0x64b005eD986ed5D6aeD7125F49e61083c46b8e02
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x50E024bd504f066fd7f343d6D048F4BD97B1064E
     * - 
       - swap
-      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+      - 0x96539F87cA176c9f6180d65Bc4c10fca264aE4A5
     * -
       - liquidityManager
-      - 0x1502d025BfA624469892289D45C0352997251728
+      - 0xE78e7447223aaED59301b44513D1d3A892ECF212
     * - 
       - limitOrderManager
-      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4 
+      - 0x01fDea353849cA29F778B2663BcaCA1D191bED0e
+    * - 
+      - Box
+      - 0xC4987497DEddd529e689809Ad213cc7645170c22
+
 
 
 3. Ethereum Classic (ETC) (chainId: 61):
