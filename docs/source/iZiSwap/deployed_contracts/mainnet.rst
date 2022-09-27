@@ -140,3 +140,98 @@ mainnet
       - Box
       - 0x3a2932a74e511C9Dc4CaD60e06eE6D3690Ce2492
       
+4. Arbitrum (chainId: 42161) (updated on 2022.09.23):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x45e5F26451CDB01B0fA1f8582E0aAD9A6F27C218
+    * -
+      - swapX2YModule 
+      - 0x88867BF3bB3321d8c7Da71a8eAb70680037068E4
+    * -
+      - swapY2XModule 
+      - 0xB8dDAfE7385A962a4515821248368823E93fa61F
+    * -
+      - liquidityModule
+      - 0x77aB297Da4f3667059ef0C32F5bc657f1006cBB0
+    * -
+      - limitOrderModule
+      - 0x6a7CDD0CC87ec02ed85c196e57BaBe1bc0Acd6f2
+    * - 
+      - flashModule
+      - 0x4a41EbEa62E7aB70413356D30DF73cA803aaE41c
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x25C030116Feb2E7BbA054b9de0915E5F51b03e31
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x1D377311b342633A970e71a787C50F83858BFC1B
+    * - 
+      - swap
+      - 0x1CB60033F61e4fc171c963f0d2d3F63Ece24319c
+    * -
+      - liquidityManager
+      - 0x611575eE1fbd4F7915D0eABCC518eD396fF78F0c
+    * - 
+      - limitOrderManager
+      - 0xcA7e21764CD8f7c1Ec40e651E25Da68AeD096037
+    * - 
+      - Box
+      - 0x032b241De86a8660f1Ae0691a4760B426EA246d7
+
+
+4. Cronos (chainId: 25) (updated on 2022.09.23):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * -
+      - swapX2YModule 
+      - 0x110dE362cc436D7f54210f96b8C7652C2617887D
+    * -
+      - swapY2XModule 
+      - 0x1502d025BfA624469892289D45C0352997251728
+    * -
+      - liquidityModule
+      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
+    * -
+      - limitOrderModule
+      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+    * - 
+      - flashModule
+      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x2C6Df0fDbCE9D2Ded2B52A117126F2Dc991f770f
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x88867BF3bB3321d8c7Da71a8eAb70680037068E4
+    * - 
+      - swap
+      - 0x04830cfCED9772b8ACbAF76Cfc7A630Ad82c9148
+    * -
+      - liquidityManager
+      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+    * - 
+      - limitOrderManager
+      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
+    * - 
+      - Box
+      - 0xB8dDAfE7385A962a4515821248368823E93fa61F
+

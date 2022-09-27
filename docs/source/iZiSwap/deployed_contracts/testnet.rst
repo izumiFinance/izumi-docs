@@ -2,7 +2,7 @@ testnet
 ==================
 
 
-1. BNB Chain Testnet (chainId: 97) (updated on 2022.09.09):
+1. BNB Chain Testnet (chainId: 97) (updated on 2022.09.26):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -13,38 +13,41 @@ testnet
       - Address
     * - Core
       - factory
-      - 0x90e2B715BE84EFC67e9d2E84619c4b230446FF3f 
+      - 0x7fc0574eAe768B109EF38BC32665e6421c52Ee9d
     * -
       - swapX2YModule 
-      - 0x89c85a7B295d3C88D244F61a2B1031C471Cd1D49
+      - 0xf6991b783FAbC33Cc7E735Bafd81ac087e08f564
     * -
       - swapY2XModule 
-      - 0x522976b4bAC6603aA98cc629892a2ED399C7aF08
+      - 0x6E58130919Bb63AA8B5B3Bd673093C1651b9fE95
     * -
       - liquidityModule
-      - 0x2B145315115D8d12DC76441CEBA8D960b16F4712
+      - 0x1D923fC2804D554beD70a1297170A2C8624E833a
     * -
       - limitOrderModule
-      - 0xf1F79910b3BA80bE2C24404606c910A0aD45AaD0
+      - 0xA00D1B745955Cb4e26eAC1287a5DbDdC6b364cd3
     * - 
       - flashModule
-      - 0xe462c09Ff491d929328328979925bd394Cd17FFe
+      - 0x6b89A2e3a0E6F403A3Fc6159a71172C150Fff2D1
 
     * - Periphery
-      - quoter 
-      - 0xf2C23eb61B1C58e6E3F54D82FdE3aFE4580cc666
+      - quoter (without limit)
+      - 0xa3d7d6746F91B6657cfFe0A7b4031EE6C262008E
+    * - 
+      - quoter (within 10000 ticks )
+      - 0x4bCACcF9A0FC3246449AC8A42A8918F2349Ed543
     * - 
       - swap
-      - 0x2798973a7d9B7451530f18621eE8Bc69058391a8
+      - 0x4bD007912911f3Ee4b4555352b556B08601cE7Ce
     * -
       - liquidityManager
-      - 0xC0b5CaC9Db0639732Fe5aCB7ee8d15e487c9957A
+      - 0xDE02C26c46AC441951951C97c8462cD85b3A124c
     * - 
       - limitOrderManager
-      - 0x070A8Cd186afC4ef8c3FFC44Af77f4eabBfA9647
+      - 0x5C97187B2CEb1494078b70623c1E59edA79983A3
     * - 
       - Box
-      - 0xa84dC5a8Bf7d60C349879cDb7B534090CA44bBD0
+      - 0x88753C2bA52429f08A79ABFd37C897d1a8353EE4
 
 2. Aurora Testnet (chainId: 1313161555):
 
