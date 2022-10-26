@@ -2,7 +2,7 @@ testnet
 ==================
 
 
-1. BNB Chain Testnet (chainId: 97) (updated on 2022.09.26):
+1. BNB Chain Testnet (chainId: 97) (updated on 2022.09.26, box on 2022.10.26):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -47,7 +47,7 @@ testnet
       - 0x5C97187B2CEb1494078b70623c1E59edA79983A3
     * - 
       - Box
-      - 0x88753C2bA52429f08A79ABFd37C897d1a8353EE4
+      - 0x8fbA4265785c56110B1277d6B23dD43B3797b3A8
 
 2. Aurora Testnet (chainId: 1313161555):
 
