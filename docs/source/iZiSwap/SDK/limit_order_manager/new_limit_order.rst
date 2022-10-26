@@ -231,7 +231,62 @@ thirdly, call **getNewLimOrderCall** to get calling and options obj
         gasPrice
     )
 
-7.  estimate gas (optional)
+7. approve
+---------------
+
+before send transaction or estimate gas, you need to approve contract limitOrderManager to have authority to spend your token,
+because you need transfer some sellToken to pool.
+
+.. code-block:: typescript
+    :linenos:
+
+    // the approve interface abi of erc20 token
+    const erc20ABI = [{
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }];
+    // if sellToken is not chain token (BNB on bsc chain or ETH on eth chain...), we need transfer tokenA to pool
+    // otherwise we can skip following codes
+    {
+        const sellTokenContract = new web3.eth.Contract(erc20ABI, sellToken.address);
+        // you could approve a very large amount (much more greater than amount to transfer),
+        // and don't worry about that because limitOrderManager only transfer your token to pool with amount you specified and your token is safe
+        // then you do not need to approve next time for this user's address
+        const approveCalling = sellTokenContract.methods.approve(
+            limitOrderAddress, 
+            "0xffffffffffffffffffffffffffffffff"
+        );
+        // estimate gas
+        const gasLimit = await mintCalling.estimateGas({from: account})
+        // then send transaction to approve
+        // you could simply use followiing line if you use metamask in your frontend code
+        // otherwise, you should use the function "web3.eth.accounts.signTransaction"
+        // notice that, sending transaction for approve may fail if you have approved the token to limitOrderManager before
+        // if you want to enlarge approve amount, you should refer to interface of erc20 token
+        await approveCalling.send({gas: gasLimit})
+    }
+
+8.  estimate gas (optional)
 ---------------------------
 of course you can skip this step if you donot want to limit gas.
 before estimate gas and send transaction, make sure you have approve limitOrderAddress of sellToken
@@ -243,9 +298,8 @@ before estimate gas and send transaction, make sure you have approve limitOrderA
     // make sure you have approve limitOrderAddress of sellToken
     const gasLimit = await newLimOrderCalling.estimateGas(options)
 
-8. finally, send transaction!
+9. finally, send transaction!
 ------------------------------
-ofcourse, before estimate gas and send transaction, make sure you have approve limitOrderAddress of sellToken
 
 for metamask or other explorer's wallet provider, you can easily write 
 

@@ -260,8 +260,62 @@ usually, we can fill **SwapChainWithExactOutputParams** through following code
         maxInputAmount: new BigNumber(amountA).times(1.015).toFixed(0)
     } as SwapChainWithExactOutputParams
 
+5. approvve
+------------
 
-5. estimate gas (optional)
+before send transaction or estimate gas, you need to approve contract liquidityManager to have authority to spend yuor token,
+because you need transfer some tokenA and some tokenB to pool.
+
+.. code-block:: typescript
+    :linenos:
+
+    // the approve interface abi of erc20 token
+    const erc20ABI = [{
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }];
+    // if tokenA is not chain token (BNB on bsc chain or ETH on eth chain...), we need transfer tokenA to pool
+    // otherwise we can skip following codes
+    {
+        const tokenAContract = new web3.eth.Contract(erc20ABI, testAAddress);
+        // you could approve a very large amount (much more greater than amount to transfer),
+        // and don't worry about that because swapContract only transfer your token to pool with amount you specified and your token is safe
+        // then you do not need to approve next time for this user's address
+        const approveCalling = tokenAContract.methods.approve(
+            swapAddress, 
+            "0xffffffffffffffffffffffffffffffff"
+        );
+        // estimate gas
+        const gasLimit = await mintCalling.estimateGas({from: account})
+        // then send transaction to approve
+        // you could simply use followiing line if you use metamask in your frontend code
+        // otherwise, you should use the function "web3.eth.accounts.signTransaction"
+        // notice that, sending transaction for approve may fail if you have approved the token to swapContract before
+        // if you want to enlarge approve amount, you should refer to interface of erc20 token
+        await approveCalling.send({gas: gasLimit})
+    }
+
+6. estimate gas (optional)
 --------------------------
 
 of course you can skip this step if you donot want to limit gas
@@ -272,8 +326,10 @@ of course you can skip this step if you donot want to limit gas
     const gasLimit = await swapCalling.estimateGas(options)
     console.log('gas limit: ', gasLimit)
 
-6. send transaction!
+7. send transaction!
 --------------------
+
+now, we can then send transaction to swap
 
 for metamask or other explorer's wallet provider, you can easily write
 

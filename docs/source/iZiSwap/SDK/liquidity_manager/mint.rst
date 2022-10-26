@@ -342,8 +342,86 @@ function **getMintCall** returns 2 object, **mintCalling** and **options**
 
 after get **mintCalling** and **options**, we can estimate gas for mint
 
-9. estimate gas (optional)
----------------------------
+9. approve
+-----------
+
+before estimate gas or send transaction, you need approve contract liquidityManager to have authority to spend yuor token,
+because you need transfer some tokenA and some tokenB to pool.
+
+.. code-block:: typescript
+    :linenos:
+
+    // the approve interface abi of erc20 token
+    const erc20ABI = [{
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }];
+
+    // if tokenA is not chain token (BNB on bsc chain or ETH on eth chain...), we need transfer tokenA to pool
+    // otherwise we can skip following codes
+    if (maxTestA.gt(0)) {
+        const tokenAContract = new web3.eth.Contract(erc20ABI, testAAddress);
+        // you could approve a very large amount (much more greater than amount to transfer),
+        // and don't worry about that because liquidityManager only transfer your token to pool with amount you specified and your token is safe
+        // then you do not need to approve next time for this user's address
+        const approveCalling = tokenAContract.methods.approve(
+            liquidityManagerAddress, 
+            "0xffffffffffffffffffffffffffffffff"
+        );
+        // estimate gas
+        const gasLimit = await mintCalling.estimateGas({from: account})
+        // then send transaction to approve
+        // you could simply use followiing line if you use metamask in your frontend code
+        // otherwise, you should use the function "web3.eth.accounts.signTransaction"
+        // notice that, sending transaction for approve may fail if you have approved the token to liquidityManager before
+        // if you want to enlarge approve amount, you should refer to interface of erc20 token
+        await approveCalling.send({gas: gasLimit})
+    }
+    
+    // if tokenB is not chain token (BNB on bsc chain or ETH on eth chain...), we need transfer tokenA to pool
+    // otherwise we can skip following codes
+    if (mexTestB.gt(0)) {
+        const tokenBContract = new web3.eth.Contract(erc20ABI, testBAddress);
+        // you could approve a very large amount (much more greater than amount to transfer),
+        // and don't worry about that because liquidityManager only transfer your token to pool with amount you specified and your token is safe
+        // then you do not need to approve next time for this user's address
+        const approveCalling = tokenBContract.methods.approve(
+            liquidityManagerAddress, 
+            "0xffffffffffffffffffffffffffffffff"
+        );
+        // estimate gas
+        const gasLimit = await mintCalling.estimateGas({from: account})
+        // then send transaction to approve
+        // you could simply use followiing line if you use metamask in your frontend code
+        // otherwise, you should use the function "web3.eth.accounts.signTransaction"
+        // notice that, sending transaction for approve may fail if you have approved the token to liquidityManager before
+        // if you want to enlarge approve amount, you should refer to interface of erc20 token
+        await approveCalling.send({gas: gasLimit})
+    }
+
+
+10.  estimate gas (optional)
+-----------------------------
 of course you can skip this step if you donot want to limit gas
 
 .. code-block:: typescript
@@ -352,8 +430,10 @@ of course you can skip this step if you donot want to limit gas
     const gasLimit = await mintCalling.estimateGas(options)
     console.log('gas limit: ', gasLimit)
 
-10. finally, send transaction!
+11. finally, send transaction!
 ------------------------------
+
+now, we can send transaction to mint.
 
 for metamask or other explorer's wallet provider, you can easily write 
 

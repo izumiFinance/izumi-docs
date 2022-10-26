@@ -140,12 +140,9 @@ because all transfers after box calling **Swap**'s interface, including user pay
 donot has transfer fee (token with transfer fee donot exist in iZiSwap, but their wrap token).
 and the **Swap** contract will **not** see user get less output token. And **Box** will not check amount of user's acquire.
 
-
-6.  estimate gas (optional)
+6. approve
 ---------------------------
-of course you can skip this step if you donot want to limit gas.
-
-notice that you should do following steps before estimate gas or send transaction in this "mint" case.
+notice that you should do following steps before estimate gas or send transaction in this "swap" case.
 
 first, if **FeeB** is input token of this trading, you should approve box to deposit your **FeeB** token to corresponding **WrapToken**, 
 because box will call **deposit** interface of **WrapToken** to help you deposit your **FeeB**, the box needs your approve.
@@ -155,17 +152,178 @@ second, if **FeeB** is input token of this trading, you should approve **WrapTok
 the **WrapToken** contract call transfer interface of **FeeB** to transfer your **FeeB** token, and **WrapToken** needs your approve.
 
 thirdly, if input token is **USDT** or **iZi** or other normal erc20 token instead of wbnb/weth,
-you should approve **Box** to transfer your corresponding erc20 token,
-you can view interfaces corresponding to approve or approval in erc20's interfaces for more information.
+you should approve **Box** to transfer your corresponding erc20 token
 
-after above steps, you can estimate or send the transaction
+in this case, token **FeeB** is token with transfer fee, and we should do following 2 steps to approve.
+
+first, calling **depositApprove** to give boxContract authority to call **depositFrom** of feeB's **wrapToken**
+
+.. code-block:: typescript
+    :linenos:
+
+    const wrapTokenABI = [
+        {
+            "inputs": [
+                {
+                "internalType": "address",
+                "name": "spender",
+                "type": "address"
+                },
+                {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+                }
+            ],
+            "name": "depositApprove",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                "internalType": "address",
+                "name": "from",
+                "type": "address"
+                },
+                {
+                "internalType": "address",
+                "name": "to",
+                "type": "address"
+                },
+                {
+                "internalType": "uint256",
+                "name": "amount",
+                "type": "uint256"
+                }
+            ],
+            "name": "depositFrom",
+            "outputs": [
+                {
+                "internalType": "uint256",
+                "name": "actualAmount",
+                "type": "uint256"
+                }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+    ]
+    const wrapTokenContract = web3.eth.Contract(wrapTokenABI, feeB.wrapTokenAddress)
+    const depositApproveCalling = wrapTokenContract.methods.depositApprove(boxAddress, '0xffffffffffffffffffffffffffffffff')
+    const depositApproveGasLimit = depositApproveCalling.estimateGas({from: account})
+    await depositApproveCalling.send({gas: depositApproveGasLimit})
+
+second, calling **approve** to give feeB's **wrapToken** authority to operate your feeB token
+
+.. code-block:: typescript
+    :linenos:
+
+    const erc20ABI = [{
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }];
+    const feeBContract = new web3.eth.Contract(erc20ABI, feeB.address);
+    // you could approve a very large amount (much more greater than amount to transfer),
+    // and don't worry about that because feeB's wrapTokenContract only transfer your token to it with amount you specified and your token is safe
+    // then you do not need to approve next time for this user's address
+    const approveCalling = feeBContract.methods.approve(
+        feeB.wrapTokenAddress, 
+        "0xffffffffffffffffffffffffffffffff"
+    );
+    // estimate gas
+    const gasLimit = await approveCalling.estimateGas({})
+    // then send transaction to approve
+    // you could simply use followiing line if you use metamask in your frontend code
+    // otherwise, you should use the function "web3.eth.accounts.signTransaction"
+    // notice that, sending transaction for approve may fail if you have approved the token to swapContract before
+    // if you want to enlarge approve amount, you should refer to interface of erc20 token
+    await approveCalling.send({gas: gasLimit})
+
+
+if your input token is a normal erc20 token which has no transfer fee (like iZi or USDT),
+you just need to write following code instead of 2 steps above (we suppose the input token is testA)
+
+.. code-block:: typescript
+    :linenos:
+
+    const erc20ABI = [{
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "spender",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }];
+    // suppose the input token is "testA"
+    const testAAddress = '0xCFD8A067e1fa03474e79Be646c5f6b6A27847399'
+    const testAContract = new web3.eth.Contract(erc20ABI, testAAddress);
+    // you could approve a very large amount (much more greater than amount to transfer),
+    // and don't worry about that because boxContract only transfer your token to it with amount you specified and your token is safe
+    // then you do not need to approve next time for this user's address
+    const approveCalling = testAContract.methods.approve(
+        boxAddress, 
+        "0xffffffffffffffffffffffffffffffff"
+    );
+    // estimate gas
+    const gasLimit = await approveCalling.estimateGas({})
+    // then send transaction to approve
+    // you could simply use followiing line if you use metamask in your frontend code
+    // otherwise, you should use the function "web3.eth.accounts.signTransaction"
+    // notice that, sending transaction for approve may fail if you have approved the token to swapContract before
+    // if you want to enlarge approve amount, you should refer to interface of erc20 token
+    await approveCalling.send({gas: gasLimit})
+
+
+7.  estimate gas (optional)
+---------------------------
+of course you can skip this step if you donot want to limit gas.
+
+if you want, you can estimate or send the transaction
 
 .. code-block:: typescript
     :linenos:
 
     const gasLimit = await swapCalling.estimateGas(options)
 
-7.  finally, send transaction!
+8.  finally, send transaction!
 ------------------------------
 
 notice that you should do following steps before estimate gas or send transaction in this "mint" case.
