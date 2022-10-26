@@ -38,7 +38,7 @@ then select one of it and decrease (or called withdraw) some liquidity
         [testA]
     )
     console.log('liquidity len: ', liquidities.length)
-    console.log('liquidtys: ', liquidities)
+    console.log('liquidity: ', liquidities)
 
 the code above is nearly the same as :ref:`fetch_liquidities`, you can view more detailed explains though this link
 
@@ -130,7 +130,7 @@ the function **getDecLiquidityCall(...)** has following params
 5. estimate gas (optional)
 --------------------------
 
-of course you can skip this step if you donot want to limit gas
+of course you can skip this step if you don't want to limit gas
 
 .. code-block:: typescript
     :linenos:
@@ -167,4 +167,4 @@ otherwise, you could use following code
     const tx = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
     console.log('tx: ', tx);
 
-after sending transaction, we will successfully decrease the liquidity (if no revert occured)
+after sending transaction, we will successfully decrease the liquidity (if no revert occurred)

@@ -5,6 +5,6 @@ iZiSwap
    :maxdepth: 4
 
    whitepaper
-   deployed_contracts
+   deployed_contracts/index
    SDK/index
    

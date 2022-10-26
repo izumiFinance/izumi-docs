@@ -1,9 +1,9 @@
 
 
-examples of LiquidityManager
+LiquidityManager
 ----------------------------
 
-some simple examples of using LiquidityManager to manage liquidties
+base examples for using LiquidityManager to manage liquidity.
 
 .. toctree::
    :maxdepth: 1

@@ -288,7 +288,7 @@ because you need transfer some sellToken to pool.
 
 8.  estimate gas (optional)
 ---------------------------
-of course you can skip this step if you donot want to limit gas.
+of course you can skip this step if you don't want to limit gas.
 before estimate gas and send transaction, make sure you have approve limitOrderAddress of sellToken
 
 .. code-block:: typescript
@@ -326,4 +326,4 @@ otherwise, if you are runing codes in console, you could use following code
     // nonce += 1;
     const tx = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
 
-after this step, we have successfully minted the liquidity (if no revert occured)
+after this step, we have successfully minted the liquidity (if no revert occurred).

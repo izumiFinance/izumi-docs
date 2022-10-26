@@ -2,8 +2,9 @@ iZUMi Developer Docs
 =======================
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 5
 
    iZiSwap/index
+   Links/index
 
    

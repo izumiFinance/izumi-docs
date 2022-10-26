@@ -1,6 +1,6 @@
 .. _price:
 
-Price of erc20 token
+Price of ERC20 token
 =====================
 
 here, we describe concepts about price
@@ -84,4 +84,4 @@ and in the example of `usdt` and `bnb` `decimal_price_BNB_by_USDT` is `300 usdt/
 
 there is a problem, `undecimal price` usually is a float number, how to describe them in contract
 
-see next section `point`
+see next section `point`.

@@ -1,9 +1,9 @@
-.. _collect_limit_order:
+.. _fetch_limit_order_and_dec:
 
-collect limit order
+fetch limit order and dec
 ================================
 
-here, we provide a simple example to fetch limit orders of iZi swap from user's address, and select one of them to collect
+here, we provide a simple example to fetch limit orders of iZiSwap from an user's address, and select one of them to decrease(or called cancel)
 
 1. fetch limit orders
 ---------------------
@@ -34,8 +34,8 @@ here, we provide a simple example to fetch limit orders of iZi swap from user's 
 
 the code above is nearly the same as :ref:`fetch_limit_order`, you can view more detailed explains though this link
 
-2. select an order to collect and get calling
--------------------------------------------------------------
+2. select an order and get calling of decrease
+--------------------------------------------------
 
 first, select an order or your own
 
@@ -44,38 +44,33 @@ first, select an order or your own
 
     const activeOrderAt2 = activeOrders[2]
 
-second, get calling of decrease the limit order
+second, get calling for decreasing the limit order
 
 .. code-block:: typescript
     :linenos:
 
     const orderIdx = activeOrderAt2.idx
     const gasPrice = '5000000000'
-    const params: CollectLimOrderParam = {
-        orderIdx,
-        tokenX: activeOrderAt2.tokenX,
-        tokenY: activeOrderAt2.tokenY,
-        collectDecAmount: activeOrderAt2.sellingDec,
-        collectEarnAmount: '1'
-    }
     // dec limit order of orderIdx
-    const {collectLimitOrderCalling, options} = getCollectLimitOrderCall(
+    const {decLimOrderCalling, options} = getDecLimOrderCall(
         limitOrderManager,
+        orderIdx,
+        activeOrderAt2.sellingRemain,
+        '0xffffffff',
         account.address,
         chain,
-        params,
         gasPrice
     )
 
 
 3.  estimate gas (optional)
 ---------------------------
-of course you can skip this step if you donot want to limit gas.
+of course you can skip this step if you don't want to limit gas.
 
 .. code-block:: typescript
     :linenos:
 
-    const gasLimit = await collectLimitOrderCalling.estimateGas(options)
+    const gasLimit = await decLimOrderCalling.estimateGas(options)
 
 4. finally, send transaction!
 ------------------------------
@@ -85,9 +80,9 @@ for metamask or other explorer's wallet provider, you can easily write
 .. code-block:: typescript
     :linenos:
 
-    await collectLimitOrderCalling.send({...options, gas: gasLimit})
+    await decLimOrderCalling.send({...options, gas: gasLimit})
 
-otherwise, if you are runing codes in console, you could use following code
+otherwise, if you run codes in console, you could use following code
 
 .. code-block:: typescript
     :linenos:
@@ -96,7 +91,7 @@ otherwise, if you are runing codes in console, you could use following code
         {
             ...options,
             to: limitOrderAddress,
-            data: collectLimitOrderCalling.encodeABI(),
+            data: decLimOrderCalling.encodeABI(),
             gas: new BigNumber(gasLimit * 1.1).toFixed(0, 2),
         }, 
         privateKey
@@ -104,4 +99,4 @@ otherwise, if you are runing codes in console, you could use following code
     // nonce += 1;
     const tx = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
 
-after this step, we have successfully collect a limitorder (if no revert occured)
+after this step, we have successfully decrease a limit order (if no revert occurred).
