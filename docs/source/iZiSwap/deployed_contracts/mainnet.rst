@@ -45,6 +45,9 @@ mainnet
     * - 
       - limitOrderManager
       - 0x9Bf8399c9f5b777cbA2052F83E213ff59e51612B
+    * - 
+      - Box
+      - 0x05dCaF89dFA5A09d832aC4e7FE01f75e82643F60
 
 
 2. Aurora (chainId: 1313161554) (updated on 2022.09.23):
