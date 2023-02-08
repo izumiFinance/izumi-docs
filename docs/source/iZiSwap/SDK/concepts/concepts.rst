@@ -10,3 +10,4 @@ some very important concepts for understanding the examples.
    amount
    price
    point
+   swap_mode
