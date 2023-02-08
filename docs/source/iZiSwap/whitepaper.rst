@@ -2,5 +2,5 @@ whitepaper
 ============
 
 
-`Check here <https://izumi.finance/paper/dswap.pdf>`_
+`iZiSwap: Building Decentralized Exchange with Discretized Concentrated Liquidity and Limit Order <https://izumi.finance/paper/dswap.pdf>`_
 
