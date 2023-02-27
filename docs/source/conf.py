@@ -83,3 +83,6 @@ html_css_files = [
 ]
 
 epub_show_urls = 'footnote'
+
+
+html_favicon = '_static/images/iZi.png'
