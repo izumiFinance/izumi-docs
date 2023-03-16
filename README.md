@@ -1,4 +1,4 @@
-# iZUMi-docs
+# iZUMi-developer-docs
 
 <div align="center">
   <a href="https://developer.izumi.finance"> 
