@@ -18,8 +18,9 @@ Welcome to iZUMi Developer Docs
 
 .. toctree::
    :maxdepth: 1
-   :caption: Links
+   :caption: Info
 
    Links/index
+   Address/index
 
    
