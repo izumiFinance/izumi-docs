@@ -427,3 +427,50 @@ mainnet
     * - 
       - Box
       - 0xbF83D435c7859d6A7bF529AD9720abD21F8F4025
+
+10. ZkSync Era (chainId: 324) (updated on 2023.03.27):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x33D9936b7B7BC155493446B5E6dDC0350EB83AEC
+    * -
+      - swapX2YModule 
+      - 0x7499ce9c8F4FF47Be5dd5308Ab54cC710DE751E1
+    * -
+      - swapY2XModule 
+      - 0xBc94aedD2a0a986476b89e072B05e0Df117A3f8b
+    * -
+      - liquidityModule
+      - 0xC319755Dff1601b3D0520B421A281B11bF22E80F
+    * -
+      - limitOrderModule
+      - 0x8df80089B7AB1646DB211D43949ECdfc94582011
+    * - 
+      - flashModule
+      - 0x0066f3791BD9d5a25d88F978dd8e1006445fE0d6
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x377EC7c9ae5a0787F384668788a1654249059dD6
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x3EC82C07981D6D213DA9bd35A0ba4cd324feA438
+    * - 
+      - swap
+      - 0x9606eC131EeC0F84c95D82c9a63959F2331cF2aC
+    * -
+      - liquidityManager
+      - 0x936c9A1B8f88BFDbd5066ad08e5d773BC82EB15F
+    * - 
+      - limitOrderManager
+      - 0x8b9D7D609a83B2f69D2135786a7D230043AF7283
+    * - 
+      - Box
+      - 0x7dEe7de9814ed6C1e20B3E4E2fA9b1B96E15FDe1

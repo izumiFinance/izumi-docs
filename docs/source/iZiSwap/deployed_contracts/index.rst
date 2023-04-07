@@ -23,6 +23,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Meter
 
+    * ZkSync Era
+
 *  Testnet:
     * BNB Chain Testnet
 
