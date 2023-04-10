@@ -91,7 +91,7 @@ testnet
       - 0x1eE5eDC5Fe498a2dD82862746D674DB2a5e7fef6
 
 
-3. ZkSync Alpha Testnet (chainId: 280 ) (updated on 2022.10.28):
+3. ZkSync Alpha Testnet (chainId: 280 ) (updated on 2023.04.10):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -102,38 +102,38 @@ testnet
       - Address
     * - Core
       - factory
-      - 0xA5900cce51c45Ab9730039943B3863C822342034
+      - 0x7FD55801c066AeB0bD848c2BA8AEc821AF700A41
     * -
       - swapX2YModule 
-      - 0x47798d598891708ceD5Bd425b9bf3C56AfA473F0
+      - 0x19ed8bB72F93B87A0605fAcc116019039757e95A
     * -
       - swapY2XModule 
-      - 0xc23Daa069A7F42818dd43FB0c2c3497c3e12da78
+      - 0x4A7Df45560899606f1fa5aE7475816ecBbf66A68
     * -
       - liquidityModule
-      - 0x1a3CC65Fe937C7dDd110cB65b281D7075766CA02
+      - 0x38D526f278189Cb6983Cf8bc58BBFAea7D2c3B22
     * -
       - limitOrderModule
-      - 0x7FD55801c066AeB0bD848c2BA8AEc821AF700A41
+      - 0x47798d598891708ceD5Bd425b9bf3C56AfA473F0
     * - 
       - flashModule
-      - 0x9A0C674c7FC173d3680f7b889CBB9a8570C5Ce73
+      - 0x1a3CC65Fe937C7dDd110cB65b281D7075766CA02
 
     * - Periphery
       - quoter (without limit)
-      - 0x33d1BA78bA27aBF3244aE60930cC33E92F2C8413
+      - 0xE93D1d35a63f7C6b51ef46a27434375761a7Db28
     * - 
       - quoter (within 10000 ticks )
-      - 0xCcf32Ff9319BF332e48F4b49957307b953A06da9
+      - 0xA8101060508f3A7fB9a98425a7fb765DB14ae224
     * - 
       - swap
-      - 0xdFA454b8BdA6B0b315852d178F00DE83D7739b2e
+      - 0x3040EE148D09e5B92956a64CDC78b49f48C0cDdc
     * -
       - liquidityManager
-      - 0xd1B4D87f69e0B7bd86A6f9525E25C9ccBaD008Ee
+      - 0x25727b360604E1e6B440c3B25aF368F54fc580B6
     * - 
       - limitOrderManager
-      - 0x5478321c39E983CCc04743F2fD17D348876b55c8
+      - 0x430972C4AF4703F7ce7B95C03735ae1504dD0Dd6
 
 
 4. Scroll Testnet L2 (chainId: 534354 ) (updated on 2023.01.30):
