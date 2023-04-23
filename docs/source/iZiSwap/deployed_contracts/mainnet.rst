@@ -287,7 +287,7 @@ mainnet
       - Box
       - 0x14323AfbC2b82fE58F0D9c203830EE969B4d1bE2
 
-7. Icplaza (chainId: 9000) (updated on 2022.12.29):
+7. Icplaza (chainId: 142857) (updated on 2022.12.29):
 
 .. list-table:: 
     :widths: 25 25 50
