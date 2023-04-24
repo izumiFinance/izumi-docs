@@ -25,6 +25,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * ZkSync Era
 
+    * Ethereum 
+
 *  Testnet:
     * BNB Chain Testnet
 
