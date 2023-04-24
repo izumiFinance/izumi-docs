@@ -474,3 +474,51 @@ mainnet
     * - 
       - Box
       - 0x7dEe7de9814ed6C1e20B3E4E2fA9b1B96E15FDe1
+
+
+10. Ethereum (chainId: 1) (updated on 2023.04.21):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x1502d025BfA624469892289D45C0352997251728
+    * -
+      - swapX2YModule 
+      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+    * -
+      - swapY2XModule 
+      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+    * -
+      - liquidityModule
+      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+    * -
+      - limitOrderModule
+      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+    * - 
+      - flashModule
+      - 0x110dE362cc436D7f54210f96b8C7652C2617887D
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+    * - 
+      - swap
+      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
+    * -
+      - liquidityManager
+      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
+    * - 
+      - limitOrderManager
+      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+    * - 
+      - Box
+      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
