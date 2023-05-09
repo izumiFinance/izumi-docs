@@ -1,5 +1,5 @@
 testnet
-==================
+=================
 
 
 1. BNB Chain Testnet (chainId: 97) (updated on 2022.09.26, box on 2022.10.26):
