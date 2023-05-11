@@ -3,11 +3,40 @@ deployed-contracts
 
 Currently, iZiSwap core and periphery contracts are deployed on:
 
-    * BNB Smart Chain (BSC)
+
+*  Mainnet:
+    * BNB Chain (BSC)
 
     * Aurora
 
+    * Polygon
+
+    * Arbitrum
+
+    * Cronos
+
     * Ethereum Classic (ETC)
+
+    * Conflux
+
+    * Icplaza
+
+    * Meter
+
+    * ZkSync Era
+
+    * Ethereum 
+
+*  Testnet:
+    * BNB Chain Testnet
+
+    * Aurora Testnet
+
+    * ZkSync Alpha Testnet
+
+    * Mantle Testnet
+
+    * Scroll Test L2
 
 .. toctree::
 
