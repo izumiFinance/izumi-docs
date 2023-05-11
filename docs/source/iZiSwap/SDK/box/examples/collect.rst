@@ -3,6 +3,8 @@ collect
 
 here, we provide a simple example for collecting earned or decreased token from an existing liquidity through box's interface
 
+The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/box/collect.ts>`_.
+
 
 1. some imports
 ---------------

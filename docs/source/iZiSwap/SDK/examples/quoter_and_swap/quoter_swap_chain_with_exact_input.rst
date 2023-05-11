@@ -9,6 +9,8 @@ here, **quoter with exact input amount** means pre-query amount of token acquire
 
 in this example, quoter and swap are called throw 2 different contracts.
 
+The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/quoterAndSwap/quoterSwapChainWithExactInput.ts>`_.
+
 1. some imports
 -----------------------------------------------------------
 

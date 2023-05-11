@@ -3,6 +3,7 @@ add liquidity
 
 here, we provide a simple example for adding some liquidity to existing liquidity through box's interface
 
+The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/box/addLiquidity.ts>`_.
 
 1. some imports
 ---------------

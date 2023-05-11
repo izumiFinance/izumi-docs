@@ -5,6 +5,7 @@ new limit order
 
 here, we provide a simple example for creating a new limit order
 
+The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/limitOrder/newLimitOrder.ts>`_.
 
 1. some imports
 ---------------

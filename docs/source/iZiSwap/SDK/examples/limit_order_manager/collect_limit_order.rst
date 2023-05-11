@@ -5,6 +5,9 @@ collect limit order
 
 here, we provide a simple example to fetch limit orders of iZiSwap from an user's address, and select one of them to collect
 
+The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/limitOrder/collectLimitOrder.ts>`_.
+
+
 1. fetch limit orders
 ---------------------
 

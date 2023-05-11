@@ -3,6 +3,8 @@ mint
 
 here, we provide a simple example for creating a new liquidity
 
+The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/liquidityManager/mint.ts>`_.
+
 
 1. some imports
 ---------------

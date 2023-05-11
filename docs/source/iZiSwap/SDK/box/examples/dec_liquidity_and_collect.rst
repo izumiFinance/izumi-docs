@@ -3,6 +3,8 @@ decrease liquidity and collect
 
 here, we provide a simple example for decreasing some liquidity from existing liquidity and withdraw tokens through box's interface
 
+The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/box/decLiquidityAndCollect.ts>`_.
+
 
 1. some imports
 ---------------
