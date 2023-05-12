@@ -2,7 +2,9 @@
 Swap Query x2y With Offline Data
 =======================================
 
-example of **swap query** usage of x2y with offline data.
+Example of **swap query** usage of x2y with offline data.
+
+The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/swapQuery/preSwapX2YWithOfflineData.ts>`_.
 
 1. some imports
 -----------------------------------------------------------

@@ -7,6 +7,8 @@ here, we provide a simple example to fetch limit orders of iZiSwap from an user'
 
 by calling **fetchLimitOrderOfAccount()**
 
+The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/limitOrder/fetchLimitOrder.ts>`_.
+
 1. some imports
 ---------------
 

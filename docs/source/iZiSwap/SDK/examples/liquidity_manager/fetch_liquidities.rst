@@ -7,6 +7,8 @@ here, we provide a simple example to fetch nft-liquidities of iZiSwap from user'
 
 by calling **fetchLiquiditiesOfAccount()**
 
+The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/liquidityManager/fetchLiquidity.ts>`_.
+
 1. some imports
 ---------------
 

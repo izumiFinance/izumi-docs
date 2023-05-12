@@ -4,6 +4,8 @@ decrease a liquidity
 in this example, we first fetch all liquidities of an account, 
 then select one of it and decrease (or called withdraw) some liquidity
 
+The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/liquidityManager/fetchLiquidityAndDec.ts>`_.
+
 1. fetch liquidities
 --------------------
 

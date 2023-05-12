@@ -6,6 +6,7 @@ Swap Query x2y With Online Data
 
 In this chapter, we will do swap query of x2y mode with online data from bsc-test chain.
 
+The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/swapQuery/preSwapX2YWithOnlineData.ts>`_.
 
 1. some imports
 -----------------------------------------------------------
