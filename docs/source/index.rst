@@ -6,6 +6,8 @@ Welcome to iZUMi Developer Docs
    :width: 800
    :align: center
 
+The main purpose of the developer documentation is to introduce the concepts and tools related to iZiSwap. As a starting point, you can click here to begin.
+
 
 .. toctree::
    :maxdepth: 1

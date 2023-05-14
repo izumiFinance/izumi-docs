@@ -1,8 +1,9 @@
 .. toctree::
    :maxdepth: 2
 
-   whitepaper
+   overview
    deployed_contracts/index
    SDK/index
 
    
+
