@@ -8,7 +8,7 @@ Welcome to iZUMi Developer Docs
 
 
 
-|br| The main purpose of the developer documentation is to introduce the concepts and tools related to iZiSwap, an innovative Concentrated Liquidity AMM solution designed for DEXes. 
+|br| The main purpose of the developer documentation is to introduce the concepts and tools related to **iZiSwap**, an innovative Concentrated Liquidity AMM solution designed for DEXes. 
 |br|
 |br| As a starting point, you can click :doc:`here <../iZiSwap/overview>` .
 
