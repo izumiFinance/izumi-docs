@@ -20,7 +20,7 @@ import sphinx_rtd_theme
 # -- Project information -----------------------------------------------------
 
 project = 'iZUMi'
-copyright = '2021-2022 @iZUMi.finance'
+copyright = '2021-2023 @iZUMi.finance'
 author = 'iZUMi Group'
 
 # The full version, including alpha/beta/rc tags
