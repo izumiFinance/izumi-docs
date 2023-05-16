@@ -18,6 +18,7 @@ Welcome to iZUMi Developer Docs
    :caption: iZiSwap
 
    iZiSwap/overview
+   iZiSwap/concepts/index
    iZiSwap/deployed_contracts/index
    iZiSwap/SDK/index
 
