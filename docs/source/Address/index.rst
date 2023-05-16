@@ -1,4 +1,4 @@
-addresses
+Addresses
 ============
 
 * iZUMi Treasury Address:
