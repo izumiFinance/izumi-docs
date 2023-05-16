@@ -1,0 +1,8 @@
+Contracts
+==================
+
+.. toctree::
+   core
+   periphery
+
+   
