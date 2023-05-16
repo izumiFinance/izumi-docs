@@ -14,3 +14,17 @@ iZiSwap-sdk
    installation
    tutorial
    
+
+
+
+**Links:**
+
+.. list-table::
+   :widths: 25 50
+   :header-rows: 0
+
+   * - Github Repo
+     - `izumiFinance/iZiSwap-sdk <https://github.com/izumiFinance/iZiSwap-sdk>`_
+   * - NPM Package
+     - `iziswap-sdk <https://www.npmjs.com/package/iziswap-sdk>`_
+
