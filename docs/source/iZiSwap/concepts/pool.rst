@@ -46,12 +46,18 @@ where :math:`L_i` represents the liquidity quantity on price point :math:`p_i`, 
 
 As illustrated in the `figure`_, the height of the purple bars represents the amount of liquidity at different price points. It is important to note that for liquidity at different price points, even if their sizes are the same, the number of tokens they contain is not the same because :math:`p_i` is different. However, the difference between them is minimal at adjacent :math:`p_i` points.
 
+Here, when we refer to liquidity, we are primarily referring to the conventional liquidity used in Automated Market Makers (AMMs). This means that when the price repeatedly crosses a certain price point, the liquidity above that price point repeatedly acts as the counterparty in trades. Later, we will discuss limit orders. Unlike conventional liquidity, once limit orders at a specific price point are filled, they no longer act as counterparties in the opposite direction. In this sense, **limit orders can be seen as one-time liquidity**.
 
 
 
 
 Pool Status
 -------------------------------------------
+
+The **STATUS** of a pool mainly records the **current price** and the liquidity on each price point. As illustrated in the `figure`_, the red line refers to the current price and the liquidity on it.
+
+As the trades progress, the current price will move back and forth. This happens only when the liquidity at the current price point is exhausted. At the current price point, both tokens may be present, while on either side of the price point, only one token will be available.
+
 
 
 
