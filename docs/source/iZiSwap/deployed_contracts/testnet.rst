@@ -136,7 +136,7 @@ Testnet
       - 0x430972C4AF4703F7ce7B95C03735ae1504dD0Dd6
 
 
-4. Scroll Testnet L2 (chainId: 534354 ) (updated on 2023.01.30):
+4. Scroll Alpha Testnet (chainId: 534353 ) (updated on 2023.05.15):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -166,25 +166,25 @@ Testnet
 
     * - Periphery
       - quoter (without limit)
-      - 0xfc88C03eea05aCd91e394d418B73978D6AF10E94
+      - 0xa9754f0D9055d14EB0D2d196E4C51d8B2Ee6f4d3
     * - 
       - quoter (within 10000 ticks )
-      - 0x3A507CB35fcDe6445EF6e3D44D836f81d24374B8
+      - 0xF6FFe4f3FdC8BBb7F70FFD48e61f17D1e343dDfD
     * - 
       - swap
-      - 0xaDd9336AB4a795a66E4E1820f5d347c4294dd76a
+      - 0x77132b63429718Db2B6ad8D942eE13A198f6Ab49
     * -
       - liquidityManager
-      - 0x6953DEe956eEe39973F1e1090368Ba434CCa0d94
+      - 0x67A1f4A939b477A6b7c5BF94D97E45dE87E608eF
     * - 
       - limitOrderManager
-      - 0xcFf0318C36147deaB07Cf751a00b21F83d13412d
+      - 0xC6C7c2edF70A3245ad6051E93809162B9758ce08
     * -
       - box
-      - 0xa847ffbeB5fD9F302ec6f5C38Cfd18E3b58c020f
+      - 0x95c5F14106ab4d1dc0cFC9326225287c18c2d247
     * -
       - tapProxy
-      - 0xffCE438BB30D468f78F12BB9d9e237B7D3Eb8bd8
+      - 0x4d140E612e476A6ba54EF1306b2bA398a5dEff09
 
 5. Mantle Testnet (chainId: 5001 ) (updated on 2023.03.08):
 
@@ -235,3 +235,54 @@ Testnet
     * -
       - tapProxy
       - 0x15F1b7f5007488986caaff32da9527B539EE722d
+
+
+6. Linea Testnet (chainId: 59140 ) (updated on 2023.05.26):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x64c2F1306b4ED3183E7B345158fd01c19C0d8c5E
+    * -
+      - swapX2YModule 
+      - 0xED9b4E3ED8fe7e820B950F28f939AF848f98e995 
+    * -
+      - swapY2XModule 
+      - 0x706A11AF5bb5C2a50aB9802503ddbfF69373D1bd
+    * -
+      - liquidityModule
+      - 0x817EC83Fb6906ba0777E89110d5089313385F4A2
+    * -
+      - limitOrderModule
+      - 0xAF931D7AaB9643d1E63Ed2E1fB17911c65e09678
+    * - 
+      - flashModule
+      - 0x29b66280F0Ea5F5DfbD7C94D560FC060575360cd
+
+    * - Periphery
+      - quoter (without limit)
+      - 0xF6FFe4f3FdC8BBb7F70FFD48e61f17D1e343dDfD 
+    * - 
+      - quoter (within 10000 ticks )
+      - 0x95c5F14106ab4d1dc0cFC9326225287c18c2d247
+    * - 
+      - swap
+      - 0xa9754f0D9055d14EB0D2d196E4C51d8B2Ee6f4d3
+    * -
+      - liquidityManager
+      - 0xC6C7c2edF70A3245ad6051E93809162B9758ce08
+    * - 
+      - limitOrderManager
+      - 0x1eE5eDC5Fe498a2dD82862746D674DB2a5e7fef6
+    * -
+      - box
+      - 0x4d140E612e476A6ba54EF1306b2bA398a5dEff09
+    * -
+      - tapProxy
+      - 0xEB122DE19FeA9eD039E2d087113db26017f5F91a

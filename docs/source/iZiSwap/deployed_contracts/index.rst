@@ -38,7 +38,9 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Mantle Testnet
 
-    * Scroll Test L2
+    * Scroll Alpha Testnet
+
+    * Linea Testnet
 
 .. toctree::
 
