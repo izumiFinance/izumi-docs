@@ -10,4 +10,4 @@ base examples for using LiquidityManager to manage liquidity.
 
    mint
    fetch_liquidities
-   decrease_liquidity
+.. decrease_liquidity
