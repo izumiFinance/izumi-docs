@@ -6,6 +6,9 @@ then select one of it and decrease (or called withdraw) some liquidity
 
 The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/liquidityManager/fetchLiquidityAndDec.ts>`_.
 
+We should notice that, after decrease liquidity, the tokens are still in the pool contract.
+To collect your decreased or fee token from pool. you can see this example :ref:`collect_liquidities`.
+
 1. fetch liquidities
 --------------------
 
@@ -16,7 +19,6 @@ The full example code of this chapter can be spotted `here <https://github.com/i
     const rpc = 'https://bsc-dataseed2.defibit.io/'
     console.log('rpc: ', rpc)
     const web3 = new Web3(new Web3.providers.HttpProvider(rpc))
-    console.log('aaaaaaaa')
     const account =  web3.eth.accounts.privateKeyToAccount(privateKey)
     console.log('address: ', account.address)
 
@@ -44,7 +46,7 @@ The full example code of this chapter can be spotted `here <https://github.com/i
 
 the code above is nearly the same as :ref:`fetch_liquidities`, you can view more detailed explains though this link
 
-2. select one of your liquidities to decrease (or withdraw)
+1. select one of your liquidities to decrease (or withdraw)
 -----------------------------------------------------------
 
 .. code-block:: typescript
