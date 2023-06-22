@@ -10,9 +10,3 @@ Limit Order
    :name: figure-limit-order1
 
 
-
-
-
-Grouped Orders
-------------------------------------------
-
