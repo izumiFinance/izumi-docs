@@ -33,6 +33,7 @@ Group the limit orders of different users at the same point into a grouped value
 The status updates of different users are lazy, meaning that their own parts will only be processed from this grouped value when they update their own limit orders.
 
 
+*Limitation: The time complexity of traversal did not disappear, but shifted from the swap operation to the limit order traders. Unlike traditional CEX models, limit order providers need to claim tokens traded on their own.*
 
 
 .. figure:: ../../_static/images/content/limit-order2.png
@@ -44,5 +45,16 @@ The status updates of different users are lazy, meaning that their own parts wil
 
 Legacy Design
 ------------------------------------
+The most crucial aspect of a limit order is to ensure chronological correctness. 
+That is, if the price passes through the target price, then regardless of subsequent price fluctuations, the portion that has been traded is locked in and can be claimed at any time.
+
+As a result, iZiSwap proposes a legacy locking mechanism as shown in the above figure. When the price crosses the target price, that is, when all limit orders on the target price are filled, 
+any remaining but unclaimed portion of the order will be moved to the legacyEarn space and recorded with a timestamp. 
+Due to the monotonicity of time, any user who placed an order before this time can retrieve their executed portion from the legacy space.
+
+
+*Limitation: The locking mechanism of Legacy is designed for the situation where the price passes through and all trades are completed. 
+For partially completed transactions, iZiSwap adheres to the principle of fairness and adopts a first-come, first-served claim method.*
+
 
 
