@@ -29,8 +29,8 @@ the execution of limit orders requires traversal of order placers in chronologic
 
 Grouped Limit Order
 ------------------------------------
-
-
+Group the limit orders of different users at the same point into a grouped value, which is the single target object in the swap process. 
+The status updates of different users are lazy, meaning that their own parts will only be processed from this grouped value when they update their own limit orders.
 
 
 
