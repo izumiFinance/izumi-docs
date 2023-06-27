@@ -21,6 +21,8 @@ For example, for the ETH/USDC/0.2% pool, the current price is 1 ETH = 2000 USDC.
 A user placed a sell limit order of 1 ETH at a price of 2500 USDC. When the price reaches or crosses 2500, this limit order will be filled. 
 However, if the price drops again to, for example, 2000 USDC, the token in this limit order still exists as 2500 USDC instead of 1 ETH.
 
+The core principle behind iZiSwap's design of limit orders is **fully non-custodial**, meaning that users' assets and trading activities are entirely carried out on the contract chain without relying on third-party relays or fund custody.
+
 From the perspective of swap, there is no difference in liquidity provided by both limit orders and normal liquidity positions. They are processed uniformly. 
 However, from an implementation perspective, we need new algorithms because on-chain operations require low time and space complexity. In traditional CEX matching engines, 
 the execution of limit orders requires traversal of order placers in chronological order. However, this is not acceptable on the blockchain. We propose the following two key designs for this purpose.
