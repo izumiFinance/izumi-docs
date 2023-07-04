@@ -48,6 +48,7 @@ Due to the equal liquidity at each price point and the fact that prices form a g
 *The concept of interval liquidity was first proposed by UniswapV3. Unlike our arithmetic sequence, their flow density is the same at each point, and their ingenious design can be calculated by integration in O(1) time.*
 
 
+In practical applications, in order to efficiently handle swaps, we restrict the values of the endpoints of range liquidity. For example, for a pool with a 0.2% fee rate, we require both l and r to be multiples of 40.
 
 
 .. |br| raw:: html
