@@ -3,7 +3,8 @@
 Concepts
 -----------------------
 
-some very important concepts for understanding the examples.
+Some very important concepts to understand the examples.
+We suggest first getting familiar with these concepts.
 
 .. toctree::
 
