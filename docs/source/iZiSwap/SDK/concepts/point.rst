@@ -3,47 +3,27 @@
 Point
 =====================
 
-in swap pool contracts, the **undecimal price** is discreted to points
+In iZiSwap pool contracts, the **undecimal price** is discreted into **points**.
 
-a **point** is a integer number in (-800000, 800000)
+A **point** is a integer number in range (-800000, 800000).
 
-they have following relationship:
+The relationship between the i-th **undecimal price** and **point** is:
 
 .. code-block:: typescript
     :linenos:
 
     undecimal_price = 1.0001 ** point
 
-current point of swap pool, and point on pool
----------------------------------------------
+Point on pool
+----------------
 
-Each izi-swap pool supports a trade pair, (tokenX, tokenY)
+Each iZiSwap pool supports a trade pair: (tokenX, tokenY), where addresses of tokenX and tokenY can be queried from the pool's view function `tokenX()` and `tokenY()`.
 
-address of tokenX and tokenY can be queried from pool's view function `tokenX()` and `tokenY()`
+There is a **restrict** for each pool that dictionary order of **tokenX lower case address** must be smaller than **tokenY lower case address**, that is, 
 
-there is a **restrict** for each pool that dictionary order of **tokenX lower case address** must be smaller than **tokenY lower case address**
+**tokenX** is the token with smaller address in the pool's trade pair.
 
-
-**current point** of swap pool is point of **undecimal price X by Y** after last trade in this pool.
-
-**current point** value can be queried from pool's view function `state()`
-
-when we know **current point**, we can get **current undecimal price X by Y**
-
-.. code-block:: typescript
-    :linenos:
-
-    current_undecimal_price_X_by_Y = 1.0001 ** current_point
-
-and we can get **current undecimal price Y by X**
-
-.. code-block:: typescript
-    :linenos:
-
-    current_undecimal_price_Y_by_X = 1.0001 ** (-current_point)
-
-point on pool
--------------
+**tokenY** is the token with larger address in the pool's trade pair.
 
 **point_on_pool** describe **undecimal_price_X_by_Y**, not **undecimal_price_Y_by_X**
 
@@ -54,17 +34,39 @@ point on pool
 
     undecimal_price_X_by_Y = 1.0001 ** point_on_pool
 
-**tokenX** is the token with smaller address in the pool's trade pair
 
-**tokenY** is the token with larger address in the pool's trade pair
 
-transform **undecimal price** to **point** on pool
+Current point of an iZiSwap pool
 --------------------------------------------------
 
-suppose we have 2 tokens, **tokenA** and **tokenB**, and we know undecimal price **undecimal_price_A_by_B**, how to transform **undecimal_price_A_by_B** to corresponding **point** on the pool
+**current point** of a iZiSwap pool is the point of **undecimal price X by Y** after last trade in this pool, and the **current point** value can be queried from pool's view function `state()`.
 
-first, compare dictionary order of tokenA and tokenB, as mentioned in :ref:`point on pool`, tokenX of pool is token with smaller address amoung tokenA and tokenB
-then we can get `undecimal_price_X_by_Y`. etc
+If we know the  **current point**, we can get the **current undecimal price X by Y** by
+
+.. code-block:: typescript
+    :linenos:
+
+    current_undecimal_price_X_by_Y = 1.0001 ** current_point
+
+and the  **current undecimal price Y by X** by
+
+.. code-block:: typescript
+    :linenos:
+
+    current_undecimal_price_Y_by_X = 1.0001 ** (-current_point)
+
+
+
+
+Transform **undecimal price** to **point** on pool
+--------------------------------------------------
+
+Suppose that we have 2 tokens, **tokenA** and **tokenB**, and we know the undecimal price **undecimal_price_A_by_B**. 
+
+To transform **undecimal_price_A_by_B** to the corresponding **point** on the pool,
+first, compare dictionary order of tokenA and tokenB, as mentioned in :ref:`point on pool`, tokenX of pool is token with smaller address among tokenA and tokenB.
+
+Now we can get `undecimal_price_X_by_Y` by
 
 .. code-block:: typescript
     :linenos:
@@ -74,9 +76,12 @@ then we can get `undecimal_price_X_by_Y`. etc
     else
         undecimal_price_X_by_Y = 1.0 / undecimal_price_A_by_B
 
-secondly we use fomula in :ref:`point on pool` to compute **point** on the pool
+Then we use the formula in :ref:`point on pool` to compute **point** on the pool
 
 .. code-block:: typescript
     :linenos:
 
     point_on_pool = Math.round(Math.log(1.0001, undecimal_price_X_by_Y))
+
+*Strictly speaking, the transformation from `undecimal price` to `point` is an approximation. However, if the `undecimal price` comes from the iZiSwap system, 
+the transformation is exact, since all prices from the system is discrete. Otherwise, the approximation is accurate enough for the most cases in reality.*

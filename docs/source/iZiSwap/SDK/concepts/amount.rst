@@ -1,7 +1,7 @@
-Amount of ERC20 Token
-=====================
+Amount of an ERC20 Token
+==========================
 
-In terms of amount (quantity), there are two different representations for the token: `decimal amount` and `undecimal amount`.
+In terms of amount (quantity), there are two different representations for a token: `decimal amount` and `undecimal amount`.
 
 Decimal amount
 --------------
