@@ -12,7 +12,8 @@ iZiSwap consists of core contracts (`iZiSwapPool`, `iZiSwapFactory`) and periphe
 In our sdk or frontend-app, we usually call interfaces of periphery contracts, and the periphery contracts will call corresponding core-contracts interfaces according to our params.
 
 The most frequently used function calls are `swapAmount()` and `swapDesire()` in the `Swap` contract from periphery contracts set.
-Here **desire** means whether the the amount of the output token is pre-determined. 
+Here **desire** means whether the the amount of the output token is pre-determined.  For example, if you want to swap M tokenA - > N tokenB,
+when M is pre-determined, `swapAmount()` should be invoked. If N is pre-determined, use `swapDesire()`.
 
 
 When we call the `swapAmount()` interface in `Swap`,
