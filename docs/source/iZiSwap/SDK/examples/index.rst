@@ -3,6 +3,8 @@
 Examples
 --------
 
+In this chapter, we will demonstrate how to implement the most common and important operations for iZiSwap using the SDK.
+
 .. toctree::
    :maxdepth: 2
    

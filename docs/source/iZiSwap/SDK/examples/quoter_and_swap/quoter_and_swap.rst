@@ -1,6 +1,6 @@
 
 
-quoter and swap
+Quoter and Swap
 ----------------------------
 
 some simple examples of quoter and swap
