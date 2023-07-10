@@ -9,7 +9,7 @@ the step is used to determine N.
 
 Quoter and swap are called throw 2 different contracts.
 
-Suppose we want to swap **testA** token to **testB** token, where these two tokens are standard ERC-20 tokens deployed on BSC.
+Suppose we want to swap **USDT** (testA) token to **BUSD** (testB) token, where these two tokens are standard ERC-20 tokens deployed on BSC.
 The full example codes can be found `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/quoterAndSwap/quoterSwapChainWithExactInput.ts>`_.
 
 1. Some imports
@@ -46,41 +46,40 @@ Here **quoterSwapChainWithExactInput** will return amount of token acquired (N).
     :linenos:
 
     const chain:BaseChain = initialChainTable[ChainId.BSC]
-    const rpc = 'https://bsc-dataseed2.defibit.io/'
-    console.log('rpc: ', rpc) 
+    const rpc = 'https://bsc-dataseed2.defibit.io/' //BSC network rpc node
     const web3 = new Web3(new Web3.providers.HttpProvider(rpc))
-    const account =  web3.eth.accounts.privateKeyToAccount(privateKey)
+    const account =  web3.eth.accounts.privateKeyToAccount(YOUR_PRIVATE_KEY)  //Fill with your sk, dangerous, never to share 
     console.log('address: ', account.address)
 
-    const testAAddress = '0xCFD8A067e1fa03474e79Be646c5f6b6A27847399'
-    const testBAddress = '0xAD1F11FBB288Cd13819cCB9397E59FAAB4Cdc16F'
+    const testAAddress = '0x55d398326f99059ff775485246999027b3197955' // USDT
+    const testBAddress = '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56' // BUSD
 
-    // TokenInfoFormatted of token 'testA' and token 'testB'
+    // TokenInfoFormatted of token 'USDT' and token 'BUSD'
     const testA = await fetchToken(testAAddress, chain, web3)
     const testB = await fetchToken(testBAddress, chain, web3)
-    const fee = 2000 // 2000 means 0.2%
+    const fee = 400 // 400 means 0.04%
 
-here we take example of paying token **testA** to acquire token **testB**
+We are going to pay token **testA** to acquire token **testB**.
 
 .. _quoter_swap_chain_with_exact_input_query:
 
-3. use quoter to pre-query amount of token **testB** acquired
--------------------------------------------------------------
+3. Use Quoter to pre-query amount of token **testB** acquired
+---------------------------------------------------------------
 
-first, we use **getQuoterContract** to get quoter contract
+First, we use **getQuoterContract** to instantiate a quoter contract.
 
 .. code-block:: typescript
     :linenos:
 
-    const quoterAddress = '0x12a76434182c8cAF7856CE1410cD8abfC5e2639F'
-    console.log('quoter address: ', quoterAddress)
+    const quoterAddress = '0x64b005eD986ed5D6aeD7125F49e61083c46b8e02' // Quoter address on BSC, more can be found in the deployed contracts section.
     const quoterContract = getQuoterContract(quoterAddress, web3)
 
-second, use **quoterSwapChainWithExactInput** to query
+Second, use **quoterSwapChainWithExactInput** to query.
 
 .. code-block:: typescript
     :linenos:
 
+    // swap 50 USDT -> BUSD
     const amountA = new BigNumber(50).times(10 ** testA.decimal)
 
     const params = {
@@ -98,12 +97,14 @@ second, use **quoterSwapChainWithExactInput** to query
     console.log(' amountA to pay: ', 50)
     console.log(' amountB to acquire: ', amountBDecimal)
 
-in the above code, we ready to pay **50** testA (decimal amount).we simply call function **quoterSwapChainWithExactInput** to get acquired amount of token **testB**
-the function **quoterSwapChainWithExactInput** need 2 params:
-first is **quoterContract** which is obtained through **getQuoterContract** before.
-second is an object of **QuoterSwapChainWithExactInputParams**, which describe informations such as **swap chains** and **input amount**
+In the above code, we are ready to pay **50** testA (USDT, decimal amount). 
+We simply call function **quoterSwapChainWithExactInput** to get the acquired amount of token **testB** (BUSD).
+The function **quoterSwapChainWithExactInput** need 2 params:
 
-the fields of **QuoterSwapChainWithExactInputParams** is explained in the following code.
+* - **quoterContract**: obtained through **getQuoterContract** before
+* - a **QuoterSwapChainWithExactInputParams** instance: describes information such as **swap chains** and **input amount**
+
+The fields of **QuoterSwapChainWithExactInputParams** is explained in the following code.
 
 .. code-block:: typescript
     :linenos:
@@ -128,8 +129,8 @@ the fields of **QuoterSwapChainWithExactInputParams** is explained in the follow
     }
 
 **iZiSwap**'s quoter and swap contracts support swap chain with multi swap pools.
-if you have some token0, and wants to get token3 through the path
-**(token0, token1, 0.05%) => (token1, token2, 0.3%) => (token2, token3, 0.3%)**, 
+For example, if you have some token0, and wants to get token3 through the path
+**token0 -> (token0, token1, 0.05%) -> token1 -> (token1, token2, 0.3%) -> token2 -> (token2, token3, 0.3%) -> token3**, 
 
 you should fill the **tokenChain** and **feeChain** fields with following code
 
@@ -141,18 +142,22 @@ you should fill the **tokenChain** and **feeChain** fields with following code
     params.tokenChain = [token0, token1, token2, token3]
     params.feeChain = [500, 3000, 3000]
 
-4. use swap to do pay token **testA** to get token **testB**
--------------------------------------------------------------
 
-first, we use **getQuoterContract** to get quoter contract
+
+Now we have finished the Quoter part. 
+
+4. Use Swap to actually pay token **testA** to get token **testB**
+----------------------------------------------------------------------
+
+First, we use **getSwapContract** to get the Swap contract
 
 .. code-block:: typescript
     :linenos:
 
-    const swapAddress = '0xBd3bd95529e0784aD973FD14928eEDF3678cfad8'
+    const swapAddress = '0xBd3bd95529e0784aD973FD14928eEDF3678cfad8' // Swap contract on BSC
     const swapContract = getSwapContract(swapAddress, web3)
 
-second, use **getSwapChainWithExactInputCall** to get calling of swap
+Second, use **getSwapChainWithExactInputCall** to get calling (transaction handler) of swap:
 
 .. code-block:: typescript
     :linenos:
@@ -160,10 +165,11 @@ second, use **getSwapChainWithExactInputCall** to get calling of swap
     const swapParams = {
         ...params,
         // slippery is 1.5%
+        // amountB is the pre-query result from Quoter
         minOutputAmount: new BigNumber(amountB).times(0.985).toFixed(0)
     } as SwapChainWithExactInputParams
     
-    const gasPrice = '5000000000'
+    const gasPrice = '3000000000' //BSC default gas price
 
     const tokenA = testA
     const tokenB = testB
@@ -184,8 +190,8 @@ second, use **getSwapChainWithExactInputCall** to get calling of swap
         gasPrice
     )
 
-in the above code, we ready to pay **50** testA (decimal amount).we simply call function **getSwapChainWithExactInputCall** to get acquired amount of token **testB**
-the params needed by function **getSwapChainWithExactInputCall** can be viewed in the following code
+In the above code, we ready to pay **50** testA (decimal amount). We simply call function **getSwapChainWithExactInputCall** to get acquired amount of token **testB**.
+The params needed by function **getSwapChainWithExactInputCall** can be viewed in the following code:
 
 .. code-block:: typescript
     :linenos:
@@ -249,7 +255,7 @@ the params needed by function **getSwapChainWithExactInputCall** can be viewed i
         strictERC20Token?: boolean;
     }
 
-usually, we can fill **SwapChainWithExactInputParams** through following code
+Usually, we can fill **SwapChainWithExactInputParams** through following code
 
 .. code-block:: typescript
     :linenos:
@@ -261,20 +267,22 @@ usually, we can fill **SwapChainWithExactInputParams** through following code
     } as SwapChainWithExactInputParams
 
 
-we should notice that, if tokenX or tokenY is chain token (like `ETH` on ethereum or `BNB` on bsc),
+Notice that in this example, both tokens are ERC-20 compatible tokens and is the general case. However,
+if tokenX or tokenY is chain gas token (such as `ETH` on Ethereum or `BNB` on BSD),
 we should specify one or some fields in `swapParams` to indicate sdk paying/acquiring in form of `Chain Token`
-or paying/acquiring in form of `Wrapped Chain Token` (like `WETH` on ethereum or `WBNB` on bsc).
+or paying/acquiring in form of `Wrapped Chain Token` (such as `WETH` on Ethereum or `WBNB` on BSC).
 
-In the sdk version 1.1.* or before, one should specify a field named `strictERC20Token` to indicate that.
-`true` for paying/acquiring token in form of `Wrapped Chain Token`, `false` for paying/acquiring in form of `Chain Token`.
-In the sdk version 1.2.* or later, you have two ways to indicate sdk. 
+..
+    In the sdk version 1.1.* or before, one should specify a field named `strictERC20Token` to indicate that.
+    `true` for paying/acquiring token in form of `Wrapped Chain Token`, `false` for paying/acquiring in form of `Chain Token`.
+    In the sdk version 1.2.* or later, you have two ways to indicate sdk. 
 
-The first way is as before, specifing `strictERC20Token` field.
-The second way is specifing `strictERC20Token` as undefined and specifying the corresponding token in this param as 
-`WETH` or `ETH`.
+    The first way is as before, specifing `strictERC20Token` field.
+    The second way is specifing `strictERC20Token` as undefined and specifying the corresponding token in this param as 
+    `WETH` or `ETH`.
 
 
-5. approve (skip if you pay chain token directly)
+5. Approve (skip if you pay chain token directly)
 ---------------------------------------------------
 
 before send transaction or estimate gas, you need approve contract liquidityManager to have authority to spend yuor token,
