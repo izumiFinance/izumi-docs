@@ -272,6 +272,44 @@ if tokenX or tokenY is chain gas token (such as `ETH` on Ethereum or `BNB` on BS
 we should specify one or some fields in `swapParams` to indicate sdk paying/acquiring in form of `Chain Token`
 or paying/acquiring in form of `Wrapped Chain Token` (such as `WETH` on Ethereum or `WBNB` on BSC).
 
+In that case, take **testA** to be BNB as example. 
+
+If you want to use BNB directly, just set testAAddress to be WBNB and `strictERC20Token` is `false` by default. 
+
+.. code-block:: typescript
+    :linenos:
+
+    ...
+
+    const testAAddress = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c' // WBNB
+
+    ...
+
+And the BNB need to pay (the value field in the transaction data) is set in the `options` return.
+
+
+If you want to use WBNB, first to set testAAddress to be WBNB and then to set `strictERC20Token` as `true`.
+
+
+.. code-block:: typescript
+    :linenos:
+
+    ...
+
+    const testAAddress = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c' // WBNB
+
+    ...
+
+    const swapParams = {
+        ...
+        strictERC20Token: true
+        ...
+    } as SwapChainWithExactInputParams
+
+    ...
+
+Now the swap will use WBNB instead of BNB.
+
 ..
     In the sdk version 1.1.* or before, one should specify a field named `strictERC20Token` to indicate that.
     `true` for paying/acquiring token in form of `Wrapped Chain Token`, `false` for paying/acquiring in form of `Chain Token`.
@@ -285,8 +323,11 @@ or paying/acquiring in form of `Wrapped Chain Token` (such as `WETH` on Ethereum
 5. Approve (skip if you pay chain token directly)
 ---------------------------------------------------
 
-before send transaction or estimate gas, you need approve contract liquidityManager to have authority to spend yuor token,
-because you need transfer some tokenA and some tokenB to pool.
+Before sending transaction or estimating gas, you need to approve contract Swap to have authority to spend your token.
+Since the contract need to transfer some tokenA or tokenB to the pool.
+
+
+If the allowance is enough or the input token is chain gas token, just skip this step.
 
 .. code-block:: typescript
     :linenos:
@@ -316,7 +357,7 @@ because you need transfer some tokenA and some tokenB to pool.
       "stateMutability": "nonpayable",
       "type": "function"
     }];
-    // if tokenA is not chain token (BNB on bsc chain or ETH on eth chain...), we need transfer tokenA to pool
+    // if tokenA is not chain token (BNB on BSC or ETH on Ethereum...), we need transfer tokenA to pool
     // otherwise we can skip following codes
     {
         const tokenAContract = new web3.eth.Contract(erc20ABI, testAAddress);
@@ -337,10 +378,11 @@ because you need transfer some tokenA and some tokenB to pool.
         await approveCalling.send({gas: gasLimit})
     }
 
-6. estimate gas (optional)
+6. Estimate gas (optional)
 --------------------------
 
-of course you can skip this step if you donot want to limit gas
+Before actually send the transaction, this is double check (or user experience enhancement measures) to check whether the gas spending is normal.
+
 
 .. code-block:: typescript
     :linenos:
@@ -348,19 +390,19 @@ of course you can skip this step if you donot want to limit gas
     const gasLimit = await swapCalling.estimateGas(options)
     console.log('gas limit: ', gasLimit)
 
-7. send transaction!
+7. Send transaction!
 --------------------
 
-now, we can then send transaction to swap
+Now, we can then send the transaction.
 
-for metamask or other explorer's wallet provider, you can easily write
+For metamask or other explorer's wallet provider, you can easily write
 
 .. code-block:: typescript
     :linenos:
 
     await swapCalling.send({...options, gas: gasLimit})
 
-otherwise, you could use following code
+Otherwise, you could use following code
 
 .. code-block:: typescript
     :linenos:
@@ -380,4 +422,4 @@ otherwise, you could use following code
     const tx = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
     console.log('tx: ', tx);
 
-after sending transaction, we will successfully do swapping with exact amount of input token (if no revert occured)
+After sending transaction, we will successfully finish swapping with exact amount of input token (if no revert occurred).
