@@ -1,58 +1,54 @@
-quoter/swap with exact input
+Quoter/Swap with exact input
 ============================
 
-in this example, we will do quoter and swap with exact input amount in iZiSwap.
+In this example, we will conduct price query and swap with exact input amount in iZiSwap (Amount Mode).
 
-here, **quoter with exact input amount** means pre-query amount of token acquired given exact input token amount.
+Here, **quoter with exact input amount** means pre-query amount of token acquired given exact input token amount. For example, if you want to swap 1 ETH to N USDC, 
+the step is used to determine N.
+**swap with exact input amount** means to invoke the real swap with the amount.
 
-**swap with exact input amount** means doing real swap with given exact input amount.
+Quoter and swap are called throw 2 different contracts.
 
-in this example, quoter and swap are called throw 2 different contracts.
+Suppose we want to swap **testA** token to **testB** token, where these two tokens are standard ERC-20 tokens deployed on BSC.
+The full example codes can be found `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/quoterAndSwap/quoterSwapChainWithExactInput.ts>`_.
 
-The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/quoterAndSwap/quoterSwapChainWithExactInput.ts>`_.
-
-1. some imports
+1. Some imports
 -----------------------------------------------------------
 
-first some base imports
+These are some base modules used in most examples.
 
 .. code-block:: typescript
     :linenos:
 
-    import {BaseChain, ChainId, initialChainTable} from 'iziswap-sdk/lib/base/types'
-    import {privateKey} from '../../.secret'
     import Web3 from 'web3';
-    import { amount2Decimal, fetchToken, getErc20TokenContract } from 'iziswap-sdk/lib/base/token/token';
+    import {privateKey} from '../../.secret'
     import { BigNumber } from 'bignumber.js'
-    import { getQuoterContract, quoterSwapChainWithExactInput } from 'iziswap-sdk/lib/quoter/funcs';
+    import {BaseChain, ChainId, initialChainTable} from 'iziswap-sdk/lib/base/types'
+    import { amount2Decimal, fetchToken, getErc20TokenContract } from 'iziswap-sdk/lib/base/token/token';
+
+And these are some imports for quoter and swap.
+
+.. code-block:: typescript
+    :linenos:
+
+    import { SwapChainWithExactInputParams } from 'iziswap-sdk/lib/swap/types';
     import { QuoterSwapChainWithExactInputParams } from 'iziswap-sdk/lib/quoter/types';
     import { getSwapChainWithExactInputCall, getSwapContract } from 'iziswap-sdk/lib/swap/funcs';
-    import { SwapChainWithExactInputParams } from 'iziswap-sdk/lib/swap/types';
+    import { getQuoterContract, quoterSwapChainWithExactInput } from 'iziswap-sdk/lib/quoter/funcs';
 
-second, some imports for quoter and swap
-
-.. code-block:: typescript
-    :linenos:
-
-    import { getQuoterContract, quoterSwapChainWithExactInput } from '../../src/quoter/funcs';
-    import { QuoterSwapChainWithExactInputParams } from '../../src/quoter/types';
-    import { getSwapChainWithExactInputCall, getSwapContract } from '../../src/swap/funcs';
-    import { SwapChainWithExactInputParams } from '../../src/swap/types';
-
-in the above code, **quoterSwapChainWithExactInput** will return amount of token acquired.
+Here **quoterSwapChainWithExactInput** will return amount of token acquired (N).
 **getSwapChainWithExactInputCall** will return calling for swapping with exact input.
 
-2. some initialization
+2. Some initialization
 -----------------------------------------------------------
 
 .. code-block:: typescript
     :linenos:
 
-    const chain:BaseChain = initialChainTable[ChainId.BSCTestnet]
+    const chain:BaseChain = initialChainTable[ChainId.BSC]
     const rpc = 'https://bsc-dataseed2.defibit.io/'
-    console.log('rpc: ', rpc)
+    console.log('rpc: ', rpc) 
     const web3 = new Web3(new Web3.providers.HttpProvider(rpc))
-    console.log('aaaaaaaa')
     const account =  web3.eth.accounts.privateKeyToAccount(privateKey)
     console.log('address: ', account.address)
 
