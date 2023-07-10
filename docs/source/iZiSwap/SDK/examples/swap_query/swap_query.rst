@@ -1,6 +1,6 @@
 
 
-swap query
+Swap Simulation
 ----------------------------
 
 some simple examples of swapQuery module

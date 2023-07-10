@@ -8,7 +8,7 @@ In this chapter, we will demonstrate how to implement the most common and import
 .. toctree::
    :maxdepth: 2
    
-   liquidity_manager/liquidity_manager
    quoter_and_swap/quoter_and_swap
+   liquidity_manager/liquidity_manager
    limit_order_manager/limit_order_manager
    swap_query/swap_query
