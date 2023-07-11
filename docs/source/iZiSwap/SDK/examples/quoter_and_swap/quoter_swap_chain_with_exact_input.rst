@@ -1,10 +1,11 @@
-Quoter/Swap with exact input
+Exact input mode
 ============================
 
 In this example, we will conduct price query and swap with exact input amount in iZiSwap (Amount Mode).
 
 Here, **quoter with exact input amount** means pre-query amount of token acquired given exact input token amount. For example, if you want to swap 1 ETH to N USDC, 
 the step is used to determine N.
+
 **swap with exact input amount** means to invoke the real swap with the amount.
 
 Quoter and swap are called throw 2 different contracts.
@@ -39,7 +40,7 @@ And these are some imports for quoter and swap.
 Here **quoterSwapChainWithExactInput** will return amount of token acquired (N).
 **getSwapChainWithExactInputCall** will return calling for swapping with exact input.
 
-2. Some initialization
+2. Initialization
 -----------------------------------------------------------
 
 .. code-block:: typescript
@@ -131,7 +132,6 @@ The fields of **QuoterSwapChainWithExactInputParams** is explained in the follow
 **iZiSwap**'s quoter and swap contracts support swap chain with multi swap pools.
 For example, if you have some token0, and wants to get token3 through the path
 **token0 -> (token0, token1, 0.05%) -> token1 -> (token1, token2, 0.3%) -> token2 -> (token2, token3, 0.3%) -> token3**, 
-
 you should fill the **tokenChain** and **feeChain** fields with following code
 
 
