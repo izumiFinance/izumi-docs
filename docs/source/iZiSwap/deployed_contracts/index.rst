@@ -29,6 +29,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Ontology
 
+    * Mantle
+
 *  Testnet:
     * BNB Chain Testnet
 
@@ -41,6 +43,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
     * Scroll Alpha Testnet
 
     * Linea Testnet
+
+    * OpBNB Testnet
 
 .. toctree::
 

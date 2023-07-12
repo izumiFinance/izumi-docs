@@ -186,7 +186,7 @@ Testnet
       - tapProxy
       - 0x4d140E612e476A6ba54EF1306b2bA398a5dEff09
 
-5. Mantle Testnet (chainId: 5001 ) (updated on 2023.03.08):
+5. Mantle Testnet (chainId: 5001 ) (updated on 2023.06.27):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -197,44 +197,44 @@ Testnet
       - Address
     * - Core
       - factory
-      - 0x848a0C239e1C42785f71e16B1d5c48D503fd0797
+      - 0xF7713d221418e098a788C4DaDd52F74b55B379E5
     * -
       - swapX2YModule 
-      - 0x7336A5a3251b9259DDf8B9D02a96dA0153e0799d
+      - 0xfc49751C99bE41792f17071862eeb248EE3a3eB8
     * -
       - swapY2XModule 
-      - 0x5708c30c6eCEa3f432aC860Cf6CFdF631f576810
+      - 0x9b2EB4C79dBe8556389364F884Abd7b51De1121c
     * -
       - liquidityModule
-      - 0x3aB38EF845E86E949253Dd3a6FdA37Cc7d4Cd892
+      - 0x44bDE35bc4eB41339E9c2Ec8B2B4B92FB684Da8E
     * -
       - limitOrderModule
-      - 0x6953DEe956eEe39973F1e1090368Ba434CCa0d94
+      - 0x2A19e0CF8c73280CdDdFd5877AA64A9690AE6d47
     * - 
       - flashModule
-      - 0xcFf0318C36147deaB07Cf751a00b21F83d13412d
+      - 0x069F50fcF55d96Fd95AE36b8E7DF44Db0dc426de
 
     * - Periphery
       - quoter (without limit)
-      - 0xEb13fc5753CA287A1B147ea47Ac327f3EC00FC83
+      - 0x6Cfc083bEFCFa41Dc36e33549F25429725B11A61
     * - 
       - quoter (within 10000 ticks )
-      - 0x3F6ab19d8b34Bcf2E40735218aD887BB4BDD342E
+      - 0xd06D1eeDbD9c64971DC946F466c56f020CDE6540
     * - 
       - swap
-      - 0x4FE2C54b7dDf6FaD344F2dD37563486d905933F2
+      - 0xae3272690D0db0199535EAec1C880283d4baD0cC
     * -
       - liquidityManager
-      - 0x3366351e9B0B4215396A442fF1A612CaBbed3017
+      - 0x879cd319b8aa506F4130acf766fA8E3654eD249B
     * - 
       - limitOrderManager
-      - 0x44512F7aFFd01fd464F6DEe14d863A0D692a47dB
+      - 0x4aAD4b81f886b12A29B68f9C8A7949d7d81Fe887
     * -
       - box
-      - 0x2742eBF02911F2d9cEBE42C976a7976715D5016a
+      - 0x5617675423Ac3C73081a3e331F5f135A948606D7
     * -
       - tapProxy
-      - 0x15F1b7f5007488986caaff32da9527B539EE722d
+      - 0x0953C6771cD8eE5421dE0CE1F11BEC559EBCF9d6
 
 
 6. Linea Testnet (chainId: 59140 ) (updated on 2023.05.26):
@@ -286,3 +286,53 @@ Testnet
     * -
       - tapProxy
       - 0xEB122DE19FeA9eD039E2d087113db26017f5F91a
+
+7. OpBNB Testnet (chainId: 5611 ) (updated on 2023.07.11):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0xF7713d221418e098a788C4DaDd52F74b55B379E5
+    * -
+      - swapX2YModule 
+      - 0xfc49751C99bE41792f17071862eeb248EE3a3eB8
+    * -
+      - swapY2XModule 
+      - 0x9b2EB4C79dBe8556389364F884Abd7b51De1121c
+    * -
+      - liquidityModule
+      - 0x44bDE35bc4eB41339E9c2Ec8B2B4B92FB684Da8E
+    * -
+      - limitOrderModule
+      - 0x2A19e0CF8c73280CdDdFd5877AA64A9690AE6d47
+    * - 
+      - flashModule
+      - 0x069F50fcF55d96Fd95AE36b8E7DF44Db0dc426de
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x6Cfc083bEFCFa41Dc36e33549F25429725B11A61
+    * - 
+      - quoter (within 10000 ticks )
+      - 0xd06D1eeDbD9c64971DC946F466c56f020CDE6540
+    * - 
+      - swap
+      - 0xae3272690D0db0199535EAec1C880283d4baD0cC
+    * -
+      - liquidityManager
+      - 0x879cd319b8aa506F4130acf766fA8E3654eD249B
+    * - 
+      - limitOrderManager
+      - 0x4aAD4b81f886b12A29B68f9C8A7949d7d81Fe887
+    * -
+      - box
+      - 0x5617675423Ac3C73081a3e331F5f135A948606D7
+    * -
+      - tapProxy
+      - 0x0953C6771cD8eE5421dE0CE1F11BEC559EBCF9d6 
