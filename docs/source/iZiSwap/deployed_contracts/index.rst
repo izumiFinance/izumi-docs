@@ -31,6 +31,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Mantle
 
+    * Linea
+
 *  Testnet:
     * BNB Chain Testnet
 
