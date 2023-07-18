@@ -523,7 +523,7 @@ Mainnet
       - Box
       - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
 
-10. ZkSync Era (chainId: 324) (updated on 2023.03.27):
+10. ZkSync Era (chainId: 324) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -534,41 +534,41 @@ Mainnet
       - Address
     * - Core
       - factory
-      - 0x33D9936b7B7BC155493446B5E6dDC0350EB83AEC
+      - 0x575Bfc57B0D3eA0d31b132D622643e71735A6957
     * -
       - swapX2YModule 
-      - 0x7499ce9c8F4FF47Be5dd5308Ab54cC710DE751E1
+      - 0x65adD4267b7D1C342a943c7C1dA9D81d41A47293
     * -
       - swapY2XModule 
-      - 0xBc94aedD2a0a986476b89e072B05e0Df117A3f8b
+      - 0x359BBb3b49b3bad5282502Df799aEEF6D9622b63
     * -
       - liquidityModule
-      - 0xC319755Dff1601b3D0520B421A281B11bF22E80F
+      - 0x894dFD50c3e55b31f13b0497654737132675B33C
     * -
       - limitOrderModule
-      - 0x8df80089B7AB1646DB211D43949ECdfc94582011
+      - 0x6d7661E0E51e3E460B26De4021e0BEF4a2B0Ebf5
     * - 
       - flashModule
-      - 0x0066f3791BD9d5a25d88F978dd8e1006445fE0d6
+      - 0x6B76e4EB16e61253F708F5b5406647da9019a763
 
     * - Periphery
       - quoter (without limit)
-      - 0x377EC7c9ae5a0787F384668788a1654249059dD6
+      - 0x30C089574551516e5F1169C32C6D429C92bf3CD7
     * - 
       - quoter (with 10000 ticks)
-      - 0x3EC82C07981D6D213DA9bd35A0ba4cd324feA438
+      - 0x1a447a8Ec35B8120549C6567fC6FCC0768b318C2 
     * - 
       - swap
-      - 0x9606eC131EeC0F84c95D82c9a63959F2331cF2aC
+      - 0x943ac2310D9BC703d6AB5e5e76876e212100f894
     * -
       - liquidityManager
-      - 0x936c9A1B8f88BFDbd5066ad08e5d773BC82EB15F
+      - 0x483FDE31bcE3DCc168E23a870831b50Ce2cCd1F1
     * - 
       - limitOrderManager
-      - 0x8b9D7D609a83B2f69D2135786a7D230043AF7283
+      - 0xe36caa16D78eF3233848a542D437C1c540Ca8149
     * - 
       - Box
-      - 0x7dEe7de9814ed6C1e20B3E4E2fA9b1B96E15FDe1
+      - 0xb498C54F8F73969841C2cBce6FD550b82eBbcB63
 
 
 12. Ontology (chainId: 58) (updated on 2023.04.25):
