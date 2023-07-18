@@ -2,7 +2,7 @@ Mainnet
 ==========================
 
 
-1. BNB Chain (BSC) (chainId: 56):
+1. BNB Chain (BSC) (chainId: 56) (update on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -13,41 +13,41 @@ Mainnet
       - Address
     * - Core
       - factory
-      - 0xd7de110Bd452AAB96608ac3750c3730A17993DE0
+      - 0x93BB94a0d5269cb437A1F71FF3a77AB753844422
     * -
       - swapX2YModule 
-      - 0x77C2C2eCe8F323abB6753b85D6b71C82039BFb17
+      - 0x759424DD2d409b4d6B39A83199177d07dc257ad7
     * -
       - swapY2XModule 
-      - 0xBf8F8Ef2d2a534773c61682Ea7cF5323a324B188
+      - 0xb922af73b899a4F0B9761b0c4407F1250FdD05be
     * -
       - liquidityModule
-      - 0xF42C48f971bDaA130573039B6c940212EeAb8496
+      - 0x1eaa949444F5a4BeE40D25d31039ECDDda0EEb19
     * -
       - limitOrderModule
-      - 0x344ADD21b136B09051fb061881eC7971c92cE7f7
+      - 0x2e2AbBFB7913669B930A4Ecfe130863c524A8810
     * - 
       - flashModule
-      - 0x79D175eF5fBe31b5D84B3ee359fcbBB466153E39
+      - 0x20804C62079569E1491fa948db005f93FA9a383d
 
     * - Periphery
       - quoter (without limit)
-      - 0x64b005eD986ed5D6aeD7125F49e61083c46b8e02
+      - 0x0e79C263EeBc37977038F26fb86Dfa84636cFE84
     * - 
       - quoter (with 10000 ticks)
-      - 0xF3409631f87B0bC9bD6e9D9FD26D31BaDAA21880
+      - 0xDCe9a4ACC59E69ECcC0cdA2E82fe601fdB726542
     * - 
       - swap
-      - 0xBd3bd95529e0784aD973FD14928eEDF3678cfad8
+      - 0xedf2021f41AbCfE2dEA4427E1B61f4d0AA5aA4b8
     * -
       - liquidityManager
-      - 0x93C22Fbeff4448F2fb6e432579b0638838Ff9581
+      - 0xBF55ef05412f1528DbD96ED9E7181f87d8C9F453
     * - 
       - limitOrderManager
-      - 0x9Bf8399c9f5b777cbA2052F83E213ff59e51612B
+      - 0x72fAfc28bFf27BB7a5cf70585CA1A5185AD2f201
     * - 
       - Box
-      - 0x05dCaF89dFA5A09d832aC4e7FE01f75e82643F60
+      - 0x7cbF7b96a7069bA384E10Ccb4F556DEBaB9c89F0
 
 
 2. Aurora (chainId: 1313161554) (updated on 2022.09.23):
