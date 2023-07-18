@@ -50,7 +50,7 @@ Mainnet
       - 0x7cbF7b96a7069bA384E10Ccb4F556DEBaB9c89F0
 
 
-2. Aurora (chainId: 1313161554) (updated on 2022.09.23):
+2. Aurora (chainId: 1313161554) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -61,41 +61,41 @@ Mainnet
       - Address
     * - Core
       - factory
-      - 0x156d8a0bE25FA232bb637Fc76255bCd00dEae9E9
+      - 0xce326A82913EAb09f7ec899C4508Cbe0E6526A74 
     * -
       - swapX2YModule 
-      - 0x9Bf8399c9f5b777cbA2052F83E213ff59e51612B
+      - 0xA7B45d3546b736B04cf80aa5Dd10d46c38E83068
     * -
       - swapY2XModule 
-      - 0x12a76434182c8cAF7856CE1410cD8abfC5e2639F
+      - 0x731C540Ad98564a6E3dC387F783475609721d0C3 
     * -
       - liquidityModule
-      - 0xBd3bd95529e0784aD973FD14928eEDF3678cfad8
+      - 0x9e0E3D5c0c1D554e05Fd7BDb5EA1513108e88414
     * -
       - limitOrderModule
-      - 0xCFD8A067e1fa03474e79Be646c5f6b6A27847399
+      - 0xF3409631f87B0bC9bD6e9D9FD26D31BaDAA21880
     * - 
       - flashModule
-      - 0xAD1F11FBB288Cd13819cCB9397E59FAAB4Cdc16F
+      - 0x41BE134611a6039aeA79029050f164bC50a6e597
 
     * - Periphery
       - quoter (without limit)
-      - 0x64b005eD986ed5D6aeD7125F49e61083c46b8e02
+      - 0xF2bd6078D51576B5c8d7e80AF3C4E2292e916985
     * - 
       - quoter (with 10000 ticks)
-      - 0x50E024bd504f066fd7f343d6D048F4BD97B1064E
+      - 0x5f6AF64f2FE0AE00D20932B6698aaB89AFb847eB
     * - 
       - swap
-      - 0x96539F87cA176c9f6180d65Bc4c10fca264aE4A5
+      - 0xEB9668316Cb87Bd107b05C52455ed31577eA82Cc
     * -
       - liquidityManager
-      - 0xE78e7447223aaED59301b44513D1d3A892ECF212
+      - 0x61A41182CD6e94f2A026aE3c0D1b73B1AA579aEa
     * - 
       - limitOrderManager
-      - 0x01fDea353849cA29F778B2663BcaCA1D191bED0e
+      - 0x05dCaF89dFA5A09d832aC4e7FE01f75e82643F60
     * - 
       - Box
-      - 0xC4987497DEddd529e689809Ad213cc7645170c22
+      - 0x759424DD2d409b4d6B39A83199177d07dc257ad7
 
 
 
