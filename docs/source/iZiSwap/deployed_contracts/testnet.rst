@@ -49,49 +49,7 @@ Testnet
       - Box
       - 0x8fbA4265785c56110B1277d6B23dD43B3797b3A8
 
-2. Aurora Testnet (chainId: 1313161555):
-
-.. list-table:: 
-    :widths: 25 25 50
-    :header-rows: 1
-
-    * -  
-      - Name
-      - Address
-    * - Core
-      - factory
-      - 0x64c2F1306b4ED3183E7B345158fd01c19C0d8c5E 
-    * -
-      - swapX2YModule 
-      - 0xED9b4E3ED8fe7e820B950F28f939AF848f98e995
-    * -
-      - swapY2XModule 
-      - 0x706A11AF5bb5C2a50aB9802503ddbfF69373D1bd
-    * -
-      - liquidityModule
-      - 0xAF931D7AaB9643d1E63Ed2E1fB17911c65e09678
-    * -
-      - limitOrderModule
-      - 0x817EC83Fb6906ba0777E89110d5089313385F4A2
-    * - 
-      - flashModule
-      - 0x29b66280F0Ea5F5DfbD7C94D560FC060575360cd
-
-    * - Periphery
-      - quoter 
-      - 0xa9754f0D9055d14EB0D2d196E4C51d8B2Ee6f4d3
-    * - 
-      - swap
-      - 0x77132b63429718Db2B6ad8D942eE13A198f6Ab49
-    * -
-      - liquidityManager
-      - 0xEa0f268a066dF3329283b0AF7560e19B89c35511
-    * - 
-      - limitOrderManager
-      - 0x1eE5eDC5Fe498a2dD82862746D674DB2a5e7fef6
-
-
-3. ZkSync Alpha Testnet (chainId: 280 ) (updated on 2023.04.10):
+2. ZkSync Alpha Testnet (chainId: 280 ) (updated on 2023.04.10):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -136,7 +94,7 @@ Testnet
       - 0x430972C4AF4703F7ce7B95C03735ae1504dD0Dd6
 
 
-4. Scroll Alpha Testnet (chainId: 534353 ) (updated on 2023.05.15):
+3. Scroll Alpha Testnet (chainId: 534353 ) (updated on 2023.05.15):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -186,7 +144,7 @@ Testnet
       - tapProxy
       - 0x4d140E612e476A6ba54EF1306b2bA398a5dEff09
 
-5. Mantle Testnet (chainId: 5001 ) (updated on 2023.06.27):
+4. Mantle Testnet (chainId: 5001 ) (updated on 2023.06.27):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -237,7 +195,7 @@ Testnet
       - 0x0953C6771cD8eE5421dE0CE1F11BEC559EBCF9d6
 
 
-6. Linea Testnet (chainId: 59140 ) (updated on 2023.05.26):
+5. Linea Testnet (chainId: 59140 ) (updated on 2023.05.26):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -287,7 +245,7 @@ Testnet
       - tapProxy
       - 0xEB122DE19FeA9eD039E2d087113db26017f5F91a
 
-7. OpBNB Testnet (chainId: 5611 ) (updated on 2023.07.11):
+6. OpBNB Testnet (chainId: 5611 ) (updated on 2023.07.11):
 
 .. list-table:: 
     :widths: 25 25 50
