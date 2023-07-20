@@ -620,7 +620,7 @@ Mainnet
       - 0x3a2932a74e511C9Dc4CaD60e06eE6D3690Ce2492
 
 
-14. Linea (chainId: 59144) (updated on 2023.07.15):
+14. Linea (chainId: 59144) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -631,38 +631,38 @@ Mainnet
       - Address
     * - Core
       - factory
-      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+      - 0x45e5F26451CDB01B0fA1f8582E0aAD9A6F27C218
     * -
       - swapX2YModule 
-      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe 
+      - 0x88867BF3bB3321d8c7Da71a8eAb70680037068E4
     * -
       - swapY2XModule 
-      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+      - 0xB8dDAfE7385A962a4515821248368823E93fa61F
     * -
       - liquidityModule
-      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+      - 0x77aB297Da4f3667059ef0C32F5bc657f1006cBB0
     * -
       - limitOrderModule
-      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+      - 0x6a7CDD0CC87ec02ed85c196e57BaBe1bc0Acd6f2
     * - 
       - flashModule
-      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+      - 0x4a41EbEa62E7aB70413356D30DF73cA803aaE41c
 
     * - Periphery
       - quoter (without limit)
-      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
+      - 0xe6805638db944eA605e774e72c6F0D15Fb6a1347
     * - 
       - quoter (with 10000 ticks)
-      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+      - 0xe4A0b241D8345d86FB140D40c87C5fbDd685B9dd
     * - 
       - swap
-      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2 
+      - 0x032b241De86a8660f1Ae0691a4760B426EA246d7
     * -
       - liquidityManager
-      - 0x110dE362cc436D7f54210f96b8C7652C2617887D
+      - 0x1CB60033F61e4fc171c963f0d2d3F63Ece24319c
     * - 
       - limitOrderManager
-      - 0x1502d025BfA624469892289D45C0352997251728
+      - 0x25C030116Feb2E7BbA054b9de0915E5F51b03e31
     * - 
       - Box
-      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
+      - 0x19647d5f84308EE780cC5E3Da6E4aEe8e12B0ED4
