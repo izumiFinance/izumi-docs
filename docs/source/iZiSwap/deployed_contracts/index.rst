@@ -5,35 +5,28 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
 
 *  Mainnet:
+
     * BNB Chain (BSC)
 
     * Aurora
 
-    * Polygon
-
-    * Arbitrum
-
-    * Cronos
-
-    * Ethereum Classic (ETC)
-
-    * Conflux
-
-    * Icplaza
-
-    * Meter
-
     * ZkSync Era
-
-    * Ethereum 
-
-    * Ontology
-
-    * Mantle
 
     * Linea
 
+    * Mantle
+
+    * Arbitrum
+
+    * Polygon
+
+    * Meter
+
+    * Ontology
+
+
 *  Testnet:
+
     * BNB Chain Testnet
 
     * Aurora Testnet

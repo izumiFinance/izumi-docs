@@ -97,53 +97,8 @@ Mainnet
       - Box
       - 0x759424DD2d409b4d6B39A83199177d07dc257ad7
 
-
-
-3. Ethereum Classic (ETC) (chainId: 61):
-
-.. list-table:: 
-    :widths: 25 25 50
-    :header-rows: 1
-
-    * -  
-      - Name
-      - Address
-    * - Core
-      - factory
-      - 0x25C030116Feb2E7BbA054b9de0915E5F51b03e31
-    * -
-      - swapX2YModule 
-      - 0x4a41EbEa62E7aB70413356D30DF73cA803aaE41c
-    * -
-      - swapY2XModule 
-      - 0x6a7CDD0CC87ec02ed85c196e57BaBe1bc0Acd6f2
-    * -
-      - liquidityModule
-      - 0x45e5F26451CDB01B0fA1f8582E0aAD9A6F27C218
-    * -
-      - limitOrderModule
-      - 0x611575eE1fbd4F7915D0eABCC518eD396fF78F0c
-    * - 
-      - flashModule
-      - 0xcA7e21764CD8f7c1Ec40e651E25Da68AeD096037
-
-    * - Periphery
-      - quoter (without limit)
-      - 0xe4A0b241D8345d86FB140D40c87C5fbDd685B9dd
-    * - 
-      - swap
-      - 0xe6805638db944eA605e774e72c6F0D15Fb6a1347
-    * -
-      - liquidityManager
-      - 0x1D377311b342633A970e71a787C50F83858BFC1B
-    * - 
-      - limitOrderManager
-      - 0x032b241De86a8660f1Ae0691a4760B426EA246d7
-    * - 
-      - Box
-      - 0x3a2932a74e511C9Dc4CaD60e06eE6D3690Ce2492
       
-4. Arbitrum (chainId: 42161) (updated on 2023.07.17):
+3. Arbitrum (chainId: 42161) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -190,57 +145,7 @@ Mainnet
       - Box
       - 0x50E024bd504f066fd7f343d6D048F4BD97B1064E
 
-
-5. Cronos (chainId: 25) (updated on 2022.09.23):
-
-.. list-table:: 
-    :widths: 25 25 50
-    :header-rows: 1
-
-    * -  
-      - Name
-      - Address
-    * - Core
-      - factory
-      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
-    * -
-      - swapX2YModule 
-      - 0x110dE362cc436D7f54210f96b8C7652C2617887D
-    * -
-      - swapY2XModule 
-      - 0x1502d025BfA624469892289D45C0352997251728
-    * -
-      - liquidityModule
-      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
-    * -
-      - limitOrderModule
-      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
-    * - 
-      - flashModule
-      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
-
-    * - Periphery
-      - quoter (without limit)
-      - 0x2C6Df0fDbCE9D2Ded2B52A117126F2Dc991f770f
-    * - 
-      - quoter (with 10000 ticks)
-      - 0x88867BF3bB3321d8c7Da71a8eAb70680037068E4
-    * - 
-      - swap
-      - 0x04830cfCED9772b8ACbAF76Cfc7A630Ad82c9148
-    * -
-      - liquidityManager
-      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
-    * - 
-      - limitOrderManager
-      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
-    * - 
-      - Box
-      - 0xB8dDAfE7385A962a4515821248368823E93fa61F
-
-    
-
-6. Polygon (chainId: 137) (updated on 2022.09.28):
+4. Polygon (chainId: 137) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -251,137 +156,40 @@ Mainnet
       - Address
     * - Core
       - factory
-      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+      - 0xcA7e21764CD8f7c1Ec40e651E25Da68AeD096037
     * -
       - swapX2YModule 
-      - 0x110dE362cc436D7f54210f96b8C7652C2617887D
+      - 0x77aB297Da4f3667059ef0C32F5bc657f1006cBB0 
     * -
       - swapY2XModule 
-      - 0x1502d025BfA624469892289D45C0352997251728
+      - 0x6a7CDD0CC87ec02ed85c196e57BaBe1bc0Acd6f2
     * -
       - liquidityModule
-      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
+      - 0x4a41EbEa62E7aB70413356D30DF73cA803aaE41c
     * -
       - limitOrderModule
-      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+      - 0x45e5F26451CDB01B0fA1f8582E0aAD9A6F27C218 
     * - 
       - flashModule
-      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
+      - 0x611575eE1fbd4F7915D0eABCC518eD396fF78F0c
 
     * - Periphery
       - quoter (without limit)
-      - 0x04830cfCED9772b8ACbAF76Cfc7A630Ad82c9148
+      - 0xe6805638db944eA605e774e72c6F0D15Fb6a1347
     * - 
       - quoter (with 10000 ticks)
-      - 0x2C6Df0fDbCE9D2Ded2B52A117126F2Dc991f770f
+      - 0xe4A0b241D8345d86FB140D40c87C5fbDd685B9dd
     * - 
       - swap
-      - 0x3F559139C2Fc7B97Ad6FE9B4d1f75149F551DB18
+      - 0x032b241De86a8660f1Ae0691a4760B426EA246d7
     * -
       - liquidityManager
-      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+      - 0x1CB60033F61e4fc171c963f0d2d3F63Ece24319c
     * - 
       - limitOrderManager
-      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
-    * - 
-      - Box
-      - 0x14323AfbC2b82fE58F0D9c203830EE969B4d1bE2
+      - 0x25C030116Feb2E7BbA054b9de0915E5F51b03e31
 
-7. Icplaza (chainId: 142857) (updated on 2022.12.29):
-
-.. list-table:: 
-    :widths: 25 25 50
-    :header-rows: 1
-
-    * -  
-      - Name
-      - Address
-    * - Core
-      - factory
-      - 0xCe1E9F846b05Ce9996BA2f55F3EC731c7C1A0fdb
-    * -
-      - swapX2YModule 
-      - 0x4353b845AfE70D4405E9d35a5A9cfE151d9A3cA7 
-    * -
-      - swapY2XModule 
-      - 0x31032ECb1920F3bBfB5960Ed47d264753FbB1577
-    * -
-      - liquidityModule
-      - 0xa7f0AFE82979A7Fca7ba6dC0F0F311A02d760325
-    * -
-      - limitOrderModule
-      - 0x95eed35F0ad225d53EC8D2459A90eDc715EC341F
-    * - 
-      - flashModule
-      - 0x303201c3CB79f99E240a0B3ad91A98BFbFa67AD7
-
-    * - Periphery
-      - quoter (without limit)
-      - 0x95308cD647F6f2a44c891BC685d6117b3d27e461
-    * - 
-      - quoter (with 10000 ticks)
-      - 0x4FB0eacF72Bb49666f2D9Cf08ac4A31e1b68937b
-    * - 
-      - swap
-      - 0xE0c7b10009fC582beFE3cAFE777eC7E2753368aF
-    * -
-      - liquidityManager
-      - 0x5bD3E57915D8136d5118Fb08C838542A3DE817DC
-    * - 
-      - limitOrderManager
-      - 0xF2a57CA885a082782764CC357fCD79466481C80D
-    * - 
-      - Box
-      - 0x1B76dC1494c38a4314d001a2f86AAAe45B48dFe0
-
-8. Conflux (chainId: 1030) (updated on 2023.02.21):
-
-.. list-table:: 
-    :widths: 25 25 50
-    :header-rows: 1
-
-    * -  
-      - Name
-      - Address
-    * - Core
-      - factory
-      - 0x110dE362cc436D7f54210f96b8C7652C2617887D
-    * -
-      - swapX2YModule 
-      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
-    * -
-      - swapY2XModule 
-      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
-    * -
-      - liquidityModule
-      - 0xe96526e92ee57bBD468DA1721987aa988b008768
-    * -
-      - limitOrderModule
-      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
-    * - 
-      - flashModule
-      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
-
-    * - Periphery
-      - quoter (without limit)
-      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
-    * - 
-      - quoter (with 10000 ticks)
-      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
-    * - 
-      - swap
-      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
-    * -
-      - liquidityManager
-      - 0x1502d025BfA624469892289D45C0352997251728
-    * - 
-      - limitOrderManager
-      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
-    * - 
-      - Box
-      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
-
-9. Meter (chainId: 82) (updated on 2023.07.17):
+5. Meter (chainId: 82) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -426,7 +234,7 @@ Mainnet
       - 0x35Dcc4e1ae93DA1316b603f0A9Fe3aD1b85C38C6
 
 
-10. ZkSync Era (chainId: 324) (updated on 2023.07.17):
+6. ZkSync Era (chainId: 324) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -474,56 +282,7 @@ Mainnet
       - 0xb498C54F8F73969841C2cBce6FD550b82eBbcB63
 
 
-11. Ethereum (chainId: 1) (updated on 2023.04.21):
-
-.. list-table:: 
-    :widths: 25 25 50
-    :header-rows: 1
-
-    * -  
-      - Name
-      - Address
-    * - Core
-      - factory
-      - 0x1502d025BfA624469892289D45C0352997251728
-    * -
-      - swapX2YModule 
-      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
-    * -
-      - swapY2XModule 
-      - 0xe96526e92ee57bBD468DA1721987aa988b008768
-    * -
-      - liquidityModule
-      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
-    * -
-      - limitOrderModule
-      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
-    * - 
-      - flashModule
-      - 0x110dE362cc436D7f54210f96b8C7652C2617887D
-
-    * - Periphery
-      - quoter (without limit)
-      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
-    * - 
-      - quoter (with 10000 ticks)
-      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
-    * - 
-      - swap
-      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
-    * -
-      - liquidityManager
-      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
-    * - 
-      - limitOrderManager
-      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
-    * - 
-      - Box
-      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
-
-
-
-12. Ontology (chainId: 58) (updated on 2023.04.25):
+7. Ontology (chainId: 58) (updated on 2023.04.25):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -570,7 +329,7 @@ Mainnet
       - Box
       - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
 
-13. Mantle (chainId: 5000) (updated on 2023.07.17):
+8. Mantle (chainId: 5000) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -618,7 +377,7 @@ Mainnet
       - 0x3a2932a74e511C9Dc4CaD60e06eE6D3690Ce2492
 
 
-14. Linea (chainId: 59144) (updated on 2023.07.17):
+9. Linea (chainId: 59144) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
