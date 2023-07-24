@@ -24,6 +24,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Ontology
 
+    * Ethereum Classic
+
 
 *  Testnet:
 

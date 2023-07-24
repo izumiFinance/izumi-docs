@@ -423,3 +423,48 @@ Mainnet
     * - 
       - Box
       - 0x19647d5f84308EE780cC5E3Da6E4aEe8e12B0ED4
+
+
+10. Ethereum Classic (chainId: 61) (updated on 2023.07.24):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x79D175eF5fBe31b5D84B3ee359fcbBB466153E39
+    * -
+      - swapX2YModule 
+      - 0x19647d5f84308EE780cC5E3Da6E4aEe8e12B0ED4 
+    * -
+      - swapY2XModule 
+      - 0x77C2C2eCe8F323abB6753b85D6b71C82039BFb17
+    * -
+      - liquidityModule
+      - 0xBf8F8Ef2d2a534773c61682Ea7cF5323a324B188
+    * -
+      - limitOrderModule
+      - 0xF42C48f971bDaA130573039B6c940212EeAb8496
+    * - 
+      - flashModule
+      - 0x344ADD21b136B09051fb061881eC7971c92cE7f7
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x12a76434182c8cAF7856CE1410cD8abfC5e2639F
+    * - 
+      - quoter (with 10000 ticks)
+      - 0xBd3bd95529e0784aD973FD14928eEDF3678cfad8 
+    * - 
+      - swap
+      - 0x9Bf8399c9f5b777cbA2052F83E213ff59e51612B
+    * -
+      - liquidityManager
+      - 0xd7de110Bd452AAB96608ac3750c3730A17993DE0
+    * - 
+      - limitOrderManager
+      - 0xAC9788cfea201950dB91d7db6F28C448CF3A4B29
