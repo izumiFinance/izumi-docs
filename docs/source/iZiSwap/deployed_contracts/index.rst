@@ -16,6 +16,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Mantle
 
+    * Base
+
     * Arbitrum
 
     * Polygon
