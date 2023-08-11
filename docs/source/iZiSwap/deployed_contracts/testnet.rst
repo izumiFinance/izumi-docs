@@ -256,41 +256,41 @@ Testnet
       - Address
     * - Core
       - factory
-      - 0xF7713d221418e098a788C4DaDd52F74b55B379E5
+      - 0x64c2F1306b4ED3183E7B345158fd01c19C0d8c5E 
     * -
       - swapX2YModule 
-      - 0xfc49751C99bE41792f17071862eeb248EE3a3eB8
+      - 0xED9b4E3ED8fe7e820B950F28f939AF848f98e995
     * -
       - swapY2XModule 
-      - 0x9b2EB4C79dBe8556389364F884Abd7b51De1121c
+      - 0x706A11AF5bb5C2a50aB9802503ddbfF69373D1bd
     * -
       - liquidityModule
-      - 0x44bDE35bc4eB41339E9c2Ec8B2B4B92FB684Da8E
+      - 0x817EC83Fb6906ba0777E89110d5089313385F4A2
     * -
       - limitOrderModule
-      - 0x2A19e0CF8c73280CdDdFd5877AA64A9690AE6d47
+      - 0xAF931D7AaB9643d1E63Ed2E1fB17911c65e09678
     * - 
       - flashModule
-      - 0x069F50fcF55d96Fd95AE36b8E7DF44Db0dc426de
+      - 0x29b66280F0Ea5F5DfbD7C94D560FC060575360cd
 
     * - Periphery
       - quoter (without limit)
-      - 0x6Cfc083bEFCFa41Dc36e33549F25429725B11A61
+      - 0x95c5F14106ab4d1dc0cFC9326225287c18c2d247
     * - 
       - quoter (within 10000 ticks )
-      - 0xd06D1eeDbD9c64971DC946F466c56f020CDE6540
+      - 0x4d140E612e476A6ba54EF1306b2bA398a5dEff09
     * - 
       - swap
-      - 0xae3272690D0db0199535EAec1C880283d4baD0cC
+      - 0xF6FFe4f3FdC8BBb7F70FFD48e61f17D1e343dDfD
     * -
       - liquidityManager
-      - 0x879cd319b8aa506F4130acf766fA8E3654eD249B
+      - 0x1eE5eDC5Fe498a2dD82862746D674DB2a5e7fef6
     * - 
       - limitOrderManager
-      - 0x4aAD4b81f886b12A29B68f9C8A7949d7d81Fe887
+      - 0x77132b63429718Db2B6ad8D942eE13A198f6Ab49
     * -
       - box
-      - 0x5617675423Ac3C73081a3e331F5f135A948606D7
+      - 0xEB122DE19FeA9eD039E2d087113db26017f5F91a
     * -
       - tapProxy
-      - 0x0953C6771cD8eE5421dE0CE1F11BEC559EBCF9d6 
+      - 0x6AECfe44225A50895e9EC7ca46377B9397D1Bb5b
