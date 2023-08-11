@@ -94,7 +94,7 @@ Testnet
       - 0x430972C4AF4703F7ce7B95C03735ae1504dD0Dd6
 
 
-3. Scroll Alpha Testnet (chainId: 534353 ) (updated on 2023.05.15):
+3. Scroll Alpha Testnet (chainId: 534353 ) (updated on 2023.08.10):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -105,44 +105,41 @@ Testnet
       - Address
     * - Core
       - factory
-      - 0x64c2F1306b4ED3183E7B345158fd01c19C0d8c5E
+      - 0xe821322692Ef22e0BA985c1Ad8BD3042e9E1Cc43
     * -
       - swapX2YModule 
-      - 0xED9b4E3ED8fe7e820B950F28f939AF848f98e995
+      - 0x10232eC2FbA69A15E3054153C311770A6eEB80C9
     * -
       - swapY2XModule 
-      - 0x706A11AF5bb5C2a50aB9802503ddbfF69373D1bd
+      - 0x8Df50480bEFC508289F3AbbaB5826c8ae809327A
     * -
       - liquidityModule
-      - 0x817EC83Fb6906ba0777E89110d5089313385F4A2
+      - 0x3012a5769CE456cc65DDE8403176228D7Dd93729
     * -
       - limitOrderModule
-      - 0xAF931D7AaB9643d1E63Ed2E1fB17911c65e09678
+      - 0xe3213248CA0798CBC6f9402A8fdeD34d2abB3dA2
     * - 
       - flashModule
-      - 0x29b66280F0Ea5F5DfbD7C94D560FC060575360cd
+      - 0xa6585bbfae62096eBd7d71668B3E6cdE300a8c3E
 
     * - Periphery
       - quoter (without limit)
-      - 0xa9754f0D9055d14EB0D2d196E4C51d8B2Ee6f4d3
+      - 0xa88C8AA45D9f7a33F4BC53d4d449F669BF60F823
     * - 
       - quoter (within 10000 ticks )
-      - 0xF6FFe4f3FdC8BBb7F70FFD48e61f17D1e343dDfD
+      - 0xcC2DE5D1A8154f7fa0e80a6732a38422D8fBEB10 
     * - 
       - swap
-      - 0x77132b63429718Db2B6ad8D942eE13A198f6Ab49
+      - 0x35BF764d0440CBB1F7b546e6AF664177DEBF8304
     * -
       - liquidityManager
-      - 0x67A1f4A939b477A6b7c5BF94D97E45dE87E608eF
+      - 0x539E30dBa3Bb825626C7A91D42557E49FF4C4413
     * - 
       - limitOrderManager
-      - 0xC6C7c2edF70A3245ad6051E93809162B9758ce08
-    * -
-      - box
-      - 0x95c5F14106ab4d1dc0cFC9326225287c18c2d247
+      - 0x58ce24c6cDC0d5A2c3BcA1e179E869AF97266829
     * -
       - tapProxy
-      - 0x4d140E612e476A6ba54EF1306b2bA398a5dEff09
+      - 0x0e7091e9036c2E7b3E6978Dd868d458a731Cd998
 
 4. Mantle Testnet (chainId: 5001 ) (updated on 2023.06.27):
 
