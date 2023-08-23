@@ -1,3 +1,5 @@
+.. _quoter_swap_chain_with_exact_input:
+
 Exact input mode
 ============================
 

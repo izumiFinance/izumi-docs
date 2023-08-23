@@ -21,5 +21,6 @@ Quoter and Swap are 2 different contracts and the deployed contracts can be foun
 .. toctree::
    :maxdepth: 1
 
+   search_path
    quoter_swap_chain_with_exact_input
    quoter_swap_chain_with_exact_output
