@@ -22,6 +22,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Polygon
 
+    * OpBNB
+
     * Meter
 
     * Ontology
