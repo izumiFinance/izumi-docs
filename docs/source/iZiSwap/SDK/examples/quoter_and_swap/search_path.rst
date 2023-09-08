@@ -15,7 +15,6 @@ The only difference of these two modes while doing path searching can be viewed 
 1. Some imports
 -----------------------------------------------------------
 
-
 .. code-block:: typescript
     :linenos:
 
