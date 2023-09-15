@@ -30,6 +30,10 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Ethereum Classic
 
+    * Kroma
+
+    * Manta 
+
 
 *  Testnet:
 
