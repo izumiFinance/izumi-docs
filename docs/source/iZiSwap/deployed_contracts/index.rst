@@ -44,7 +44,7 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Mantle Testnet
 
-    * Scroll Alpha Testnet
+    * Scroll Sepolia Testnet
 
     * Linea Testnet
 
