@@ -48,8 +48,6 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Linea Testnet
 
-    * OpBNB Testnet
-
 
 .. toctree::
 
