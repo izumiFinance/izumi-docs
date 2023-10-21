@@ -282,7 +282,7 @@ Mainnet
       - 0xb498C54F8F73969841C2cBce6FD550b82eBbcB63
 
 
-7. Ontology (chainId: 58) (updated on 2023.04.25):
+7. Ontology (chainId: 58) (updated on 2023.10.19):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -293,41 +293,38 @@ Mainnet
       - Address
     * - Core
       - factory
-      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+      - 0x032b241De86a8660f1Ae0691a4760B426EA246d7
     * -
       - swapX2YModule 
-      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+      - 0x611575eE1fbd4F7915D0eABCC518eD396fF78F0c
     * -
       - swapY2XModule 
-      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+      - 0xcA7e21764CD8f7c1Ec40e651E25Da68AeD096037
     * -
       - liquidityModule
-      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+      - 0x1CB60033F61e4fc171c963f0d2d3F63Ece24319c
     * -
       - limitOrderModule
-      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+      - 0x25C030116Feb2E7BbA054b9de0915E5F51b03e31
     * - 
       - flashModule
-      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+      - 0x1D377311b342633A970e71a787C50F83858BFC1B
 
     * - Periphery
       - quoter (without limit)
-      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
+      - 0x93C22Fbeff4448F2fb6e432579b0638838Ff9581
     * - 
       - quoter (with 10000 ticks)
-      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+      - 0x9Bf8399c9f5b777cbA2052F83E213ff59e51612B
     * - 
       - swap
-      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+      - 0xAC9788cfea201950dB91d7db6F28C448CF3A4B29
     * -
       - liquidityManager
-      - 0x110dE362cc436D7f54210f96b8C7652C2617887D
+      - 0x344ADD21b136B09051fb061881eC7971c92cE7f7
     * - 
       - limitOrderManager
-      - 0x1502d025BfA624469892289D45C0352997251728
-    * - 
-      - Box
-      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+      - 0x79D175eF5fBe31b5D84B3ee359fcbBB466153E39
 
 8. Mantle (chainId: 5000) (updated on 2023.07.17):
 
