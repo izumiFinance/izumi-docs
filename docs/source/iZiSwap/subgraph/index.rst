@@ -14,4 +14,36 @@ iZiSwap provides GraphQL-based indexing on most supported blockchain networks. T
 
 
 
+example:
 
+.. code-block:: 
+
+   query swapsQuery($address: Bytes!, $timestamp: BigInt) {
+      swaps(
+         where: { account: $address, timestamp_gte: $timestamp }
+         orderBy: timestamp
+         orderDirection: asc
+         first: 1000
+      ) {
+         amountX
+         amountY
+         amountUSD
+         timestamp
+      }
+   }
+
+   query positionsQuery($owner: Bytes!, $timestamp: BigInt) {
+      liquidities(
+         orderBy: transaction__timestamp
+         first: 1000
+         where: { owner: $owner, transaction_: { timestamp_gte: $timestamp } }
+         orderDirection: asc
+      ) {
+         liquidity
+         depositedTokenX
+         depositedTokenY
+         transaction {
+            timestamp
+         }
+      }
+   }
