@@ -1,9 +1,9 @@
 .. _collect_liquidities:
 
-collect a liquidity
-====================
+collect a liquidity position
+=============================
 
-in this example, we first fetch all liquidities of an account, 
+In this example, we first fetch all liquidities of an account, 
 then select one of it and collect fee or decreased token from it.
 
 The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/iZiSwap-sdk/blob/main/example/liquidityManager/fetchLiquidityAndCollect.ts>`_.
@@ -43,9 +43,9 @@ The full example code of this chapter can be spotted `here <https://github.com/i
     console.log('liquidity len: ', liquidities.length)
     console.log('liquidity: ', liquidities)
 
-the code above is nearly the same as :ref:`fetch_liquidities`, you can view more detailed explains through this link
+The code above is nearly the same as :ref:`fetch_liquidities`, you can view more detailed explains through this link
 
-2. select one of your liquidities to collect
+2. select one of your liquidity positions to collect
 -----------------------------------------------------------
 
 .. code-block:: typescript
