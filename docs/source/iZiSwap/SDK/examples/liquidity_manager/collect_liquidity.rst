@@ -1,6 +1,6 @@
 .. _collect_liquidities:
 
-collect a liquidity position
+Collect a liquidity position
 =============================
 
 In this example, we first fetch all liquidities of an account, 
