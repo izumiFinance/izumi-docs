@@ -8,8 +8,8 @@ then select one of it and collect fee or decreased token from it.
 
 The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/iZiSwap-sdk/blob/main/example/liquidityManager/fetchLiquidityAndCollect.ts>`_.
 
-1. fetch liquidities
---------------------
+1. Fetch liquidity positions
+-----------------------------
 
 .. code-block:: typescript
     :linenos:
@@ -45,7 +45,7 @@ The full example code of this chapter can be spotted `here <https://github.com/i
 
 The code above is nearly the same as :ref:`fetch_liquidities`, you can view more detailed explains through this link
 
-2. select one of your liquidity positions to collect
+2. Select one of your liquidity positions to collect
 -----------------------------------------------------------
 
 .. code-block:: typescript
@@ -55,7 +55,7 @@ The code above is nearly the same as :ref:`fetch_liquidities`, you can view more
 
 of course one can only collect his/her liquidity, cannot collect others.
 
-3. set max amount of tokenX and tokenY you would collect
+3. Set max amount of tokenX and tokenY you would collect
 ------------------------------------------------------------------------------
 
 .. code-block:: typescript
@@ -74,7 +74,7 @@ of course one can only collect his/her liquidity, cannot collect others.
     console.log('maxAmountB: ', maxAmountB)
 
 
-4. get calling of getCollectLiquidityCall
+4. Get calling of getCollectLiquidityCall
 ------------------------------------------------------------------------------
 
 .. code-block:: typescript
@@ -128,7 +128,7 @@ The first way is as before, specifing `strictERC20Token` field.
 The second way is specifing `strictERC20Token` as undefined and specifying the corresponding token in this param as 
 `WETH` or `ETH`.
 
-5. estimate gas (optional)
+5. Estimate gas (optional)
 --------------------------
 
 of course you can skip this step if you don't want to limit gas
@@ -139,7 +139,7 @@ of course you can skip this step if you don't want to limit gas
     const gasLimit = await collectLiquidityCalling.estimateGas(options)
     console.log('gas limit: ', gasLimit)
 
-6. send transaction!
+6. Send transaction!
 --------------------
 
 for metamask or other explorer's wallet provider, you can easily write
