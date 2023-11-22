@@ -9,8 +9,6 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * BNB Chain (BSC)
 
-    * Aurora
-
     * ZkSync Era
 
     * Linea

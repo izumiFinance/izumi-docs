@@ -49,56 +49,8 @@ Mainnet
       - Box
       - 0x7cbF7b96a7069bA384E10Ccb4F556DEBaB9c89F0
 
-
-2. Aurora (chainId: 1313161554) (updated on 2023.07.17):
-
-.. list-table:: 
-    :widths: 25 25 50
-    :header-rows: 1
-
-    * -  
-      - Name
-      - Address
-    * - Core
-      - factory
-      - 0xce326A82913EAb09f7ec899C4508Cbe0E6526A74 
-    * -
-      - swapX2YModule 
-      - 0xA7B45d3546b736B04cf80aa5Dd10d46c38E83068
-    * -
-      - swapY2XModule 
-      - 0x731C540Ad98564a6E3dC387F783475609721d0C3 
-    * -
-      - liquidityModule
-      - 0x9e0E3D5c0c1D554e05Fd7BDb5EA1513108e88414
-    * -
-      - limitOrderModule
-      - 0xF3409631f87B0bC9bD6e9D9FD26D31BaDAA21880
-    * - 
-      - flashModule
-      - 0x41BE134611a6039aeA79029050f164bC50a6e597
-
-    * - Periphery
-      - quoter (without limit)
-      - 0xF2bd6078D51576B5c8d7e80AF3C4E2292e916985
-    * - 
-      - quoter (with 10000 ticks)
-      - 0x5f6AF64f2FE0AE00D20932B6698aaB89AFb847eB
-    * - 
-      - swap
-      - 0xEB9668316Cb87Bd107b05C52455ed31577eA82Cc
-    * -
-      - liquidityManager
-      - 0x61A41182CD6e94f2A026aE3c0D1b73B1AA579aEa
-    * - 
-      - limitOrderManager
-      - 0x05dCaF89dFA5A09d832aC4e7FE01f75e82643F60
-    * - 
-      - Box
-      - 0x759424DD2d409b4d6B39A83199177d07dc257ad7
-
       
-3. Arbitrum (chainId: 42161) (updated on 2023.07.17):
+2. Arbitrum (chainId: 42161) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -145,7 +97,7 @@ Mainnet
       - Box
       - 0x50E024bd504f066fd7f343d6D048F4BD97B1064E
 
-4. Polygon (chainId: 137) (updated on 2023.07.17):
+3. Polygon (chainId: 137) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -189,7 +141,7 @@ Mainnet
       - limitOrderManager
       - 0x25C030116Feb2E7BbA054b9de0915E5F51b03e31
 
-5. Meter (chainId: 82) (updated on 2023.07.17):
+4. Meter (chainId: 82) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -234,7 +186,7 @@ Mainnet
       - 0x35Dcc4e1ae93DA1316b603f0A9Fe3aD1b85C38C6
 
 
-6. ZkSync Era (chainId: 324) (updated on 2023.07.17):
+5. ZkSync Era (chainId: 324) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -283,7 +235,7 @@ Mainnet
 
 
 
-7. Ontology (chainId: 58) (updated on 2023.10.19):
+6. Ontology (chainId: 58) (updated on 2023.10.19):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -328,7 +280,7 @@ Mainnet
       - 0x79D175eF5fBe31b5D84B3ee359fcbBB466153E39
 
 
-8. Mantle (chainId: 5000) (updated on 2023.07.17):
+7. Mantle (chainId: 5000) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -376,7 +328,7 @@ Mainnet
       - 0x3a2932a74e511C9Dc4CaD60e06eE6D3690Ce2492
 
 
-9. Linea (chainId: 59144) (updated on 2023.07.17):
+8. Linea (chainId: 59144) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -424,7 +376,7 @@ Mainnet
       - 0x19647d5f84308EE780cC5E3Da6E4aEe8e12B0ED4
 
 
-10. Ethereum Classic (chainId: 61) (updated on 2023.07.24):
+9. Ethereum Classic (chainId: 61) (updated on 2023.07.24):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -469,7 +421,7 @@ Mainnet
       - 0xAC9788cfea201950dB91d7db6F28C448CF3A4B29
 
 
-11. Base (chainId: 8453) (updated on 2023.07.31):
+10. Base (chainId: 8453) (updated on 2023.07.31):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -514,7 +466,7 @@ Mainnet
       - 0x1502d025BfA624469892289D45C0352997251728
 
 
-12. OpBNB (chainId: 204) (updated on 2023.08.24):
+11. OpBNB (chainId: 204) (updated on 2023.08.24):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -559,7 +511,7 @@ Mainnet
       - 0x1502d025BfA624469892289D45C0352997251728
 
 
-13. Kroma (chainId: 255) (updated on 2023.09.06):
+12. Kroma (chainId: 255) (updated on 2023.09.06):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -604,7 +556,7 @@ Mainnet
       - 0x1502d025BfA624469892289D45C0352997251728
 
 
-14. Manta (chainId: 169) (updated on 2023.09.11):
+13. Manta (chainId: 169) (updated on 2023.09.11):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -650,7 +602,7 @@ Mainnet
 
 
 
-15. Scroll (chainId: 169) (updated on 2023.10.13):
+14. Scroll (chainId: 169) (updated on 2023.10.13):
 
 .. list-table:: 
     :widths: 25 25 50
