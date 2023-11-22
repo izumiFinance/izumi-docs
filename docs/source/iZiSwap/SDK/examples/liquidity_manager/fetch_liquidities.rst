@@ -1,6 +1,6 @@
 .. _fetch_liquidities:
 
-fetch liquidities
+Fetch liquidity positions
 ================================
 
 here, we provide a simple example to fetch nft-liquidities of iZiSwap from user's address
