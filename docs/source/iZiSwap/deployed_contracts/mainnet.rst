@@ -45,9 +45,6 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x72fAfc28bFf27BB7a5cf70585CA1A5185AD2f201
-    * - 
-      - Box
-      - 0x7cbF7b96a7069bA384E10Ccb4F556DEBaB9c89F0
 
       
 2. Arbitrum (chainId: 42161) (updated on 2023.07.17):
@@ -93,9 +90,6 @@ Mainnet
     * - 
       - limitOrderManager
       - 0xE78e7447223aaED59301b44513D1d3A892ECF212
-    * - 
-      - Box
-      - 0x50E024bd504f066fd7f343d6D048F4BD97B1064E
 
 3. Polygon (chainId: 137) (updated on 2023.07.17):
 
@@ -229,9 +223,6 @@ Mainnet
     * - 
       - limitOrderManager
       - 0xe36caa16D78eF3233848a542D437C1c540Ca8149
-    * - 
-      - Box
-      - 0xb498C54F8F73969841C2cBce6FD550b82eBbcB63
 
 
 
@@ -323,9 +314,6 @@ Mainnet
     * - 
       - limitOrderManager
       - 0xcA7e21764CD8f7c1Ec40e651E25Da68AeD096037
-    * - 
-      - Box
-      - 0x3a2932a74e511C9Dc4CaD60e06eE6D3690Ce2492
 
 
 8. Linea (chainId: 59144) (updated on 2023.07.17):
@@ -371,9 +359,6 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x25C030116Feb2E7BbA054b9de0915E5F51b03e31
-    * - 
-      - Box
-      - 0x19647d5f84308EE780cC5E3Da6E4aEe8e12B0ED4
 
 
 9. Ethereum Classic (chainId: 61) (updated on 2023.07.24):
