@@ -1,9 +1,9 @@
 
 
-LimitOrderManager
+Limit Order
 -----------------------------
 
-base examples for using LimitOrderManager to manage limit orders
+base examples for using the LimitOrderManager contract to manage limit orders.
 
 .. toctree::
    :maxdepth: 1

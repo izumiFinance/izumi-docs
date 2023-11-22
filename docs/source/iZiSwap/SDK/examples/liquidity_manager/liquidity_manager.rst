@@ -1,9 +1,9 @@
 
 
-LiquidityManager
+Liquidity
 ----------------------------
 
-base examples for using LiquidityManager to manage liquidity.
+Base examples for using the LiquidityManager contract to manage liquidity.
 
 .. toctree::
    :maxdepth: 1
