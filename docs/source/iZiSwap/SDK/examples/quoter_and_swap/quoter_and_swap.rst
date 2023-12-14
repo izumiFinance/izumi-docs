@@ -18,7 +18,6 @@ if M is pre-determined, and N is acquired by the Quoter contract, the amount mod
 Quoter and Swap are 2 different contracts and the deployed contracts can be found in the corresponding section.
 
 
-
 .. toctree::
    :maxdepth: 1
 
