@@ -361,7 +361,7 @@ Mainnet
       - 0x25C030116Feb2E7BbA054b9de0915E5F51b03e31
 
 
-9. Ethereum Classic (chainId: 61) (updated on 2023.07.24):
+9. Ethereum Classic (chainId: 61) (updated on 2023.07.24 (periphery 2023.12.19)):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -391,19 +391,19 @@ Mainnet
 
     * - Periphery
       - quoter (without limit)
-      - 0x12a76434182c8cAF7856CE1410cD8abfC5e2639F
+      - 0x64b005eD986ed5D6aeD7125F49e61083c46b8e02
     * - 
       - quoter (with 10000 ticks)
-      - 0xBd3bd95529e0784aD973FD14928eEDF3678cfad8 
+      - 0x50E024bd504f066fd7f343d6D048F4BD97B1064E
     * - 
       - swap
-      - 0x9Bf8399c9f5b777cbA2052F83E213ff59e51612B
+      - 0x96539F87cA176c9f6180d65Bc4c10fca264aE4A5
     * -
       - liquidityManager
-      - 0xd7de110Bd452AAB96608ac3750c3730A17993DE0
+      - 0x156d8a0bE25FA232bb637Fc76255bCd00dEae9E9
     * - 
       - limitOrderManager
-      - 0xAC9788cfea201950dB91d7db6F28C448CF3A4B29
+      - 0xE78e7447223aaED59301b44513D1d3A892ECF212
 
 
 10. Base (chainId: 8453) (updated on 2023.07.31):
