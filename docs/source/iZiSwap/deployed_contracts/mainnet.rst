@@ -135,7 +135,7 @@ Mainnet
       - limitOrderManager
       - 0x25C030116Feb2E7BbA054b9de0915E5F51b03e31
 
-4. Meter (chainId: 82) (updated on 2023.07.17 (periphery 2023.12.19)):
+4. Meter (chainId: 82) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -165,19 +165,19 @@ Mainnet
 
     * - Periphery
       - quoter (without limit)
-      - 0x64b005eD986ed5D6aeD7125F49e61083c46b8e02
+      - 0x72F51b617A9c48EbaDF997586C5C6472c08775A3
     * - 
       - quoter (with 10000 ticks)
-      - 0x50E024bd504f066fd7f343d6D048F4BD97B1064E
+      - 0x85a3871CA57637860b5d35E983341c92aE07Ed5C
     * - 
       - swap
-      - 0x96539F87cA176c9f6180d65Bc4c10fca264aE4A5 
+      - 0x90bd53037B504fB83687Ea153F9657D3BD989976
     * -
       - liquidityManager
-      - 0x156d8a0bE25FA232bb637Fc76255bCd00dEae9E9
+      - 0x579ffe4A5c8CB2C969aE4E65039B7dBb6951d164
     * - 
       - limitOrderManager
-      - 0xE78e7447223aaED59301b44513D1d3A892ECF212
+      - 0x35Dcc4e1ae93DA1316b603f0A9Fe3aD1b85C38C6
 
 
 5. ZkSync Era (chainId: 324) (updated on 2023.07.17):
