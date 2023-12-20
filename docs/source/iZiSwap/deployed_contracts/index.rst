@@ -35,6 +35,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Manta 
 
+    * ZKFair
+
 
 *  Testnet:
 
