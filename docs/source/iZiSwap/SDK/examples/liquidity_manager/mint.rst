@@ -1,4 +1,4 @@
-mint
+Mint
 ================================
 
 here, we provide a simple example for creating a new liquidity
