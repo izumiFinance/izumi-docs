@@ -23,7 +23,7 @@ Before we use function of **fetchLiquiditiesOfAccount()**, we should import some
     import { getLiquidityManagerContract, fetchLiquiditiesOfAccount } from 'iziswap-sdk/lib/liquidityManager/view';
     import { fetchToken } from 'iziswap-sdk/lib/base/token/token';
 
-Details of these imports can be viewed in following content.
+Details of these imports can be viewed in the following content.
 
 .. _base_obj:
 

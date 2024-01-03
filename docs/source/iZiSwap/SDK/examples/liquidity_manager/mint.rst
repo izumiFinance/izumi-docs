@@ -1,33 +1,33 @@
 Mint
 ================================
 
-here, we provide a simple example for creating a new liquidity
+In this section, we provide a simple example for creating a new liquidity position. Notice the liquidity position is a NFT.
 
 The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/liquidityManager/mint.ts>`_.
 
 
-1. some imports
+1. Some imports
 ---------------
 
 .. code-block:: typescript
     :linenos:
 
-    import {BaseChain, ChainId, initialChainTable, PriceRoundingType} from 'iziswap-sdk/lib/base/types'
-    import {privateKey} from '../../.secret'
     import Web3 from 'web3';
+    import { BigNumber } from 'bignumber.js'
+    import { privateKey } from '../../.secret'
+    import { BaseChain, ChainId, initialChainTable, PriceRoundingType } from 'iziswap-sdk/lib/base/types'
     import { getPointDelta, getPoolContract, getPoolState } from 'iziswap-sdk/lib/pool/funcs';
     import { getPoolAddress, getLiquidityManagerContract } from 'iziswap-sdk/lib/liquidityManager/view';
     import { amount2Decimal, fetchToken } from 'iziswap-sdk/lib/base/token/token';
     import { pointDeltaRoundingDown, pointDeltaRoundingUp, priceDecimal2Point } from 'iziswap-sdk/lib/base/price';
-    import { BigNumber } from 'bignumber.js'
     import { calciZiLiquidityAmountDesired } from 'iziswap-sdk/lib/liquidityManager/calc';
     import { getMintCall } from 'iziswap-sdk/lib/liquidityManager/liquidity';
 
-the detail of these imports can be viewed in following content
+Detail of these imports can be viewed in the following content.
 
 .. _base_obj_mint:
 
-2. specify which chain, rpc url, web3, and account
+2. Specify chain, rpc, web3, and account
 --------------------------------------------------
 
 .. code-block:: typescript
@@ -40,35 +40,30 @@ the detail of these imports can be viewed in following content
     const account =  web3.eth.accounts.privateKeyToAccount(privateKey)
     console.log('address: ', account.address)
 
-here
+where
 
-**BaseChain** is a data structure to describe a chain, in this example we use **bsc** chain.
-
-**ChainId** is an enum to describe **chain id**, value of the enum is equal to value of **chain id**
-
-**initialChainTable** is a mapping from some most used **ChainId** to **BaseChain**, of course you can fill fields of BaseChain by yourself
-
-**privateKey** is a string, which is your private key, and should be configured by your self
-
-**web3** package is a public package to interact with block chain
-
-**rpc** is the rpc url on the chain you specified
+* - **BaseChain** is a data structure to describe a chain, in this example we use **bsc** chain.
+* - **ChainId** is an enum to describe **chain id**, value of the enum is equal to value of **chain id**.
+* - **initialChainTable** is a mapping from some most used **ChainId** to **BaseChain**. You can fill fields of BaseChain by yourself.
+* - **privateKey** is a string, which is your private key, and should be configured by your self.
+* - **web3** is a public package to interact with block chain.
+* - **rpc** is the rpc url on the chain you specified.
 
 .. _LiquidityManagerContract_forMint:
 
-3. get web3.eth.Contract object of liquidityManager
+3. Get web3.eth.Contract object of liquidityManager
 ---------------------------------------------------
 
 .. code-block:: typescript
     :linenos:
 
-    const liquidityManagerAddress = '0x93C22Fbeff4448F2fb6e432579b0638838Ff9581'
+    const liquidityManagerAddress = '0xBF55ef05412f1528DbD96ED9E7181f87d8C9F453' // example BSC address
     const liquidityManagerContract = getLiquidityManagerContract(liquidityManagerAddress, web3)
     console.log('liquidity manager address: ', liquidityManagerAddress)
 
-here, **getLiquidityManagerContract** is an api provided by our sdk, which returns a **web3.eth.Contract** object of **LiquidityManager**
+Here, **getLiquidityManagerContract** is an api provided by our sdk, which returns a **web3.eth.Contract** object of **LiquidityManager**.
 
-4. fetch 2 erc20-tokens' infomations
+4. Fetch 2 ERC20 information
 ---------------------------------------------------------
 
 .. code-block:: typescript
@@ -80,10 +75,10 @@ here, **getLiquidityManagerContract** is an api provided by our sdk, which retur
     const testA = await fetchToken(testAAddress, chain, web3)
     const testB = await fetchToken(testBAddress, chain, web3)
 
-**fetchToken()** returns a **TokenInfoFormatted** obj of that token, which containing following fields,
+The function **fetchToken()** returns a **TokenInfoFormatted** obj of that token, which containing following fields.
 
-of course you can fill TokenInfoFormatted by yourself if you have known each field correctly of the erc20-token
-the TokenInfoFormatted fields used in sdk currently are only **symbol**, **address**, and **decimal**.
+You can fill **TokenInfoFormatted** by yourself, if you know each field correctly of the erc20-tokens related.
+The TokenInfoFormatted fields used in sdk currently are only **symbol**, **address**, and **decimal**.
 
 .. code-block:: typescript
     :linenos:
@@ -111,61 +106,41 @@ the TokenInfoFormatted fields used in sdk currently are only **symbol**, **addre
         wrapTokenAddress?: string;
     }
 
-notice that, usually we set **TokenInfoFormatted.wrapTokenAddress** as undefined.
-
-..
-    following paragraph corresponding to box and wrap token you can just **skip** it if you do not consider token with transfer fee.
-
-    only if we want to use **box** and the token has transfer fee, we should set the **wrapTokenAddress** field.
-    if we don't want to use **box** or the token has no transfer fee, **TokenInfoFormatted.wrapTokenAddress** should be undefined.
-    :ref:`box<box>` is designed to deal with problem of erc20 token with ":ref:`transfer fee<transfer_fee>`".
-    there is a problem that in iZiSwap we can not mint or trade or add limit order with tokens which have transfer fee.
-    to deal with this problem, we can deploy a :ref:`Wrap Token<wrap_token>` which can be transformed from origin erc20 token.
-    wrap token has no transfer fee, transfer fee only charged when user transform origin token to wrap token or wrap token to origin token.
-    and we can mint or add limit order or trade with such wrap tokens instead of origin token in iZiSwap.
-    for sdk of box, see :ref:`here<box>` for more infomation.
+We usually set **TokenInfoFormatted.wrapTokenAddress** as undefined.
 
 
-5. get state of corresponding swap pool
+5. Get state of the corresponding pool
 ---------------------------------------------------------
 
-first get pool address of token pair (testA, testB, fee)
+First get the pool address of token pair (testA, testB, fee):
 
 .. code-block:: typescript
     :linenos:
 
     const poolAddress = await getPoolAddress(liquidityManagerContract, testA, testB, fee)
 
-function **getPoolAddress(...)** queries **liquidityManagerContract** to get iZiSwap pool address of token pair **(testA, testB, fee)**
+The function **getPoolAddress(...)** queries **liquidityManagerContract** to get iZiSwap pool address of token pair **(testA, testB, fee)**, where
 
-
-.. code-block:: typescript
-
-   - liquidityManagerContract: liquidity manager contract, acquired in '4. get web3.eth.Contract object of liquidityManager'
-   
-   - testA: an erc20 token in type of TokenInfoFormatted, acquired in '5. fetch 2 erc20-tokens' infomations'
-   
-   - testB: another erc20 token in type of TokenInfoFormatted, also acquired in '5. fetch 2 erc20-tokens' infomations'
-   
-   - fee: an int number, fee/1e6 is fee rate of pool, etc, 2000 means 0.2% fee rate
+ * - **liquidityManagerContract**: liquidity manager contract, acquired in step 4.
+ * - **testA**: an erc20 token in type of TokenInfoFormatted, acquired in step 5.
+ * - **testB**: another erc20 token in type of TokenInfoFormatted, also acquired in step 5.
+ * - **fee**: an int number, fee/1e6 is fee rate of pool, etc, 2000 means 0.2% fee rate
   
-after acquire **poolAddress**, calling **getPoolContract(...)** to get pool contract object
+When **poolAddress** is ready, you can call **getPoolContract(...)** to get the pool contract object.
 
 .. code-block:: typescript
     :linenos:
 
     const pool = getPoolContract(poolAddress, web3)
 
-thirdly, query state of pool
+Then we can get the state of the pool:
 
 .. code-block:: typescript
     :linenos:
 
     const state = await getPoolState(pool)
 
-state is a **State** obj which extends from **BaseState**
-
-only fields in **BaseState** are used in this example
+where state is a **State** obj which extends from **BaseState**, with only fields in **BaseState** are used in this example.
 
 
 .. code-block:: typescript
@@ -184,17 +159,17 @@ only fields in **BaseState** are used in this example
 
 to compute undecimal-amount of token in minting, we will take use of **state.currentPoint**
 
-6.  compute boundary point of liquidity on the pool
+6.  Compute boundary point of liquidity on the pool
 ---------------------------------------------------------
 
-boundary point is **leftPoint** and **rightPoint** of liquidity, according to :ref:`price` , we know that **point** on the pool and **decimal price** can be transformed from each other
+The boundary point is **leftPoint** and **rightPoint** of a liquidity position, according to :ref:`price` , we know that **point** in the pool and **decimal price** can be transformed from each other.
 
-first we determine the minimal and maximum **decimal price** of our liquidity ready to mint
+We first determine the minimal and maximum **decimal price** of our liquidity ready to mint.
 
-assume the desired minimal **decimal price** of **A_by_B** is **0.099870** (this decimal price means 0.099870 testB to buy 1.0 testA, here, number 0.099870 and 1.0 are both **decimal amount**).
-assume the max **decimal price** of  `A_by_B` is `0.29881`
+Assume the desired minimal **decimal price** of **A_by_B** is **0.099870** (this decimal price means 0.099870 testB to buy 1.0 testA, here, number 0.099870 and 1.0 are both **decimal amount**).
+and the max **decimal price** of  `A_by_B` is `0.29881`
 
-then, we can get 2 **point**s on the pool of min and max **decimal prices** though following code
+We can get 2 **point**s on the pool of min and max **decimal prices** though following code:
 
 .. code-block:: typescript
     :linenos:
@@ -202,7 +177,7 @@ then, we can get 2 **point**s on the pool of min and max **decimal prices** thou
     const point1 = priceDecimal2Point(testA, testB, 0.099870, PriceRoundingType.PRICE_ROUNDING_NEAREST)
     const point2 = priceDecimal2Point(testA, testB, 0.29881, PriceRoundingType.PRICE_ROUNDING_NEAREST)
 
-**priceDecimal2Point(...)** is a function to transform **decimal price** to the **point** on the pool, the function has following params
+where **priceDecimal2Point(...)** is a function to transform **decimal price** to the **point** on the pool, the function has following params:
 
 .. code-block:: typescript
 
@@ -215,11 +190,8 @@ then, we can get 2 **point**s on the pool of min and max **decimal prices** thou
      */
     priceDecimal2Point(tokenA, tokenB, priceDecimalAByB, roundingType)
 
-because we do not ensure that tokenA's address is smaller than tokenB
-
-so here point1 may be larger than point2, and we could not simply specify leftPoint as point1 and rightPoint as point2
-
-instead we take min(point1, point2) as leftPoint and max(point1, point2) as rightPoint
+Since we do not ensure that tokenA's address is smaller than tokenB, point1 may be larger than point2. We could not simply specify leftPoint as point1 and rightPoint as point2.
+Instead, we take min(point1, point2) as leftPoint and max(point1, point2) as rightPoint.
 
 .. code-block:: typescript
     :linenos:
@@ -227,9 +199,8 @@ instead we take min(point1, point2) as leftPoint and max(point1, point2) as righ
     let leftPoint = Math.min(point1, point2)
     let rightPoint = Math.max(point1, point2)
 
-also, when we mint, the boundary point of liquidity must be times of `pointDelta`
-
-so we should rounding `leftPoint` and `rightPoint` to times of `pointDelta` throw following codes
+When we mint, the boundary point of liquidity must be times of `pointDelta`.
+Thus we should rounding `leftPoint` and `rightPoint` to times of `pointDelta` throw following codes:
 
 .. code-block:: typescript
     :linenos:
@@ -239,11 +210,11 @@ so we should rounding `leftPoint` and `rightPoint` to times of `pointDelta` thro
     leftPoint = pointDeltaRoundingDown(leftPoint, pointDelta)
     rightPoint = pointDeltaRoundingUp(rightPoint, pointDelta)
 
-in the above codes, pointDelta is a number value queried from pool contract
+where **pointDelta** is a number value queried from pool contract.
 
-for fee rate of 0.2%, pointDelta usually equals to **40**
+For fee rate of 0.2%, pointDelta usually equals to **40** (0.3% -> **60**, 1% -> **200**).
 
-besides, about **leftPoint** and **rightPoint** we must garrentee following inequality
+Besides, for **leftPoint** and **rightPoint** we must guarantee following inequality:
 
 .. code-block:: typescript
 
@@ -251,21 +222,21 @@ besides, about **leftPoint** and **rightPoint** we must garrentee following ineq
     rightPoint <= pool.rightMostPt()
     rightPoint - leftPoint < 400000
 
-7. specify or compute tokenA's and tokenB's max undecimal amount in this mint (optional)
+7. Specify or compute tokenA's and tokenB's max undecimal amount (optional)
 ----------------------------------------------------------------------------------------
 
-sometimes, our app's user wants to know the amount of tokenA when he fill amount of tokenB or amount of tokenB when he fill tokenA.
+Sometimes, a user wants to know the amount of tokenA when he fill amount of tokenB or vise versa.
 
-so, we provide a function named `calciZiLiquidityAmountDesired()` in sdk to do this calculation
+Here we provide a function named `calciZiLiquidityAmountDesired()` in sdk to do this calculation.
 
-suppose we want to specify max decimal amount of tokenA ( token named testA) is 100
+Suppose we want to specify max decimal amount of tokenA ( token named testA) to be 100,
 
 .. code-block:: typescript
     :linenos:
 
     const maxTestA = new BigNumber(100).times(10 ** testA.decimal)
 
-and we can compute corresponding undecimal amount of tokenB ( token named testB)
+then we can compute the corresponding undecimal amount of tokenB ( token named testB).
 
 .. code-block:: typescript
     :linenos:
@@ -275,11 +246,11 @@ and we can compute corresponding undecimal amount of tokenB ( token named testB)
         maxTestA, true, testA, testB
     )
 
-here, `calciZiLiquidityAmountDesired(...)` is a function provided by sdk,
+Here, `calciZiLiquidityAmountDesired(...)` is a function provided by sdk,
 which is used for computing one erc20-token's undecimal amount of a liquidity after
-given `leftPoint` `rightPoint` `currentPoint` and  the other erc20-token's undecimal amount
+given `leftPoint` `rightPoint` `currentPoint` and  the other erc20-token's undecimal amount.
 
-the params are following:
+The params are as follows:
 
 .. code-block:: typescript
 
@@ -295,16 +266,14 @@ the params are following:
    calciZiLiquidityAmountDesired(leftPoint, rightPoint, currentPoint, amount, amountIsTokenA, tokenA, tokenB):
 
 
-here, after we calling `calciZiLiquidityAmountDesired`,
-we get a `BigNumber` stored in `maxTestB`,
-which is corresponding undecimal amount of tokenB ( token named testB)
+After the call to `calciZiLiquidityAmountDesired`, we get a `BigNumber` stored in `maxTestB`, which is corresponding undecimal amount of tokenB ( token named testB).
 
 .. _liquidity_manager_mint_calling:
 
-8. get mint calling
--------------------
+8. Get the mint calling
+-----------------------
 
-first, construct necessary params and gasPrice for mint calling
+First, construct necessary params and gasPrice for the mint calling.
 
 .. code-block:: typescript
     :linenos:
@@ -323,7 +292,7 @@ first, construct necessary params and gasPrice for mint calling
 
     const gasPrice = '5000000000'
 
-then, get mint calling
+Then, get mint calling by:
 
 .. code-block:: typescript
     :linenos:
@@ -336,17 +305,15 @@ then, get mint calling
         gasPrice
     )
 
-mintParams is type of MintParam, **maxAmountA**, **maxAmountB**, **minAmountA**, **minAmountB**
-is required min-max undecimal amount of tokenA and tokenB deposited in this mint
+where **mintParams** of type MintParam,  and **maxAmountA**, **maxAmountB**, **minAmountA**, **minAmountB**
+is required min-max undecimal amount of tokenA and tokenB deposited in this mint procedure.
+You can fill **maxAmountA**, **maxAmountB**, **minAmountA**, **minAmountB** to arbitrary value as you want.
 
-of course, you can fill **maxAmountA**, **maxAmountB**, **minAmountA**, **minAmountB** to arbitrary value as you want
-
-function **getMintCall** returns 2 object, **mintCalling** and **options**
-
-after get **mintCalling** and **options**, we can estimate gas for mint
+The function **getMintCall** returns 2 object, **mintCalling** and **options**.
+When **mintCalling** and **options** are ready, we can estimate gas.
 
 
-we should notice that, if tokenX or tokenY is chain token (like `ETH` on ethereum or `BNB` on bsc),
+Notice that, if tokenX or tokenY is chain token (like `ETH` on ethereum or `BNB` on bsc),
 we should specify one or some fields in `mintParams` to indicate sdk paying in form of `Chain Token`
 or paying in form of `Wrapped Chain Token` (like `WETH` on ethereum or `WBNB` on bsc).
 
@@ -359,11 +326,11 @@ The second way is specifing `strictERC20Token` as undefined and specifying the c
 `WETH` or `ETH`.
 
 
-9. approve (skip if you pay chain token directly)
+9. Approve (skip if you pay chain token directly)
 -------------------------------------------------------
 
-before estimate gas or send transaction, you need approve contract liquidityManager to have authority to spend yuor token,
-because you need transfer some tokenA and some tokenB to pool.
+Before estimate gas or send transaction, you need approve contract **liquidityManager** to have authority to spend your token,
+since you need transfer some tokenA and some tokenB to pool.
 
 .. code-block:: typescript
     :linenos:
@@ -437,9 +404,9 @@ because you need transfer some tokenA and some tokenB to pool.
     }
 
 
-10.  estimate gas (optional)
+10.  Estimate gas (optional)
 -----------------------------
-of course you can skip this step if you donot want to limit gas
+You can skip this step if you do not want to limit gas.
 
 .. code-block:: typescript
     :linenos:
@@ -447,19 +414,19 @@ of course you can skip this step if you donot want to limit gas
     const gasLimit = await mintCalling.estimateGas(options)
     console.log('gas limit: ', gasLimit)
 
-11. finally, send transaction!
+11. Finally, send transaction!
 ------------------------------
 
-now, we can send transaction to mint.
+Now, we can send transaction to mint a new liquidity position.
 
-for metamask or other explorer's wallet provider, you can easily write 
+For metamask or other injected wallet provider, you can easily write 
 
 .. code-block:: typescript
     :linenos:
 
     await mintCalling.send({...options, gas: gasLimit})
 
-otherwise, if you are runing codes in console, you could use following code
+Otherwise, if you are running codes in console, you could use the following code
 
 .. code-block:: typescript
     :linenos:
@@ -478,4 +445,4 @@ otherwise, if you are runing codes in console, you could use following code
     const tx = await web3.eth.sendSignedTransaction(signedTx.rawTransaction);
     console.log('tx: ', tx)
 
-after this step, we have successfully minted the liquidity (if no revert occurred)
+Finally, we have successfully minted a liquidity position (if no revert occurred).
