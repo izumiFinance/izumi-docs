@@ -675,3 +675,48 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x1502d025BfA624469892289D45C0352997251728
+
+
+15. Zeta (chainId: 7000) (updated on 2024.01.30):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+    * -
+      - swapX2YModule 
+      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+    * -
+      - swapY2XModule 
+      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+    * -
+      - liquidityModule
+      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+    * -
+      - limitOrderModule
+      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+    * - 
+      - flashModule
+      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x3F559139C2Fc7B97Ad6FE9B4d1f75149F551DB18
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x04830cfCED9772b8ACbAF76Cfc7A630Ad82c9148
+    * - 
+      - swap
+      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
+    * -
+      - liquidityManager
+      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
+    * - 
+      - limitOrderManager
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
