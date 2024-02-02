@@ -677,7 +677,7 @@ Mainnet
       - 0x1502d025BfA624469892289D45C0352997251728
 
 
-15. Zeta (chainId: 7000) (updated on 2024.01.30):
+16. Zeta (chainId: 7000) (updated on 2024.01.30):
 
 .. list-table:: 
     :widths: 25 25 50
