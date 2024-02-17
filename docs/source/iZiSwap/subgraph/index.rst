@@ -4,7 +4,6 @@ Subgraph
 iZiSwap provides GraphQL-based indexing on most supported blockchain networks. The relevant repository can be found `here <https://github.com/izumiFinance/iZUMi-iZiSwap-theGraph.git>`_.
 
 
-
 * `zkSync Era <https://api.studio.thegraph.com/query/24334/izumi-zksync-subgraph/version/latest>`_
 * `BNB Chain <https://api.thegraph.com/subgraphs/name/lpcaries/izumi-subgraph-bsc>`_
 * `Base <https://api.thegraph.com/subgraphs/name/lpcaries/izumi-subgraph-base>`_
