@@ -45,60 +45,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x72fAfc28bFf27BB7a5cf70585CA1A5185AD2f201
-    * - 
-      - Box
-      - 0x7cbF7b96a7069bA384E10Ccb4F556DEBaB9c89F0
-
-
-2. Aurora (chainId: 1313161554) (updated on 2023.07.17):
-
-.. list-table:: 
-    :widths: 25 25 50
-    :header-rows: 1
-
-    * -  
-      - Name
-      - Address
-    * - Core
-      - factory
-      - 0xce326A82913EAb09f7ec899C4508Cbe0E6526A74 
-    * -
-      - swapX2YModule 
-      - 0xA7B45d3546b736B04cf80aa5Dd10d46c38E83068
-    * -
-      - swapY2XModule 
-      - 0x731C540Ad98564a6E3dC387F783475609721d0C3 
-    * -
-      - liquidityModule
-      - 0x9e0E3D5c0c1D554e05Fd7BDb5EA1513108e88414
-    * -
-      - limitOrderModule
-      - 0xF3409631f87B0bC9bD6e9D9FD26D31BaDAA21880
-    * - 
-      - flashModule
-      - 0x41BE134611a6039aeA79029050f164bC50a6e597
-
-    * - Periphery
-      - quoter (without limit)
-      - 0xF2bd6078D51576B5c8d7e80AF3C4E2292e916985
-    * - 
-      - quoter (with 10000 ticks)
-      - 0x5f6AF64f2FE0AE00D20932B6698aaB89AFb847eB
-    * - 
-      - swap
-      - 0xEB9668316Cb87Bd107b05C52455ed31577eA82Cc
-    * -
-      - liquidityManager
-      - 0x61A41182CD6e94f2A026aE3c0D1b73B1AA579aEa
-    * - 
-      - limitOrderManager
-      - 0x05dCaF89dFA5A09d832aC4e7FE01f75e82643F60
-    * - 
-      - Box
-      - 0x759424DD2d409b4d6B39A83199177d07dc257ad7
 
       
-3. Arbitrum (chainId: 42161) (updated on 2023.07.17):
+2. Arbitrum (chainId: 42161) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -141,11 +90,8 @@ Mainnet
     * - 
       - limitOrderManager
       - 0xE78e7447223aaED59301b44513D1d3A892ECF212
-    * - 
-      - Box
-      - 0x50E024bd504f066fd7f343d6D048F4BD97B1064E
 
-4. Polygon (chainId: 137) (updated on 2023.07.17):
+3. Polygon (chainId: 137) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -189,7 +135,7 @@ Mainnet
       - limitOrderManager
       - 0x25C030116Feb2E7BbA054b9de0915E5F51b03e31
 
-5. Meter (chainId: 82) (updated on 2023.07.17):
+4. Meter (chainId: 82) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -234,7 +180,7 @@ Mainnet
       - 0x35Dcc4e1ae93DA1316b603f0A9Fe3aD1b85C38C6
 
 
-6. ZkSync Era (chainId: 324) (updated on 2023.07.17):
+5. ZkSync Era (chainId: 324) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -277,12 +223,10 @@ Mainnet
     * - 
       - limitOrderManager
       - 0xe36caa16D78eF3233848a542D437C1c540Ca8149
-    * - 
-      - Box
-      - 0xb498C54F8F73969841C2cBce6FD550b82eBbcB63
 
 
-7. Ontology (chainId: 58) (updated on 2023.04.25):
+
+6. Ontology (chainId: 58) (updated on 2023.10.19):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -293,43 +237,41 @@ Mainnet
       - Address
     * - Core
       - factory
-      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+      - 0x032b241De86a8660f1Ae0691a4760B426EA246d7
     * -
       - swapX2YModule 
-      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+      - 0x611575eE1fbd4F7915D0eABCC518eD396fF78F0c
     * -
       - swapY2XModule 
-      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+      - 0xcA7e21764CD8f7c1Ec40e651E25Da68AeD096037
     * -
       - liquidityModule
-      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+      - 0x1CB60033F61e4fc171c963f0d2d3F63Ece24319c
     * -
       - limitOrderModule
-      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+      - 0x25C030116Feb2E7BbA054b9de0915E5F51b03e31
     * - 
       - flashModule
-      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+      - 0x1D377311b342633A970e71a787C50F83858BFC1B
 
     * - Periphery
       - quoter (without limit)
-      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
+      - 0x93C22Fbeff4448F2fb6e432579b0638838Ff9581
     * - 
       - quoter (with 10000 ticks)
-      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+      - 0x9Bf8399c9f5b777cbA2052F83E213ff59e51612B
     * - 
       - swap
-      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+      - 0xAC9788cfea201950dB91d7db6F28C448CF3A4B29
     * -
       - liquidityManager
-      - 0x110dE362cc436D7f54210f96b8C7652C2617887D
+      - 0x344ADD21b136B09051fb061881eC7971c92cE7f7
     * - 
       - limitOrderManager
-      - 0x1502d025BfA624469892289D45C0352997251728
-    * - 
-      - Box
-      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+      - 0x79D175eF5fBe31b5D84B3ee359fcbBB466153E39
 
-8. Mantle (chainId: 5000) (updated on 2023.07.17):
+
+7. Mantle (chainId: 5000) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -372,12 +314,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0xcA7e21764CD8f7c1Ec40e651E25Da68AeD096037
-    * - 
-      - Box
-      - 0x3a2932a74e511C9Dc4CaD60e06eE6D3690Ce2492
 
 
-9. Linea (chainId: 59144) (updated on 2023.07.17):
+8. Linea (chainId: 59144) (updated on 2023.07.17):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -420,12 +359,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x25C030116Feb2E7BbA054b9de0915E5F51b03e31
-    * - 
-      - Box
-      - 0x19647d5f84308EE780cC5E3Da6E4aEe8e12B0ED4
 
 
-10. Ethereum Classic (chainId: 61) (updated on 2023.07.24):
+9. Ethereum Classic (chainId: 61) (updated on 2023.07.24 (periphery 2023.12.19)):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -455,22 +391,22 @@ Mainnet
 
     * - Periphery
       - quoter (without limit)
-      - 0x12a76434182c8cAF7856CE1410cD8abfC5e2639F
+      - 0x64b005eD986ed5D6aeD7125F49e61083c46b8e02
     * - 
       - quoter (with 10000 ticks)
-      - 0xBd3bd95529e0784aD973FD14928eEDF3678cfad8 
+      - 0x50E024bd504f066fd7f343d6D048F4BD97B1064E
     * - 
       - swap
-      - 0x9Bf8399c9f5b777cbA2052F83E213ff59e51612B
+      - 0x96539F87cA176c9f6180d65Bc4c10fca264aE4A5
     * -
       - liquidityManager
-      - 0xd7de110Bd452AAB96608ac3750c3730A17993DE0
+      - 0x156d8a0bE25FA232bb637Fc76255bCd00dEae9E9
     * - 
       - limitOrderManager
-      - 0xAC9788cfea201950dB91d7db6F28C448CF3A4B29
+      - 0xE78e7447223aaED59301b44513D1d3A892ECF212
 
 
-11. Base (chainId: 8453) (updated on 2023.07.31):
+10. Base (chainId: 8453) (updated on 2023.07.31):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -514,3 +450,273 @@ Mainnet
       - limitOrderManager
       - 0x1502d025BfA624469892289D45C0352997251728
 
+
+11. OpBNB (chainId: 204) (updated on 2023.08.24):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+    * -
+      - swapX2YModule 
+      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+    * -
+      - swapY2XModule 
+      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+    * -
+      - liquidityModule
+      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+    * -
+      - limitOrderModule
+      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+    * - 
+      - flashModule
+      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * - 
+      - swap
+      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+    * -
+      - liquidityManager
+      - 0x110dE362cc436D7f54210f96b8C7652C2617887D
+    * - 
+      - limitOrderManager
+      - 0x1502d025BfA624469892289D45C0352997251728
+
+
+12. Kroma (chainId: 255) (updated on 2023.09.06):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+    * -
+      - swapX2YModule 
+      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+    * -
+      - swapY2XModule 
+      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+    * -
+      - liquidityModule
+      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+    * -
+      - limitOrderModule
+      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+    * - 
+      - flashModule
+      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * - 
+      - swap
+      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+    * -
+      - liquidityManager
+      - 0x110dE362cc436D7f54210f96b8C7652C2617887D
+    * - 
+      - limitOrderManager
+      - 0x1502d025BfA624469892289D45C0352997251728
+
+
+13. Manta (chainId: 169) (updated on 2023.09.11):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+    * -
+      - swapX2YModule 
+      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+    * -
+      - swapY2XModule 
+      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+    * -
+      - liquidityModule
+      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+    * -
+      - limitOrderModule
+      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+    * - 
+      - flashModule
+      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
+    * - 
+      - swap
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * -
+      - liquidityManager
+      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663 
+    * - 
+      - limitOrderManager
+      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+
+
+
+14. Scroll (chainId: 169) (updated on 2023.10.13):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+    * -
+      - swapX2YModule 
+      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+    * -
+      - swapY2XModule 
+      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+    * -
+      - liquidityModule
+      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+    * -
+      - limitOrderModule
+      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+    * - 
+      - flashModule
+      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+    * - 
+      - swap
+      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
+    * -
+      - liquidityManager
+      - 0x1502d025BfA624469892289D45C0352997251728
+    * - 
+      - limitOrderManager
+      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
+
+
+15. ZKFair (chainId: 42766) (updated on 2023.12.19):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+    * -
+      - swapX2YModule 
+      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+    * -
+      - swapY2XModule 
+      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+    * -
+      - liquidityModule
+      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+    * -
+      - limitOrderModule
+      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+    * - 
+      - flashModule
+      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7 
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * - 
+      - swap
+      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2 
+    * -
+      - liquidityManager
+      - 0x110dE362cc436D7f54210f96b8C7652C2617887D
+    * - 
+      - limitOrderManager
+      - 0x1502d025BfA624469892289D45C0352997251728
+
+
+16. Zeta (chainId: 7000) (updated on 2024.01.30):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+    * -
+      - swapX2YModule 
+      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+    * -
+      - swapY2XModule 
+      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+    * -
+      - liquidityModule
+      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+    * -
+      - limitOrderModule
+      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+    * - 
+      - flashModule
+      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x3F559139C2Fc7B97Ad6FE9B4d1f75149F551DB18
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x04830cfCED9772b8ACbAF76Cfc7A630Ad82c9148
+    * - 
+      - swap
+      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
+    * -
+      - liquidityManager
+      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
+    * - 
+      - limitOrderManager
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4

@@ -22,6 +22,7 @@ Welcome to iZUMi Developer Docs
    iZiSwap/contracts/index
    iZiSwap/deployed_contracts/index
    iZiSwap/SDK/index
+   iZiSwap/subgraph/index
 
 
 .. toctree::

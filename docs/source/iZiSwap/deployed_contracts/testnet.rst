@@ -45,9 +45,6 @@ Testnet
     * - 
       - limitOrderManager
       - 0x5C97187B2CEb1494078b70623c1E59edA79983A3
-    * - 
-      - Box
-      - 0x8fbA4265785c56110B1277d6B23dD43B3797b3A8
 
 2. ZkSync Alpha Testnet (chainId: 280 ) (updated on 2023.04.10):
 
@@ -94,7 +91,7 @@ Testnet
       - 0x430972C4AF4703F7ce7B95C03735ae1504dD0Dd6
 
 
-3. Scroll Alpha Testnet (chainId: 534353 ) (updated on 2023.08.10):
+3. Scroll Sepolia Testnet (chainId: 534351 ) (updated on 2023.08.24):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -105,41 +102,41 @@ Testnet
       - Address
     * - Core
       - factory
-      - 0xe821322692Ef22e0BA985c1Ad8BD3042e9E1Cc43
+      - 0x64c2F1306b4ED3183E7B345158fd01c19C0d8c5E
     * -
       - swapX2YModule 
-      - 0x10232eC2FbA69A15E3054153C311770A6eEB80C9
+      - 0xED9b4E3ED8fe7e820B950F28f939AF848f98e995
     * -
       - swapY2XModule 
-      - 0x8Df50480bEFC508289F3AbbaB5826c8ae809327A
+      - 0x706A11AF5bb5C2a50aB9802503ddbfF69373D1bd
     * -
       - liquidityModule
-      - 0x3012a5769CE456cc65DDE8403176228D7Dd93729
+      - 0x817EC83Fb6906ba0777E89110d5089313385F4A2
     * -
       - limitOrderModule
-      - 0xe3213248CA0798CBC6f9402A8fdeD34d2abB3dA2
+      - 0xAF931D7AaB9643d1E63Ed2E1fB17911c65e09678
     * - 
       - flashModule
-      - 0xa6585bbfae62096eBd7d71668B3E6cdE300a8c3E
+      - 0x29b66280F0Ea5F5DfbD7C94D560FC060575360cd
 
     * - Periphery
       - quoter (without limit)
-      - 0xa88C8AA45D9f7a33F4BC53d4d449F669BF60F823
+      - 0xa9754f0D9055d14EB0D2d196E4C51d8B2Ee6f4d3
     * - 
       - quoter (within 10000 ticks )
-      - 0xcC2DE5D1A8154f7fa0e80a6732a38422D8fBEB10 
+      - 0xF6FFe4f3FdC8BBb7F70FFD48e61f17D1e343dDfD
     * - 
       - swap
-      - 0x35BF764d0440CBB1F7b546e6AF664177DEBF8304
+      - 0x77132b63429718Db2B6ad8D942eE13A198f6Ab49
     * -
       - liquidityManager
-      - 0x539E30dBa3Bb825626C7A91D42557E49FF4C4413
+      - 0x67A1f4A939b477A6b7c5BF94D97E45dE87E608eF
     * - 
       - limitOrderManager
-      - 0x58ce24c6cDC0d5A2c3BcA1e179E869AF97266829
+      - 0xC6C7c2edF70A3245ad6051E93809162B9758ce08
     * -
       - tapProxy
-      - 0x0e7091e9036c2E7b3E6978Dd868d458a731Cd998
+      - 0x95c5F14106ab4d1dc0cFC9326225287c18c2d247
 
 4. Mantle Testnet (chainId: 5001 ) (updated on 2023.06.27):
 
@@ -184,9 +181,6 @@ Testnet
     * - 
       - limitOrderManager
       - 0x4aAD4b81f886b12A29B68f9C8A7949d7d81Fe887
-    * -
-      - box
-      - 0x5617675423Ac3C73081a3e331F5f135A948606D7
     * -
       - tapProxy
       - 0x0953C6771cD8eE5421dE0CE1F11BEC559EBCF9d6
@@ -236,13 +230,11 @@ Testnet
       - limitOrderManager
       - 0x1eE5eDC5Fe498a2dD82862746D674DB2a5e7fef6
     * -
-      - box
-      - 0x4d140E612e476A6ba54EF1306b2bA398a5dEff09
-    * -
       - tapProxy
       - 0xEB122DE19FeA9eD039E2d087113db26017f5F91a
 
-6. OpBNB Testnet (chainId: 5611 ) (updated on 2023.07.11):
+
+6. X1 Testnet (chainId: 195 ) (updated on 2023.11.16):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -253,10 +245,10 @@ Testnet
       - Address
     * - Core
       - factory
-      - 0x64c2F1306b4ED3183E7B345158fd01c19C0d8c5E 
+      - 0x64c2F1306b4ED3183E7B345158fd01c19C0d8c5E
     * -
       - swapX2YModule 
-      - 0xED9b4E3ED8fe7e820B950F28f939AF848f98e995
+      - 0xED9b4E3ED8fe7e820B950F28f939AF848f98e995 
     * -
       - swapY2XModule 
       - 0x706A11AF5bb5C2a50aB9802503ddbfF69373D1bd
@@ -272,22 +264,68 @@ Testnet
 
     * - Periphery
       - quoter (without limit)
-      - 0x95c5F14106ab4d1dc0cFC9326225287c18c2d247
+      - 0xF6FFe4f3FdC8BBb7F70FFD48e61f17D1e343dDfD 
     * - 
       - quoter (within 10000 ticks )
-      - 0x4d140E612e476A6ba54EF1306b2bA398a5dEff09
+      - 0x95c5F14106ab4d1dc0cFC9326225287c18c2d247
     * - 
       - swap
-      - 0xF6FFe4f3FdC8BBb7F70FFD48e61f17D1e343dDfD
+      - 0xa9754f0D9055d14EB0D2d196E4C51d8B2Ee6f4d3
     * -
       - liquidityManager
-      - 0x1eE5eDC5Fe498a2dD82862746D674DB2a5e7fef6
+      - 0xC6C7c2edF70A3245ad6051E93809162B9758ce08
     * - 
       - limitOrderManager
-      - 0x77132b63429718Db2B6ad8D942eE13A198f6Ab49
-    * -
-      - box
-      - 0xEB122DE19FeA9eD039E2d087113db26017f5F91a
+      - 0x1eE5eDC5Fe498a2dD82862746D674DB2a5e7fef6
     * -
       - tapProxy
-      - 0x6AECfe44225A50895e9EC7ca46377B9397D1Bb5b
+      - 0x4d140E612e476A6ba54EF1306b2bA398a5dEff09
+
+7. ZetaChain Testnet (chainId: 7001 ) (updated on 2023-07-17):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x64c2F1306b4ED3183E7B345158fd01c19C0d8c5E
+    * -
+      - swapX2YModule 
+      - 0xED9b4E3ED8fe7e820B950F28f939AF848f98e995 
+    * -
+      - swapY2XModule 
+      - 0x706A11AF5bb5C2a50aB9802503ddbfF69373D1bd
+    * -
+      - liquidityModule
+      - 0x817EC83Fb6906ba0777E89110d5089313385F4A2
+    * -
+      - limitOrderModule
+      - 0xAF931D7AaB9643d1E63Ed2E1fB17911c65e09678
+    * - 
+      - flashModule
+      - 0x29b66280F0Ea5F5DfbD7C94D560FC060575360cd
+
+    * - Periphery
+      - quoter (without limit)
+      - 0xa9754f0D9055d14EB0D2d196E4C51d8B2Ee6f4d3
+    * - 
+      - quoter (within 10000 ticks )
+      - 0xF6FFe4f3FdC8BBb7F70FFD48e61f17D1e343dDfD
+    * - 
+      - swap
+      - 0x77132b63429718Db2B6ad8D942eE13A198f6Ab49
+    * -
+      - liquidityManager
+      - 0x67A1f4A939b477A6b7c5BF94D97E45dE87E608eF
+    * - 
+      - limitOrderManager
+      - 0xC6C7c2edF70A3245ad6051E93809162B9758ce08
+    * -
+      - tapProxy
+      - 0x95c5F14106ab4d1dc0cFC9326225287c18c2d247
+
+

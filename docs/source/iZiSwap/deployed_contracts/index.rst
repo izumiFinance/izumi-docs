@@ -4,11 +4,10 @@ Deployed Contracts
 Currently, iZiSwap core and periphery contracts are deployed on:
 
 
+
 *  Mainnet:
 
     * BNB Chain (BSC)
-
-    * Aurora
 
     * ZkSync Era
 
@@ -18,15 +17,27 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Base
 
+    * Scroll
+
     * Arbitrum
 
     * Polygon
+
+    * OpBNB
 
     * Meter
 
     * Ontology
 
     * Ethereum Classic
+
+    * Kroma
+
+    * Manta 
+
+    * ZKFair
+
+    * Zeta
 
 
 *  Testnet:
@@ -37,11 +48,13 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Mantle Testnet
 
-    * Scroll Alpha Testnet
+    * Scroll Sepolia Testnet
 
     * Linea Testnet
 
-    * OpBNB Testnet
+    * X1 Testnet
+
+    * ZetaChain Testnet
 
 
 .. toctree::

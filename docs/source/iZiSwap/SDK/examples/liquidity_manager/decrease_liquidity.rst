@@ -1,16 +1,16 @@
-decrease a liquidity
-====================
+Decrease a liquidity position
+==============================
 
-in this example, we first fetch all liquidities of an account, 
-then select one of it and decrease (or called withdraw) some liquidity
+In this example, we first fetch all liquidity positions of an account, 
+then select one of it to decrease (or withdraw) some liquidity.
 
-The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/liquidityManager/fetchLiquidityAndDec.ts>`_.
+The full example code of this section can be found `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/liquidityManager/fetchLiquidityAndDec.ts>`_.
 
-We should notice that, after decrease liquidity, the tokens are still in the pool contract.
-To collect your decreased or fee token from pool. you can see this example :ref:`collect_liquidities`.
+*Important note: after decreasing liquidity, the tokens are still in the pool contract.
+Another separate collect operation is needed to collect your decreased token (and fees) from the pool. Check this example* :ref:`collect_liquidities`.
 
-1. fetch liquidities
---------------------
+1. Fetch liquidity positions
+-----------------------------
 
 .. code-block:: typescript
     :linenos:

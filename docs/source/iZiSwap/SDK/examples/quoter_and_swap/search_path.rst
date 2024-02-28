@@ -2,19 +2,19 @@ Search Swap Path
 ============================
 
 In this example, we will do path searching with **exact input amount** (amount of payed token).
-The complete example codes can be found `here <https://github.com/izumiFinance/iZiSwap-sdk/blob/main/example/search/searchWithExactInput.ts>`_.
+The complete example codes can be found `here <https://github.com/izumiFinance/iZiSwap-sdk/blob/main/example/search/searchWithExactInput.ts>`__.
 
 The search result can be used in **Exact Input** mode of **swap** or **quoter** .
 Also we can use same search result in **Exact Output** mode of **swap** or **quoter**.
 
 If you want to do path searching with **exact output amount** (amount of acquired token),
-You can refer the codes `here <https://github.com/izumiFinance/iZiSwap-sdk/blob/main/example/search/searchWithExactOutput.ts>`_.
+You can refer the codes in the `here <https://github.com/izumiFinance/iZiSwap-sdk/blob/main/example/search/searchWithExactOutput.ts>`_.
 
 The only difference of these two modes while doing path searching can be viewed in :ref:`this subsection <diff_for_exact_output>`
 
+
 1. Some imports
 -----------------------------------------------------------
-
 
 .. code-block:: typescript
     :linenos:

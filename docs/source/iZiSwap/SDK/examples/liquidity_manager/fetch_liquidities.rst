@@ -1,18 +1,18 @@
 .. _fetch_liquidities:
 
-fetch liquidities
+Fetch liquidity positions
 ================================
 
-here, we provide a simple example to fetch nft-liquidities of iZiSwap from user's address
+Here, we provide an example to fetch liquidity positions of a user address.
 
-by calling **fetchLiquiditiesOfAccount()**
+The function is realized by calling **fetchLiquiditiesOfAccount()**,
 
 The full example code of this chapter can be spotted `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/liquidityManager/fetchLiquidity.ts>`_.
 
-1. some imports
----------------
+1. Some imports
+----------------
 
-before we use function of **fetchLiquiditiesOfAccount()**, we should import some corresponding function and data structure
+Before we use function of **fetchLiquiditiesOfAccount()**, we should import some corresponding function and data structure.
 
 .. code-block:: typescript
     :linenos:
@@ -23,11 +23,11 @@ before we use function of **fetchLiquiditiesOfAccount()**, we should import some
     import { getLiquidityManagerContract, fetchLiquiditiesOfAccount } from 'iziswap-sdk/lib/liquidityManager/view';
     import { fetchToken } from 'iziswap-sdk/lib/base/token/token';
 
-the detail of these imports can be viewed in following content
+Details of these imports can be viewed in the following content.
 
 .. _base_obj:
 
-2. specify which chain, rpc url, web3, and account
+2. Specify chain, rpc, web3, and account
 --------------------------------------------------
 
 .. code-block:: typescript
@@ -40,46 +40,41 @@ the detail of these imports can be viewed in following content
     const account =  web3.eth.accounts.privateKeyToAccount(privateKey)
     console.log('address: ', account.address)
 
-here
+Where
 
-**BaseChain** is a data structure to describe a chain, in this example we use **bsc** chain.
-
-**ChainId** is an enum to describe **chain id**, value of the enum is equal to value of **chain id**
-
-**initialChainTable** is a mapping from some most used **ChainId** to **BaseChain**, of course you can fill fields of BaseChain by yourself
-
-**privateKey** is a string, which is your private key, and should be configured by your self
-
-**web3** package is a public package to interact with block chain
-
-**rpc** is the rpc url on the chain you specified
+* - **BaseChain** is a data structure to describe a chain, in this example we use **bsc** chain.
+* - **ChainId** is an enum to describe **chain id**, value of the enum is equal to value of **chain id**.
+* - **initialChainTable** is a mapping from some most used **ChainId** to **BaseChain**. You can fill fields of BaseChain by yourself.
+* - **privateKey** is a string, which is your private key, and should be configured by yourself.
+* - **web3**  is a public package to interact with block chain.
+* - **rpc** is the rpc url on the chain you specified.
 
 .. _LiquidityManagerContract:
 
-3. get web3.eth.Contract object of liquidityManager
----------------------------------------------------
+3. Get the web3.eth.Contract object of liquidityManager
+-------------------------------------------------------
 
 .. code-block:: typescript
     :linenos:
 
-    const liquidityManagerAddress = '0x93C22Fbeff4448F2fb6e432579b0638838Ff9581'
+    const liquidityManagerAddress = '0xBF55ef05412f1528DbD96ED9E7181f87d8C9F453' // example BSC address
     const liquidityManagerContract = getLiquidityManagerContract(liquidityManagerAddress, web3)
     console.log('liquidity manager address: ', liquidityManagerAddress)
 
-here, **getLiquidityManagerContract** is an api provided by our sdk, which returns a **web3.eth.Contract** object of **LiquidityManager**
+Here, **getLiquidityManagerContract** is an api provided by our sdk, which returns a **web3.eth.Contract** object of **LiquidityManager**.
 
-4. cache some erc20 tokens to speed up fetching(optional)
+4. Cache some erc20 tokens to speed up fetching(optional)
 ---------------------------------------------------------
 
-both of the function **fetchLiquiditiesOfAccount()** and **fetchLiquiditiesByTokenIds()** have a parameter called **tokenList: TokenInfoFormatted[]**, which is a cache of list of **TokenInfoFormatted**
+Both of the function **fetchLiquiditiesOfAccount()** and **fetchLiquiditiesByTokenIds()** have a parameter called **tokenList: TokenInfoFormatted[]**, which is a cache list of **TokenInfoFormatted**.
 
-each returned liquidity will contain fields **tokenX** and **tokenY** which are both **TokenInfoFormatted** type
+Each returned liquidity position contains fields **tokenX** and **tokenY**,  which are both of **TokenInfoFormatted** type.
 
-if we fill tokenList with most erc20 tokens involved by these liquidities in advance, we may speed up calling of **fetchLiquiditiesOfAccount()** and **fetchLiquiditiesByTokenIds()**
+If you fill tokenList with most erc20 tokens involved by these liquidities in advance, you may speed up the calling of **fetchLiquiditiesOfAccount()** and **fetchLiquiditiesByTokenIds()**.
 
-ofcourse, you can skip this section and just transfer **[]** to the **tokenList** parameter in next section
+You can also skip this section and just transfer **[]** to the **tokenList** parameter in next section.
 
-here, we cache 2 erc20 tokens **testA** and **testB** in advance
+Here, we cache 2 erc20 tokens **testA** and **testB** in advance.
 
 .. code-block:: typescript
     :linenos:
@@ -90,8 +85,8 @@ here, we cache 2 erc20 tokens **testA** and **testB** in advance
     const testA = await fetchToken(testAAddress, chain, web3)
     const testB = await fetchToken(testBAddress, chain, web3)
 
-5. fetch!
----------
+5. Fetch!
+----------
 
 .. code-block:: typescript
     :linenos:
@@ -107,19 +102,15 @@ here, we cache 2 erc20 tokens **testA** and **testB** in advance
     console.log('liquidtys: ', liquidities)
 
 
-here,
+Here,
 
-**chain** is **BaseChain** obj specified in :ref:`2 <base_obj>`
+* - **chain** is a **BaseChain** obj specified in :ref:`2 <base_obj>`.
+* - **web3** is a **Web3** obj specified in :ref:`2 <base_obj>`.
+* - **liquidityManagerContract** is constructed in :ref:`3 <LiquidityManagerContract>`.
+* - **account.address** is generated from private key in :ref:`2 <base_obj>`.
+* - **[testA, testB]** is parameter **tokenList** which is cache of list of possible erc20 token info needed, of course we can fill **tokenList** with **[]**.
 
-**web3** is **Web3** obj specified in :ref:`2 <base_obj>`
-
-**liquidityManagerContract** is constructed in :ref:`3 <LiquidityManagerContract>`
-
-**account.address** is generated from private key in :ref:`2 <base_obj>`
-
-**[testA, testB]** is parameter **tokenList** which is cache of list of possible erc20 token info needed, of course we can fill **tokenList** with **[]**
-
-**return** of **fetchLiquiditiesOfAccount()** is list of **Liquidity** object, each has following fields
+The function **return** of **fetchLiquiditiesOfAccount()** is list of **Liquidity** object, each has following fields.
 
 .. code-block:: typescript
     :linenos:
@@ -156,4 +147,4 @@ here,
         state: State;
     }
 
-after this step, we have successfully fetched all liquidities of the user
+Finally, we have successfully fetched all liquidity positions of an address.
