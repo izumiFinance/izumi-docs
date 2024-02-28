@@ -6,7 +6,51 @@ oracle
 in this example, we will display the way to
 query recent time weighted average (TWA) point on a swap pool.
 
-query in solidity
+expand observation queue
+-------------------------------
+
+if we want to query TWA point on a swap pool, we should guarantee
+that the observation queue has enough capacity.
+
+we can call `pool.state(...)` interface on swap pool to get current capacity
+of the queue.
+
+.. code-block:: solidity
+    :linenos:
+
+    interface IiZiSwapPool {
+        function state()
+            external view
+            returns(
+                uint160 sqrtPrice_96,
+                int24 currentPoint,
+                uint16 observationCurrentIndex,
+                uint16 observationQueueLen,
+                uint16 observationNextQueueLen,
+                bool locked,
+                uint128 liquidity,
+                uint128 liquidityX
+            );
+    }
+
+the returned value **observationNextQueueLen** is the current capacity of
+of the pool.
+
+to expand the capacity of observation queue on a pool,
+just call following interface of swap pool.
+
+.. code-block:: solidity
+    :linenos:
+
+    interface IiZiSwapPool {
+        function expandObservationQueue(uint16 newNextQueueLen) external;
+    }
+
+in the above code, newNextQueueLen is the new
+capacity you want to expand to.
+
+
+Query TWA point in solidity
 -------------------------------
 
 we can easily query recent TWA point from deployed
