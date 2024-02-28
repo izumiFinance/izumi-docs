@@ -630,6 +630,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
+    * - 
+      - oracle (TWA price) 
+      - 0x611575eE1fbd4F7915D0eABCC518eD396fF78F0c
 
 
 15. ZKFair (chainId: 42766) (updated on 2023.12.19):
