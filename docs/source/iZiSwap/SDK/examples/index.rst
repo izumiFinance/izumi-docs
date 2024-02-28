@@ -12,3 +12,4 @@ In this chapter, we will demonstrate how to implement the most common and import
    liquidity_manager/liquidity_manager
    limit_order_manager/limit_order_manager
    swap_query/swap_query
+   oracle/oracle
