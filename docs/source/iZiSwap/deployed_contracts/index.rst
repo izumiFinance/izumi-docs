@@ -4,7 +4,6 @@ Deployed Contracts
 Currently, iZiSwap core and periphery contracts are deployed on:
 
 
-
 *  Mainnet:
 
     * BNB Chain (BSC)
