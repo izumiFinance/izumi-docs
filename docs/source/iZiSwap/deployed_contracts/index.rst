@@ -44,6 +44,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * zkLink Nova
 
+    * Mode 
+
 
 
 *  Testnet:

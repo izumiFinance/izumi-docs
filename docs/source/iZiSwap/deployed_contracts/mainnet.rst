@@ -724,3 +724,184 @@ Mainnet
       - limitOrderManager
       - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
 
+
+17. Merlin (chainId: 4200) (updated on 2024.02.03, DAAS called MerlinSwap):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0xE29a6620DAc789B8a76e9b9eC8fE9B7cf2B663D5
+    * -
+      - swapX2YModule 
+      - 0x7Ff3b3F03c9fd67b1cb0eF11840c65985D41EFEe
+    * -
+      - swapY2XModule 
+      - 0x69a5D4F5d364Aa102A36645B9b7540C27a801A39
+    * -
+      - liquidityModule
+      - 0x126bDEC9dF42e503038D2e4FfA5F71EA1b0fa380
+    * -
+      - limitOrderModule
+      - 0x63fA0cD4E4cE96b329Fc59C6410f946FbAa79d85
+    * - 
+      - flashModule
+      - 0xC8D7740050c78B05222B661304FA415AA68e968B
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x2569bcE69287618e2cd004f785d016F7DF29232F
+    * - 
+      - quoter (with 10000 ticks)
+      - 0xD5f164e44057e8004266cc2EABc670cDFa3E0Fd2
+    * - 
+      - swap
+      - 0x1aFa5D7f89743219576Ef48a9826261bE6378a68
+    * -
+      - liquidityManager
+      - 0x261507940678Bf22d8ee96c31dF4a642294c0467
+    * - 
+      - limitOrderManager
+      - 0x302842DD5E8EdaE2967fbAE50283E0998954504b
+
+
+18. Blast (chainId: 81457) (updated on 2024.03.01, DAAS called RawrSwap):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x5162f29E9626CF7186ec40ab97D92230B428ff2d
+    * -
+      - swapX2YModule 
+      - 0xC825c19B35d6F03D473E1aC6C83e58735bcBe822
+    * -
+      - swapY2XModule 
+      - 0x2AdE4e559D057b225cF2783311350470a5006807
+    * -
+      - liquidityModule
+      - 0xa176d20069a3c49AFb661EA0017bED1E5e3dA513
+    * -
+      - limitOrderModule
+      - 0xaEF41D6a8F02400096388cc8c234AaA3D43b1BEC
+    * - 
+      - flashModule
+      - 0x108DfE525bD3eB431f4be198586D7970f84cC1Fd
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x7e97337AF2c13cCc132Ead0BB71983a24065F624
+    * - 
+      - quoter (with 10000 ticks)
+      - 0xd413b415Bf8449D6DB8238826579647bfDb60a9f
+    * - 
+      - swap
+      - 0xA3F50FeBA40dd3E884688C0AF72C4054D07a1c50
+    * -
+      - liquidityManager
+      - 0x5e7902aDf0Ea0ff827683Cc1d431F740CAD0731b
+    * - 
+      - limitOrderManager
+      - 0x3252da4D17dd11E0326d82497Da26AE404C74F09
+
+19. zkLink Nova (chainId: 810180) (updated on 2024.03.11):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x33D9936b7B7BC155493446B5E6dDC0350EB83AEC
+    * -
+      - swapX2YModule 
+      - 0x7499ce9c8F4FF47Be5dd5308Ab54cC710DE751E1
+    * -
+      - swapY2XModule 
+      - 0xBc94aedD2a0a986476b89e072B05e0Df117A3f8b
+    * -
+      - liquidityModule
+      - 0xC319755Dff1601b3D0520B421A281B11bF22E80F
+    * -
+      - limitOrderModule
+      - 0x8df80089B7AB1646DB211D43949ECdfc94582011
+    * - 
+      - flashModule
+      - 0x0066f3791BD9d5a25d88F978dd8e1006445fE0d6
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x3EC82C07981D6D213DA9bd35A0ba4cd324feA438
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x7dEe7de9814ed6C1e20B3E4E2fA9b1B96E15FDe1
+    * - 
+      - swap
+      - 0x377EC7c9ae5a0787F384668788a1654249059dD6
+    * -
+      - liquidityManager
+      - 0x936c9A1B8f88BFDbd5066ad08e5d773BC82EB15F
+    * - 
+      - limitOrderManager
+      - 0x8b9D7D609a83B2f69D2135786a7D230043AF7283
+    * - 
+      - oracle
+      - 0xe7d7b5cd36dEeD96C2aDe3Da228d9792D2BE756A
+
+
+20. Mode (chainId: 34443) (updated on 2024.03.14):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+    * -
+      - swapX2YModule 
+      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+    * -
+      - swapY2XModule 
+      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+    * -
+      - liquidityModule
+      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+    * -
+      - limitOrderModule
+      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+    * - 
+      - flashModule
+      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
+    * - 
+      - swap
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * -
+      - liquidityManager
+      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
+    * - 
+      - limitOrderManager
+      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
