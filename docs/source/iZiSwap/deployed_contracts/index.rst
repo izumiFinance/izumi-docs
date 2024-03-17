@@ -38,6 +38,13 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Zeta
 
+    * Merlin (DAAS, named MerlinSwap)
+
+    * Blast (DAAS, named RawrSwap)
+
+    * zkLink Nova
+
+
 
 *  Testnet:
 
