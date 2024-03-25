@@ -46,6 +46,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Mode 
 
+    * MAP Protocol (DAAS, named HiveSwap)
+
 
 *  Testnet:
 
