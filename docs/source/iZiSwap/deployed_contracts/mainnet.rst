@@ -587,7 +587,7 @@ Mainnet
 
 
 
-14. Scroll (chainId: 169) (updated on 2023.10.13):
+14. Scroll (chainId: 534352) (updated on 2023.10.13):
 
 .. list-table:: 
     :widths: 25 25 50
