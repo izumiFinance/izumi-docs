@@ -634,7 +634,7 @@ Mainnet
       - oracle (TWA price) 
       - 0x611575eE1fbd4F7915D0eABCC518eD396fF78F0c
 
-15. ZKFair (chainId: 42766) (updated on 2023.12.19):
+16. ZKFair (chainId: 42766) (updated on 2023.12.19):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -907,7 +907,7 @@ Mainnet
 
 
 
-21. MAP Protocol (chainId: 22776) (updated on 2024.03.08):
+21. MAP Protocol (chainId: 22776) (updated on 2024.03.08, DAAS called HiveSwap):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -956,3 +956,98 @@ Mainnet
     * -
       - multicall
       - 0x2C6Df0fDbCE9D2Ded2B52A117126F2Dc991f770f 
+
+
+22. ANVM (chainId: 2649) (updated on 2024.04.01, DAAS called AinnSwap):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+    * -
+      - swapX2YModule 
+      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+    * -
+      - swapY2XModule 
+      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+    * -
+      - liquidityModule
+      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+    * -
+      - limitOrderModule
+      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+    * - 
+      - flashModule
+      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
+    * - 
+      - swap
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * -
+      - liquidityManager
+      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
+    * - 
+      - limitOrderManager
+      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+    * -
+      - multicall
+      - 0x7a524c7e82874226F0b51aade60A1BE4D430Cf0F
+
+23. X Layer (chainId: 196) (updated on 2024.04.01):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+    * -
+      - swapX2YModule 
+      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+    * -
+      - swapY2XModule 
+      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+    * -
+      - liquidityModule
+      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+    * -
+      - limitOrderModule
+      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+    * - 
+      - flashModule
+      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+    * - 
+      - swap
+      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
+    * -
+      - liquidityManager
+      - 0x1502d025BfA624469892289D45C0352997251728
+    * - 
+      - limitOrderManager
+      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
+    * -
+      - multicall
+      - 0x14323AfbC2b82fE58F0D9c203830EE969B4d1bE2

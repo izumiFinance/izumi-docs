@@ -48,6 +48,10 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * MAP Protocol (DAAS, named HiveSwap)
 
+    * ANVM (DAAS, nammed AinnSwap)
+
+    * X Layer 
+
 
 *  Testnet:
 
