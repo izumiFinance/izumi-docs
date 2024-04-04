@@ -67,8 +67,6 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * X1 Testnet
 
-    * ZetaChain Testnet
-
 
 .. toctree::
 
