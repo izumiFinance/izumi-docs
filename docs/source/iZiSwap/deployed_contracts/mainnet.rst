@@ -1005,7 +1005,7 @@ Mainnet
       - multicall
       - 0x7a524c7e82874226F0b51aade60A1BE4D430Cf0F
 
-23. X Layer (chainId: 196) (updated on 2024.04.01):
+23. X Layer (chainId: 196) (updated on 2024.04.10, DAAS called XSwap):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -1016,38 +1016,38 @@ Mainnet
       - Address
     * - Core
       - factory
-      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+      - 0xBf8F8Ef2d2a534773c61682Ea7cF5323a324B188
     * -
       - swapX2YModule 
-      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+      - 0xe6805638db944eA605e774e72c6F0D15Fb6a1347
     * -
       - swapY2XModule 
-      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+      - 0xe4A0b241D8345d86FB140D40c87C5fbDd685B9dd
     * -
       - liquidityModule
-      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+      - 0x3a2932a74e511C9Dc4CaD60e06eE6D3690Ce2492
     * -
       - limitOrderModule
-      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+      - 0x19647d5f84308EE780cC5E3Da6E4aEe8e12B0ED4
     * - 
       - flashModule
-      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+      - 0x77C2C2eCe8F323abB6753b85D6b71C82039BFb17
 
     * - Periphery
       - quoter (without limit)
-      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+      - 0xAC9788cfea201950dB91d7db6F28C448CF3A4B29
     * - 
       - quoter (with 10000 ticks)
-      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+      - 0x93C22Fbeff4448F2fb6e432579b0638838Ff9581
     * - 
       - swap
-      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
+      - 0xd7de110Bd452AAB96608ac3750c3730A17993DE0
     * -
       - liquidityManager
-      - 0x1502d025BfA624469892289D45C0352997251728
+      - 0xF42C48f971bDaA130573039B6c940212EeAb8496
     * - 
       - limitOrderManager
-      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
+      - 0x344ADD21b136B09051fb061881eC7971c92cE7f7
     * -
       - multicall
       - 0x14323AfbC2b82fE58F0D9c203830EE969B4d1bE2

@@ -50,7 +50,7 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * ANVM (DAAS, nammed AinnSwap)
 
-    * X Layer 
+    * X Layer  (DAAS, named XSwap)
 
 
 *  Testnet:
