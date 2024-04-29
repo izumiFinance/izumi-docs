@@ -52,6 +52,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * X Layer  (DAAS, named XSwap)
 
+    * Cyber (DAAS, named CyberSwap)
+
 
 *  Testnet:
 
