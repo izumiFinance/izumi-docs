@@ -54,6 +54,10 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Cyber (DAAS, named CyberSwap)
 
+    * Klaytn (DAAS, named KaiaSwap)
+
+    * BOB 
+
 
 *  Testnet:
 
