@@ -904,6 +904,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+    * - 
+      - orcale
+      - 0x611575eE1fbd4F7915D0eABCC518eD396fF78F0c
 
 
 
