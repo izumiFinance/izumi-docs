@@ -359,6 +359,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x25C030116Feb2E7BbA054b9de0915E5F51b03e31
+    * - 
+      - oracle
+      - 0xBd3bd95529e0784aD973FD14928eEDF3678cfad8
 
 
 9. Ethereum Classic (chainId: 61) (updated on 2023.07.24 (periphery 2023.12.19)):
