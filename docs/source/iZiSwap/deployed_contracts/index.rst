@@ -58,6 +58,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * BOB 
 
+    * Taiko
+
 
 *  Testnet:
 
