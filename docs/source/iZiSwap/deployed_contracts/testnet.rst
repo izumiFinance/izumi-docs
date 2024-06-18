@@ -282,7 +282,7 @@ Testnet
       - 0x4d140E612e476A6ba54EF1306b2bA398a5dEff09
 
 
-7. Berachain Testnet (chainId: 80085 ) (updated on 2024.02.08):
+7. Berachain bArtio Testnet (chainId: 80084 ) (updated on 2024.06.11):
 
 .. list-table:: 
     :widths: 25 25 50

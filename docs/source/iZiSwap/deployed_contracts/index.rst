@@ -60,6 +60,10 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Taiko
 
+    * KAVA 
+
+    * RootStock (DAAS, named WoodSwap)
+
 
 *  Testnet:
 
@@ -75,7 +79,7 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * X1 Testnet
 
-    * Berachain Testnet
+    * Berachain bArtio Testnet
 
 
 .. toctree::
