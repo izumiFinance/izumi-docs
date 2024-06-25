@@ -64,6 +64,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * RootStock (DAAS, named WoodSwap)
 
+    * Core 
+
 
 *  Testnet:
 
