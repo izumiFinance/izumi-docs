@@ -26,7 +26,6 @@ Assuming that the current price of the pool is 1 ETH = 3000 USDC. In the range o
 If the price of PoolToken 1ETH < 1000 USDC, then the form of liquidity will be converted to a single token ETH; otherwise, if the price of PoolToken 1ETH > 5000 USDC, then the form of liquidity will be a single token USDC.
 
 
-
 Range Liquidity
 ------------------------------------
 
