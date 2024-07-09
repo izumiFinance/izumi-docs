@@ -1,19 +1,23 @@
 .. _oracle:
 
-oracle
+Oracle
 ====================
 
-in this example, we will display the way to
-query recent time weighted average (TWA) point on a swap pool.
 
-expand observation queue
+iZiSwap, as a DEX, has the ability to provide price feeds externally. While the pools have real-time prices, real-time prices are susceptible to manipulation. Therefore, iZiSwap provides TWA (Time-Weighted Average) prices to external sources.
+
+In this example, we will show how to query a recent TWA price point of a swap pool, in Solidity code.
+
+
+Expand Observation Queue
 -------------------------------
 
-if we want to query TWA point on a swap pool, we should guarantee
+If we want to query a TWA price point of a swap pool, we should guarantee
 that the observation queue has enough capacity.
 
-we can call `pool.state(...)` interface on swap pool to get current capacity
-of the queue.
+One can call the `pool.state(...)` interface of a swap pool to get the current capacity (slots) of the queue.
+Each slot records the latest trading price, and it is updated only once per block.
+
 
 .. code-block:: solidity
     :linenos:
@@ -33,11 +37,9 @@ of the queue.
             );
     }
 
-the returned value **observationNextQueueLen** is the current capacity of
-of the pool.
+The returned value **observationNextQueueLen** is the current capacity of of the pool.
 
-to expand the capacity of observation queue on a pool,
-just call following interface of swap pool.
+To expand the capacity of observation queue on a pool, just call following interface of swap pool.
 
 .. code-block:: solidity
     :linenos:
@@ -46,15 +48,14 @@ just call following interface of swap pool.
         function expandObservationQueue(uint16 newNextQueueLen) external;
     }
 
-in the above code, newNextQueueLen is the new
-capacity you want to expand to.
+Here **newNextQueueLen** is the new capacity you want to expand to.
 
 
-Query TWA point in solidity
+Query TWA Price Point
 -------------------------------
 
-we can easily query recent TWA point from deployed
-oracle contract by easily calling following interface.
+One can easily query recent TWA point from deployed
+oracle contract by calling  the following interface.
 
 .. code-block:: solidity
     :linenos:
@@ -66,27 +67,29 @@ oracle contract by easily calling following interface.
             returns (bool enough, int24 avgPoint, uint256 oldestTime);
     }
 
-in the above code, the interface `getTWAPoint` has following params
+where the interface `getTWAPoint` has following params
 
 .. code-block:: solidity
     :linenos:
 
     pool: address, swap pool address you want to query
-    delta: uint256, seconds of time period, 
-        this interface calculates TWA point from delta ago to now
-        etc, the time period is [block.Timestamp - delta, block.Timestamp]
+
+    delta: uint256, seconds of time period. This interface calculates TWA point from delta ago to now, i.e., the time period is [block.Timestamp - delta, block.Timestamp]
 
 
-And the interface will return following values.
+The interface will return following values.
 
 .. code-block:: solidity
     :linenos:
 
     enough: bool, whether oldest point in the observation queue is older than (currentTime - delta)
+
     avgPoint: int24, TWA point within [block.Timestamp - delta, block.Timestamp]
+
     oldestTime: the oldest time of point in the observation queue.
 
-and we also provide a simple example to call oracle's interface in solidity.
+
+We also provide a simple example to call oracle's interface in solidity.
 
 .. code-block:: solidity
     :linenos:

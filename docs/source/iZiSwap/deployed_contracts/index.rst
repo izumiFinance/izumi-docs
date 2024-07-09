@@ -4,7 +4,6 @@ Deployed Contracts
 Currently, iZiSwap core and periphery contracts are deployed on:
 
 
-
 *  Mainnet:
 
     * BNB Chain (BSC)
@@ -39,6 +38,34 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Zeta
 
+    * Merlin (DAAS, named MerlinSwap)
+
+    * Blast (DAAS, named RawrSwap)
+
+    * zkLink Nova
+
+    * Mode 
+
+    * MAP Protocol (DAAS, named HiveSwap)
+
+    * ANVM (DAAS, nammed AinnSwap)
+
+    * X Layer  (DAAS, named XSwap)
+
+    * Cyber (DAAS, named CyberSwap)
+
+    * Klaytn (DAAS, named KaiaSwap)
+
+    * BOB 
+
+    * Taiko
+
+    * KAVA 
+
+    * RootStock (DAAS, named WoodSwap)
+
+    * Core 
+
 
 *  Testnet:
 
@@ -54,7 +81,7 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * X1 Testnet
 
-    * ZetaChain Testnet
+    * Berachain bArtio Testnet
 
 
 .. toctree::

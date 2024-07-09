@@ -30,7 +30,6 @@ Welcome to iZUMi Developer Docs
    :caption: Info
 
    Links/index
-   Address/index
 
 
 .. |br| raw:: html

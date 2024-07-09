@@ -281,7 +281,8 @@ Testnet
       - tapProxy
       - 0x4d140E612e476A6ba54EF1306b2bA398a5dEff09
 
-7. ZetaChain Testnet (chainId: 7001 ) (updated on 2023-07-17):
+
+7. Berachain bArtio Testnet (chainId: 80084 ) (updated on 2024.06.11):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -311,21 +312,18 @@ Testnet
 
     * - Periphery
       - quoter (without limit)
-      - 0xa9754f0D9055d14EB0D2d196E4C51d8B2Ee6f4d3
+      - 0x95c5F14106ab4d1dc0cFC9326225287c18c2d247
     * - 
       - quoter (within 10000 ticks )
-      - 0xF6FFe4f3FdC8BBb7F70FFD48e61f17D1e343dDfD
+      - 0x4d140E612e476A6ba54EF1306b2bA398a5dEff09
     * - 
       - swap
-      - 0x77132b63429718Db2B6ad8D942eE13A198f6Ab49
+      - 0xF6FFe4f3FdC8BBb7F70FFD48e61f17D1e343dDfD
     * -
       - liquidityManager
-      - 0x67A1f4A939b477A6b7c5BF94D97E45dE87E608eF
+      - 0x1eE5eDC5Fe498a2dD82862746D674DB2a5e7fef6 
     * - 
       - limitOrderManager
-      - 0xC6C7c2edF70A3245ad6051E93809162B9758ce08
-    * -
-      - tapProxy
-      - 0x95c5F14106ab4d1dc0cFC9326225287c18c2d247
+      - 0x77132b63429718Db2B6ad8D942eE13A198f6Ab49
 
 
