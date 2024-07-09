@@ -158,7 +158,7 @@ where
  * - **factoryContract**: iZiSwap Factory contract, acquired in step 3.
  * - **tokenXAddress**: address of tokenX, here tokenXAddress is `min{tokenAAddress, tokenBAddress}`.
  * - **tokenYAddress**: address of tokenY, here tokenYAddress is `max{tokenAAddress, tokenBAddress}`.
- * - **feeContractNumber**: an int number, fee/1e6 is fee rate of pool, etc, 2000 means 0.2% fee rate.
+ * - **feeContractNumber**: an int number, fee/1e6 is fee rate of pool, etc, 3000 means 0.3% fee rate.
  * - **initPointXByY**: an int number specifying initial point (see :ref:`here<point>`) of the pool.
  * - **account.address**: address of your private key, acquired in step 2.
  * - **chain**: chain object, acquired in step 2.

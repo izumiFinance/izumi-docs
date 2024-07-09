@@ -60,9 +60,12 @@ Here **quoterSwapChainWithExactInput** will return amount of token acquired (N).
     // TokenInfoFormatted of token 'USDT' and token 'BUSD'
     const testA = await fetchToken(testAAddress, chain, web3)
     const testB = await fetchToken(testBAddress, chain, web3)
-    const fee = 400 // 400 means 0.04%
+    const fee = 500 // 500 means 0.05%
 
-We are going to pay token **testA** to acquire token **testB**.
+We are going to pay token **testA** to acquire token **testB** with the pool of **0.05%** fee rate.
+
+*In general, the supported fee rates for the mainnet are 500 (0.05%), 3000 (0.3%), and 10000 (1%); and for the testnet are 400 (0.04%), 2000 (0.2%) and 10000 (1%). One needs to check if the choosen pool exists and has enough liquidity.*
+*The liquidity condition can be checked on the analytics page* `here <https://analytics.izumi.finance>`_ .
 
 .. _quoter_swap_chain_with_exact_input_query:
 
