@@ -152,7 +152,6 @@ If you donot modify any element (**testAAddress** or **testBAddress** or **feeCo
         gasPrice,
     )
 
-
 The function **getCreatePoolCall(...)** imported from **'iziswap-sdk/lib/pool/funcs'** will return corresponding txn data for creating a new pool,
 where
 
