@@ -66,6 +66,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Core 
 
+    * Neon (DAAS, named VibrSwap)
+
 
 *  Testnet:
 
