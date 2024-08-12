@@ -1,6 +1,7 @@
 Mainnet
 ==========================
 
+
 1. BNB Chain (BSC) (chainId: 56) (update on 2023.07.17):
 
 .. list-table:: 
