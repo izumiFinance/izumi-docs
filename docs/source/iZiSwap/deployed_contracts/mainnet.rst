@@ -1392,3 +1392,48 @@ Mainnet
     * - 
       - locker 
       - 0x3F559139C2Fc7B97Ad6FE9B4d1f75149F551DB18
+
+
+31. NEON (chainId: 245022934) (updated on 2024.01.17, DAAS called VibrSwap):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * -
+      - swapX2YModule 
+      - 0x110dE362cc436D7f54210f96b8C7652C2617887D
+    * -
+      - swapY2XModule 
+      - 0x1502d025BfA624469892289D45C0352997251728
+    * -
+      - liquidityModule
+      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
+    * -
+      - limitOrderModule
+      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+    * - 
+      - flashModule
+      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x2C6Df0fDbCE9D2Ded2B52A117126F2Dc991f770f
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x14323AfbC2b82fE58F0D9c203830EE969B4d1bE2
+    * - 
+      - swap
+      - 0x04830cfCED9772b8ACbAF76Cfc7A630Ad82c9148
+    * -
+      - liquidityManager
+      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+    * - 
+      - limitOrderManager
+      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406

@@ -2,3 +2,7 @@
 /.vscode
 /docs/build
 .DS_Store
+/bin
+/lib
+pyvenv.cfg
+

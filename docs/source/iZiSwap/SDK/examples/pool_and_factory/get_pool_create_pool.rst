@@ -72,20 +72,22 @@ Here, **getFactoryContract** is an api provided by our sdk, which returns a **we
     // etc, 3000 means 0.3%
     // you should choose a proper feeRate of new pool
     // which should be supported by factory on that chain
-    const feeContractNumber = 400;
+    const feeContractNumber = 3000;
 
 Here, we will create a pool of pair **(testAAddress, testBAddress, feeContractNumber)**,
 Where
 
  * - **testAAddress**: address of an erc20 token.
  * - **testBAddress**: address of another erc20 token.
- * - **feeContractNumber**: an int number, fee/1e6 is fee rate of pool, etc, 2000 means 0.2% fee rate.
+ * - **feeContractNumber**: an int number, fee/1e6 is fee rate of pool, etc, 3000 means 0.3% fee rate.
   
 You can fill **testAAddress** and **testBAddress** with your expected erc20 token address,
 and fill **feeContractNumber** with your expected fee number. 
 
 But notice that, when you fill value of **feeContractNumber**, you should garrantee
 that the corresponding fee rate is supported by **iZiSwap** on that chain.
+
+*In general, the supported fee rates for the mainnet are 500 (0.05%), 3000 (0.3%), and 10000 (1%); and for the testnet are 400 (0.04%), 2000 (0.2%) and 10000 (1%).*
 
 5. Check whether the pool has been created
 ---------------------------------------------------------
@@ -108,7 +110,7 @@ token pair **(testAAddress, testBAddress, feeContractNumber)**, where
  * - **factoryContract**: iZiSwap Factory contract, acquired in step 3.
  * - **testAAddress**: address of an erc20 token, filled in step 4.
  * - **testBAddress**: address of another erc20 token, filled in step 4.
- * - **feeContractNumber**: an int number, fee/1e6 is fee rate of pool, etc, 2000 means 0.2% fee rate.
+ * - **feeContractNumber**: an int number, fee/1e6 is fee rate of pool, etc, 3000 means 0.3% fee rate.
 
 You should notice that the function **getPoolAddress** imported from **'iziswap-sdk/lib/pool/funcs'** requires the sdk with minimum version of **1.5.0**.
 
@@ -156,7 +158,7 @@ where
  * - **factoryContract**: iZiSwap Factory contract, acquired in step 3.
  * - **tokenXAddress**: address of tokenX, here tokenXAddress is `min{tokenAAddress, tokenBAddress}`.
  * - **tokenYAddress**: address of tokenY, here tokenYAddress is `max{tokenAAddress, tokenBAddress}`.
- * - **feeContractNumber**: an int number, fee/1e6 is fee rate of pool, etc, 2000 means 0.2% fee rate.
+ * - **feeContractNumber**: an int number, fee/1e6 is fee rate of pool, etc, 3000 means 0.3% fee rate.
  * - **initPointXByY**: an int number specifying initial point (see :ref:`here<point>`) of the pool.
  * - **account.address**: address of your private key, acquired in step 2.
  * - **chain**: chain object, acquired in step 2.

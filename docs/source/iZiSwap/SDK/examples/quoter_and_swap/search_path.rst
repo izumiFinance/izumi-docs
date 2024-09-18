@@ -130,7 +130,7 @@ And in this example, we init max amount of **BNB** is **10.0**
         quoterAddress,
         poolBlackList: [],
         midTokenList: [BNB, USDT, USDC, iZi],
-        supportFeeContractNumbers: [2000, 400, 100],
+        supportFeeContractNumbers: [3000, 500, 100],
         support001Pools,
         direction: SwapDirection.ExactIn,
         amount: amountInputBNB
@@ -143,7 +143,7 @@ In this example, the swap mode is **swap with exact input**, and we need to fill
 **SearchPathQueryParams.amount** with **undecimal amount of input token (BNB)**
 
 **supportFeeContractNumbers** is a list containing supported fees of swap-pool. And we only consider
-pools with fee within this list in our path searching. And number **2000** means fee tier of **0.2%**
+pools with fee within this list in our path searching. And number **3000** means fee tier of **0.3%**
 
 Due to the fact that pools with fee tier of **0.01%** may consume much more gas than others. We need to
 limit the usage of such pools. 
@@ -153,6 +153,9 @@ Each element in **support001Pools** is a struct of **PoolPair**.
 
 If we want to ignore some pool, we can fill the field **poolBlackList**.
 Element in **poolBlackList** is also struct of **PoolPair**.
+
+*In general, the supported fee rates for the mainnet are 500 (0.05%), 3000 (0.3%), and 10000 (1%); and for the testnet are 400 (0.04%), 2000 (0.2%) and 10000 (1%). One needs to check if the choosen pool exists and has enough liquidity.*
+*The liquidity condition can be checked on the analytics page* `here <https://analytics.izumi.finance>`__ .
 
 .. _diff_for_exact_output:
 
