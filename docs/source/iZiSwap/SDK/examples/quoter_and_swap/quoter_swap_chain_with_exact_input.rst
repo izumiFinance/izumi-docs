@@ -371,7 +371,7 @@ If the allowance is enough or the input token is chain gas token, just skip this
             "0xffffffffffffffffffffffffffffffff"
         );
         // estimate gas
-        const gasLimit = await mintCalling.estimateGas({from: account})
+        const gasLimit = await approveCalling.estimateGas({from: account})
         // then send transaction to approve
         // you could simply use followiing line if you use metamask in your frontend code
         // otherwise, you should use the function "web3.eth.accounts.signTransaction"
