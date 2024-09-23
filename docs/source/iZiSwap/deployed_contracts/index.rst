@@ -68,6 +68,12 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Neon (DAAS, named VibrSwap)
 
+    * Gravity
+
+    * Flow EVM (DAAS, named Trado)
+
+    * IoTeX
+
 
 *  Testnet:
 

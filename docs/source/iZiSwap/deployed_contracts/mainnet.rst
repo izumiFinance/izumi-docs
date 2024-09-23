@@ -45,6 +45,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x72fAfc28bFf27BB7a5cf70585CA1A5185AD2f201
+    * -
+      - multicall
+      - 0xA1189a420662105bef5Be444B8b1E0a7D8279672
 
       
 2. Arbitrum (chainId: 42161) (updated on 2023.07.17):
@@ -90,6 +93,10 @@ Mainnet
     * - 
       - limitOrderManager
       - 0xE78e7447223aaED59301b44513D1d3A892ECF212
+    * -
+      - multicall
+      - 0x844A47ad42187F255e5523D4d3Be33f6e94786f8
+
 
 3. Polygon (chainId: 137) (updated on 2023.07.17):
 
@@ -134,6 +141,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x25C030116Feb2E7BbA054b9de0915E5F51b03e31
+    * -
+      - multicall
+      - 0x48dA26C7645e98f6764E8E1f4A87112a2BD10F19
 
 4. Meter (chainId: 82) (updated on 2023.07.17):
 
@@ -178,6 +188,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x35Dcc4e1ae93DA1316b603f0A9Fe3aD1b85C38C6
+    * -
+      - multicall
+      - 0x98d10345627450233Bac4C52079Bd7d1F32b576F
 
 
 5. ZkSync Era (chainId: 324) (updated on 2023.07.17):
@@ -223,7 +236,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0xe36caa16D78eF3233848a542D437C1c540Ca8149
-
+    * -
+      - multicall
+      - 0x18d6b2F2A5F88380D42AdD6588F4484Cfb27EE07
 
 
 6. Ontology (chainId: 58) (updated on 2023.10.19):
@@ -269,6 +284,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x79D175eF5fBe31b5D84B3ee359fcbBB466153E39
+    * -
+      - multicall
+      - 0x3F559139C2Fc7B97Ad6FE9B4d1f75149F551DB18
 
 
 7. Mantle (chainId: 5000) (updated on 2023.07.17):
@@ -314,6 +332,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0xcA7e21764CD8f7c1Ec40e651E25Da68AeD096037
+    * -
+      - multicall
+      - 0x1DADF066518E2b7064D85cED45625BFeC52ca07d
 
 
 8. Linea (chainId: 59144) (updated on 2023.07.17):
@@ -362,6 +383,9 @@ Mainnet
     * - 
       - oracle
       - 0xBd3bd95529e0784aD973FD14928eEDF3678cfad8
+    * -
+      - multicall
+      - 0x7a524c7e82874226F0b51aade60A1BE4D430Cf0F
 
 
 9. Ethereum Classic (chainId: 61) (updated on 2023.07.24 (periphery 2023.12.19)):
@@ -407,6 +431,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0xE78e7447223aaED59301b44513D1d3A892ECF212
+    * -
+      - multicall
+      - 0x263B272A99127ad57cff73AA9c04C515007bFb6f
 
 
 10. Base (chainId: 8453) (updated on 2023.07.31):
@@ -452,6 +479,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x1502d025BfA624469892289D45C0352997251728
+    * -
+      - multicall
+      - 0x7a524c7e82874226F0b51aade60A1BE4D430Cf0F
 
 
 11. OpBNB (chainId: 204) (updated on 2023.08.24):
@@ -497,6 +527,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x1502d025BfA624469892289D45C0352997251728
+    * -
+      - multicall
+      - 0x7a524c7e82874226F0b51aade60A1BE4D430Cf0F
 
 
 12. Kroma (chainId: 255) (updated on 2023.09.06):
@@ -542,6 +575,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x1502d025BfA624469892289D45C0352997251728
+    * -
+      - multicall
+      - 0x7a524c7e82874226F0b51aade60A1BE4D430Cf0F
 
 
 13. Manta (chainId: 169) (updated on 2023.09.11):
@@ -587,6 +623,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+    * -
+      - multicall
+      - 0x7a524c7e82874226F0b51aade60A1BE4D430Cf0F
 
 
 
@@ -636,6 +675,9 @@ Mainnet
     * - 
       - oracle (TWA price) 
       - 0x611575eE1fbd4F7915D0eABCC518eD396fF78F0c
+    * -
+      - multicall
+      - 0x93E94ef7D2d735fF21C302c765d8A77C1955A311
 
 16. ZKFair (chainId: 42766) (updated on 2023.12.19):
 
@@ -680,6 +722,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x1502d025BfA624469892289D45C0352997251728
+    * -
+      - multicall
+      - 0x7a524c7e82874226F0b51aade60A1BE4D430Cf0F
 
 
 16. Zeta (chainId: 7000) (updated on 2024.01.30):
@@ -725,6 +770,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * -
+      - multicall
+      - 0x7a524c7e82874226F0b51aade60A1BE4D430Cf0F
 
 
 17. Merlin (chainId: 4200) (updated on 2024.02.03, DAAS called MerlinSwap):
@@ -815,6 +863,9 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x3252da4D17dd11E0326d82497Da26AE404C74F09
+    * -
+      - multicall
+      - 0x1DADF066518E2b7064D85cED45625BFeC52ca07d
 
 19. zkLink Nova (chainId: 810180) (updated on 2024.03.11):
 
@@ -862,6 +913,9 @@ Mainnet
     * - 
       - oracle
       - 0xe7d7b5cd36dEeD96C2aDe3Da228d9792D2BE756A
+    * -
+      - multicall
+      - 0xfd5f0acaaa666f3d816fe3dd54a96dacd6e7bb16
 
 
 20. Mode (chainId: 34443) (updated on 2024.03.14):
@@ -910,6 +964,9 @@ Mainnet
     * - 
       - orcale
       - 0x611575eE1fbd4F7915D0eABCC518eD396fF78F0c
+    * -
+      - multicall
+      - 0x7a524c7e82874226F0b51aade60A1BE4D430Cf0F
 
 
 
@@ -1392,6 +1449,9 @@ Mainnet
     * - 
       - locker 
       - 0x3F559139C2Fc7B97Ad6FE9B4d1f75149F551DB18
+    * -
+      - multicall
+      - 0x7a524c7e82874226F0b51aade60A1BE4D430Cf0F
 
 
 31. NEON (chainId: 245022934) (updated on 2024.01.17, DAAS called VibrSwap):
@@ -1437,3 +1497,152 @@ Mainnet
     * - 
       - limitOrderManager
       - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
+
+
+32. Gravity (chainId: 1625) (updated on 2024.06.27):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+    * -
+      - swapX2YModule 
+      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+    * -
+      - swapY2XModule 
+      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+    * -
+      - liquidityModule
+      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+    * -
+      - limitOrderModule
+      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+    * - 
+      - flashModule
+      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
+    * - 
+      - swap
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * -
+      - liquidityManager
+      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
+    * - 
+      - limitOrderManager
+      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+    * -
+      - multicall
+      - 0x7a524c7e82874226F0b51aade60A1BE4D430Cf0F
+  
+33. Flow EVM (chainId: 747) (updated on 2024.09.09, DAAS called Trado):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+    * -
+      - swapX2YModule 
+      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+    * -
+      - swapY2XModule 
+      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+    * -
+      - liquidityModule
+      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+    * -
+      - limitOrderModule
+      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+    * - 
+      - flashModule
+      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
+    * - 
+      - swap
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * -
+      - liquidityManager
+      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
+    * - 
+      - limitOrderManager
+      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+    * - 
+      - locker
+      - 0x3F559139C2Fc7B97Ad6FE9B4d1f75149F551DB18
+    * -
+      - multicall
+      - 0x7a524c7e82874226F0b51aade60A1BE4D430Cf0F
+
+
+34. IoTeX (chainId: 4689) (updated on 2024.08.12):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+    * -
+      - swapX2YModule 
+      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+    * -
+      - swapY2XModule 
+      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+    * -
+      - liquidityModule
+      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+    * -
+      - limitOrderModule
+      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+    * - 
+      - flashModule
+      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
+    * - 
+      - swap
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * -
+      - liquidityManager
+      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
+    * - 
+      - limitOrderManager
+      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+    * - 
+      - locker
+      - 0x3F559139C2Fc7B97Ad6FE9B4d1f75149F551DB18
+    * -
+      - multicall
+      - 0x7a524c7e82874226F0b51aade60A1BE4D430Cf0F
