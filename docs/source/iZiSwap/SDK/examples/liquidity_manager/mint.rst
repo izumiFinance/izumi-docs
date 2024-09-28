@@ -379,7 +379,7 @@ since you need transfer some tokenA and some tokenB to pool.
         // otherwise, you should use the function "web3.eth.accounts.signTransaction"
         // notice that, sending transaction for approve may fail if you have approved the token to liquidityManager before
         // if you want to enlarge approve amount, you should refer to interface of erc20 token
-        await approveCalling.send({gas: gasLimit})
+        await approveCalling.send({gas: Number(gasLimit)})
     }
     
     // if tokenB is not chain token (BNB on bsc chain or ETH on eth chain...), we need transfer tokenA to pool
@@ -400,7 +400,7 @@ since you need transfer some tokenA and some tokenB to pool.
         // otherwise, you should use the function "web3.eth.accounts.signTransaction"
         // notice that, sending transaction for approve may fail if you have approved the token to liquidityManager before
         // if you want to enlarge approve amount, you should refer to interface of erc20 token
-        await approveCalling.send({gas: gasLimit})
+        await approveCalling.send({gas: Number(gasLimit)})
     }
 
 
@@ -424,7 +424,7 @@ For metamask or other injected wallet provider, you can easily write
 .. code-block:: typescript
     :linenos:
 
-    await mintCalling.send({...options, gas: gasLimit})
+    await mintCalling.send({...options, gas: Number(gasLimit)})
 
 Otherwise, if you are running codes in console, you could use the following code
 
@@ -437,7 +437,7 @@ Otherwise, if you are running codes in console, you could use the following code
             ...options,
             to: liquidityManagerAddress,
             data: mintCalling.encodeABI(),
-            gas: new BigNumber(gasLimit * 1.1).toFixed(0, 2),
+            gas: new BigNumber(Number(gasLimit) * 1.1).toFixed(0, 2),
         }, 
         privateKey
     )

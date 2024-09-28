@@ -299,7 +299,7 @@ because you need transfer some sellToken to pool.
         // otherwise, you should use the function "web3.eth.accounts.signTransaction"
         // notice that, sending transaction for approve may fail if you have approved the token to limitOrderManager before
         // if you want to enlarge approve amount, you should refer to interface of erc20 token
-        await approveCalling.send({gas: gasLimit})
+        await approveCalling.send({gas: Number(gasLimit)})
     }
 
 8.  estimate gas (optional)
@@ -322,7 +322,7 @@ for metamask or other explorer's wallet provider, you can easily write
 .. code-block:: typescript
     :linenos:
 
-    await newLimOrderCalling.send({...options, gas: gasLimit})
+    await newLimOrderCalling.send({...options, gas: Number(gasLimit)})
 
 otherwise, if you are runing codes in console, you could use following code
 
@@ -335,7 +335,7 @@ otherwise, if you are runing codes in console, you could use following code
             ...options,
             to: limitOrderAddress,
             data: newLimOrderCalling.encodeABI(),
-            gas: new BigNumber(gasLimit * 1.1).toFixed(0, 2),
+            gas: new BigNumber(Number(gasLimit) * 1.1).toFixed(0, 2),
         }, 
         privateKey
     )

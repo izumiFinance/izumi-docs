@@ -12,6 +12,8 @@ You can refer the codes in the `here <https://github.com/izumiFinance/iZiSwap-sd
 
 The only difference of these two modes while doing path searching can be viewed in :ref:`this subsection <diff_for_exact_output>`
 
+**Notice** currently, searching path function can only search paths only with V3-pools!!
+
 
 1. Some imports
 -----------------------------------------------------------

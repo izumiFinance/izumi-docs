@@ -198,7 +198,7 @@ For metamask or other injected wallet provider, you can easily write
 .. code-block:: typescript
     :linenos:
 
-    await createPoolCalling.send({...options, gas: new BigNumber(gasLimit * 1.1).toFixed(0, 2)})
+    await createPoolCalling.send({...options, gas: new BigNumber(Number(gasLimit) * 1.1).toFixed(0, 2)})
 
 Otherwise, if you are running codes in console, you could use the following code
 
@@ -211,7 +211,7 @@ Otherwise, if you are running codes in console, you could use the following code
             ...options,
             to: factoryAddress,
             data: createPoolCalling.encodeABI(),
-            gas: new BigNumber(gasLimit * 1.1).toFixed(0, 2),
+            gas: new BigNumber(Number(gasLimit) * 1.1).toFixed(0, 2),
         }, 
         privateKey
     )
