@@ -261,7 +261,7 @@ second, calling **approve** to give feeB's **wrapToken** authority to operate yo
     // otherwise, you should use the function "web3.eth.accounts.signTransaction"
     // notice that, sending transaction for approve may fail if you have approved the token to swapContract before
     // if you want to enlarge approve amount, you should refer to interface of erc20 token
-    await approveCalling.send({gas: gasLimit})
+    await approveCalling.send({gas: Number(gasLimit)})
 
 
 if your input token is a normal erc20 token which has no transfer fee (like iZi or USDT),
@@ -311,7 +311,7 @@ you just need to write following code instead of 2 steps above (we suppose the i
     // otherwise, you should use the function "web3.eth.accounts.signTransaction"
     // notice that, sending transaction for approve may fail if you have approved the token to swapContract before
     // if you want to enlarge approve amount, you should refer to interface of erc20 token
-    await approveCalling.send({gas: gasLimit})
+    await approveCalling.send({gas: Number(gasLimit)})
 
 
 7.  estimate gas (optional)
@@ -348,7 +348,7 @@ for metamask or other explorer's wallet provider, you can easily write
 .. code-block:: typescript
     :linenos:
 
-    await swapCalling.send({...options, gas: gasLimit})
+    await swapCalling.send({...options, gas: Number(gasLimit)})
 
 otherwise, if you are runing codes in console, you could use following code
 
@@ -361,7 +361,7 @@ otherwise, if you are runing codes in console, you could use following code
             ...options,
             to: boxAddress,
             data: swapCalling.encodeABI(),
-            gas: new BigNumber(gasLimit * 1.1).toFixed(0, 2),
+            gas: new BigNumber(Number(gasLimit) * 1.1).toFixed(0, 2),
         }, 
         privateKey
     )

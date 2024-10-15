@@ -247,7 +247,7 @@ for metamask or other explorer's wallet provider, you can easily write
 .. code-block:: typescript
     :linenos:
 
-    await calling.send({...options, gas: gasLimit})
+    await calling.send({...options, gas: Number(gasLimit)})
 
 otherwise, if you are runing codes in console, you could use following code
 
@@ -260,7 +260,7 @@ otherwise, if you are runing codes in console, you could use following code
             ...options,
             to: boxAddress,
             data: calling.encodeABI(),
-            gas: new BigNumber(gasLimit * 1.1).toFixed(0, 2),
+            gas: new BigNumber(Number(gasLimit) * 1.1).toFixed(0, 2),
         }, 
         privateKey
     )

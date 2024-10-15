@@ -100,7 +100,7 @@ for metamask or other explorer's wallet provider, you can easily write
 .. code-block:: typescript
     :linenos:
 
-    await collectLimitOrderCalling.send({...options, gas: gasLimit})
+    await collectLimitOrderCalling.send({...options, gas: Number(gasLimit)})
 
 otherwise, if you run codes in console, you could use following code
 
@@ -112,7 +112,7 @@ otherwise, if you run codes in console, you could use following code
             ...options,
             to: limitOrderAddress,
             data: collectLimitOrderCalling.encodeABI(),
-            gas: new BigNumber(gasLimit * 1.1).toFixed(0, 2),
+            gas: new BigNumber(Number(gasLimit) * 1.1).toFixed(0, 2),
         }, 
         privateKey
     )
