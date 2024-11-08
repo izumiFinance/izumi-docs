@@ -1,6 +1,9 @@
+
 .. _universal_quoter_swap_chain_with_exact_input:
+
 Exact input mode
 ===================================================
+
 In this example, we will conduct price query and swap with exact input amount in iZiSwap (Amount Mode)
 via UniversalQuoter and UniversalSwapRouter.
 
@@ -14,7 +17,7 @@ Quoter and swap are called throw 2 different contracts.
 Suppose we want to swap test **USDT** token to test **BNB** token, where the test **USDT** is standard ERC-20 token deployed by us on BSC testnet and 
 the test **BNB** is native token on BSC testnet.
 
-The full example codes can be found `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/universalRouter/quoterSwapExactInput.ts>`_.
+The full example codes can be found `here_repo <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/universalRouter/quoterSwapExactInput.ts>`_.
 
 1. Some imports
 -----------------------------------------------------------
