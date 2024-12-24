@@ -13,7 +13,7 @@ the step is used to determine N.
 Quoter and swap are called throw 2 different contracts.
 
 Suppose we want to swap **USDT** (testA) token to **BUSD** (testB) token, where these two tokens are standard ERC-20 tokens deployed on BSC.
-The full example code of this chapter can be found `here <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/quoterAndSwap/quoterSwapChainWithExactOutput.ts>`_.
+The full example code of this chapter can be found `here_swap_output <https://github.com/izumiFinance/izumi-iZiSwap-sdk/blob/main/example/quoterAndSwap/quoterSwapChainWithExactOutput.ts>`_.
 
 1. Some imports
 -----------------------------------------------------------

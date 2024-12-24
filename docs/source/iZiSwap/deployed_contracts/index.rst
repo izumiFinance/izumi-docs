@@ -74,6 +74,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * IoTeX
 
+    * Morph
+
 
 *  Testnet:
 
