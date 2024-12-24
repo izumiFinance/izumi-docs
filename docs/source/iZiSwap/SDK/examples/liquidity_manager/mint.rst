@@ -63,7 +63,9 @@ where
 
 Here, **getLiquidityManagerContract** is an api provided by our sdk, which returns a **web3.eth.Contract** object of **LiquidityManager**.
 
-4. Fetch 2 ERC20 information
+.. _specify_token_pair:
+
+4. Specify Token Pair And Fee
 ---------------------------------------------------------
 
 .. code-block:: typescript
@@ -74,6 +76,7 @@ Here, **getLiquidityManagerContract** is an api provided by our sdk, which retur
 
     const testA = await fetchToken(testAAddress, chain, web3)
     const testB = await fetchToken(testBAddress, chain, web3)
+    const fee = 2000; // 2000 means 0.2%
 
 The function **fetchToken()** returns a **TokenInfoFormatted** obj of that token, which containing following fields.
 
@@ -108,8 +111,60 @@ The TokenInfoFormatted fields used in sdk currently are only **symbol**, **addre
 
 We usually set **TokenInfoFormatted.wrapTokenAddress** as undefined.
 
+**Notice**: Here, we are ready to mint with token pair of **<testA,testB,2000>**, 
+**testA** and **testB** here are both normal erc20-token.
+And if you want to mint with a pair which contains chain gas token (like ETH on ethereum),
+you can refer to :ref:`following section<mint_native_or_wrapped_native>`
 
-5. Get state of the corresponding pool
+.. _mint_native_or_wrapped_native:
+
+5. mint with native or wrapped native
+------------------------------------------------------------
+
+In the sdk version 1.2.* or later, 
+
+If you want to mint in form of native token(like **BNB** on bsc or **ETH** on ethereum ...),
+for simplification, you are ready to mint with pair **<BNB, testB, 2000>**,
+just simply replace **testA** in :ref:`section 4<specify_token_pair>` as **BNB** and 
+fill **strictERC20Token** of **mintParams** in :ref:`section 9<liquidity_manager_mint_calling>` as **undefined** by default.
+
+.. code-block:: typescript
+    :linenos:
+
+    const testA = {
+        chainId: ChainId.BSC,
+        symbol: 'BNB', 
+        // address of wbnb on bsc mainnet
+        address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+        decimal: 18,
+    } as TokenInfoFormatted;
+
+If you want to mint in form of  wrapped-native token(like **WBNB** on bsc or **WETH** on ethereum ...),
+for simplification, you are ready to mint with pair **<WBNB, testB, 2000>**,
+just simply replace **testA** in :ref:`section 4<specify_token_pair>` as **WBNB** and 
+fill **strictERC20Token** of **mintParams** in :ref:`section 9<liquidity_manager_mint_calling>` as **undefined** by default.
+
+.. code-block:: typescript
+    :linenos:
+
+    const testA = {
+        chainId: ChainId.BSC,
+        symbol: 'WBNB', // only difference with above code
+        // address of wbnb on bsc mainnet
+        address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+        decimal: 18,
+    } as TokenInfoFormatted;
+
+we can see that, the only difference of mining native token and wrapped-native token
+is **symbol** field of **sellToken**.
+
+
+In the sdk version 1.1.* or before, one should specify a field named `strictERC20Token` to indicate that.
+`true` for paying token in form of `Wrapped Chain Token`, `false` for paying in form of `Chain Token`.
+But we suggest you to upgrade your sdk to latest version.
+
+
+6. Get state of the corresponding pool
 ---------------------------------------------------------
 
 First get the pool address of token pair (testA, testB, fee):
@@ -159,7 +214,9 @@ where state is a **State** obj which extends from **BaseState**, with only field
 
 to compute undecimal-amount of token in minting, we will take use of **state.currentPoint**
 
-6.  Compute boundary point of liquidity on the pool
+.. _compute_boundary_point:
+
+7.  Compute boundary point of liquidity on the pool
 ---------------------------------------------------------
 
 The boundary point is **leftPoint** and **rightPoint** of a liquidity position, according to :ref:`price` , we know that **point** in the pool and **decimal price** can be transformed from each other.
@@ -222,7 +279,7 @@ Besides, for **leftPoint** and **rightPoint** we must guarantee following inequa
     rightPoint <= pool.rightMostPt()
     rightPoint - leftPoint < 400000
 
-7. Specify or compute tokenA's and tokenB's max undecimal amount (optional)
+8. Specify or compute tokenA's and tokenB's max undecimal amount (optional)
 ----------------------------------------------------------------------------------------
 
 Sometimes, a user wants to know the amount of tokenA when he fill amount of tokenB or vise versa.
@@ -270,7 +327,7 @@ After the call to `calciZiLiquidityAmountDesired`, we get a `BigNumber` stored i
 
 .. _liquidity_manager_mint_calling:
 
-8. Get the mint calling
+9. Get the mint calling
 -----------------------
 
 First, construct necessary params and gasPrice for the mint calling.
@@ -326,8 +383,8 @@ The second way is specifing `strictERC20Token` as undefined and specifying the c
 `WETH` or `ETH`.
 
 
-9. Approve (skip if you pay chain token directly)
--------------------------------------------------------
+10. Approve (skip if you mint with native token directly)
+-------------------------------------------------------------
 
 Before estimate gas or send transaction, you need approve contract **liquidityManager** to have authority to spend your token,
 since you need transfer some tokenA and some tokenB to pool.
@@ -404,7 +461,7 @@ since you need transfer some tokenA and some tokenB to pool.
     }
 
 
-10.  Estimate gas (optional)
+11.  Estimate gas (optional)
 -----------------------------
 You can skip this step if you do not want to limit gas.
 
@@ -414,7 +471,7 @@ You can skip this step if you do not want to limit gas.
     const gasLimit = await mintCalling.estimateGas(options)
     console.log('gas limit: ', gasLimit)
 
-11. Finally, send transaction!
+12. Finally, send transaction!
 ------------------------------
 
 Now, we can send transaction to mint a new liquidity position.

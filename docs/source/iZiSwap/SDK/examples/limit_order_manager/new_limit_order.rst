@@ -67,7 +67,10 @@ here
 
 here, **getLiquidityManagerContract** is an api provided by our sdk, which returns a **web3.eth.Contract** object of **LiquidityManager**
 
-4. fetch 2 erc20-tokens' infomations and specify selltoken,earntoken and fee
+
+.. _specify_sell_earn_token_and_fee:
+
+4. fetch 2 tokens' informations and specify selltoken,earntoken and fee
 ----------------------------------------------------------------------------
 
 .. code-block:: typescript
@@ -116,20 +119,60 @@ the TokenInfoFormatted fields used in sdk currently are only **symbol**, **addre
 
 notice that, usually we set **TokenInfoFormatted.wrapTokenAddress** as undefined.
 
-..
-    following paragraph corresponding to box and wrap token you can just **skip** it if you do not consider token with transfer fee.
-
-    only if we want to use **box** and the token has transfer fee, we should set the **wrapTokenAddress** field.
-    if we donot want to use **box** or the token has no transfer fee, **TokenInfoFormatted.wrapTokenAddress** should be undefined.
-    :ref:`box<box>` is designed to deal with problem of erc20 token with ":ref:`transfer fee<transfer_fee>`".
-    there is a problem that in iZiSwap we can not mint or trade or add limit order with tokens which have transfer fee.
-    to deal with this problem, we can deploy a :ref:`Wrap Token<wrap_token>` which can be transformed from origin erc20 token.
-    wrap token has no transfer fee, transfer fee only charged when user transform origin token to wrap token or wrap token to origin token.
-    and we can mint or add limit order or trade with such wrap tokens instead of origin token in iZiSwap.
-    for sdk of box, see :ref:`here<box>` for more infomation.
+**Notice**: If you are selling chain gas token(etc, **BNB** on bsc or **ETH** on ethereum), you can refer to
+:ref:`following section<sell_native_or_wrapped_native>`
 
 
-5. compute sellPoint (price) and sell amount
+.. _sell_native_or_wrapped_native:
+
+1. sell native or wrapped native
+------------------------------------------------------------
+
+In the sdk version 1.2.* or later, 
+
+If you want to sell native token(like **BNB** on bsc or **ETH** on ethereum ...),
+you should replace **sellToken** in :ref:`section 4<specify_sell_earn_token_and_fee>` as **BNB** (suppose we are selling **BNB** here), and 
+fill **strictERC20Token** of **params** in :ref:`section 6<get_newlimitorder_calling>` as **undefined** by default.
+In a word, after you specify **sellToken** as native token, sdk will then help you sell native token.
+
+.. code-block:: typescript
+    :linenos:
+
+    const sellToken = {
+        chainId: ChainId.BSC,
+        symbol: 'BNB', 
+        // address of wbnb on bsc mainnet
+        address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+        decimal: 18,
+    } as TokenInfoFormatted;
+
+If you want to sell native token(like **BNB** on bsc or **ETH** on ethereum ...),
+you should replace **sellToken** in :ref:`section 4<specify_sell_earn_token_and_fee>` as **WBNB** (suppose we are selling **WBNB** here), and 
+fill **strictERC20Token** of **params** in :ref:`section 6<get_newlimitorder_calling>` as **undefined** by default.
+In a word, after you specify **sellToken** as wrapped-native token, sdk will then help you sell wrapped-native token.
+
+.. code-block:: typescript
+    :linenos:
+
+    const sellToken = {
+        chainId: ChainId.BSC,
+        symbol: 'WBNB', // only difference with above code
+        // address of wbnb on bsc mainnet
+        address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+        decimal: 18,
+    } as TokenInfoFormatted;
+
+we can see that, the only difference of selling native token and wrapped-native token
+is **symbol** field of **sellToken**.
+
+
+In the sdk version 1.1.* or before, one should specify a field named `strictERC20Token` to indicate that.
+`true` for paying token in form of `Wrapped Chain Token`, `false` for paying in form of `Chain Token`.
+But we suggest you to upgrade your sdk to latest version.
+
+
+
+6. compute sellPoint (price) and sell amount
 ---------------------------------------------------------
 
 first set decimal price, and transform the decimal price to point on the pool
@@ -168,7 +211,9 @@ thirdly, compute sellPoint rounding to times of pointDelta.
 We should notice that, if sellToken is tokenX (etc. sellToken < earnToken), the sell point should be
 greater than or equal to current point. otherwise, sell point should be less than or equal to current point.
 
-6.  get newLimitOrder calling
+.. _get_newlimitorder_calling:
+
+7.  get newLimitOrder calling
 ---------------------------------------------------------
 
 when we send a transaction calling limit order manager to add a new limit order, we should specify an empty slot idx.
@@ -212,11 +257,15 @@ the field of **AddLimOrderParam** is displayed in following code
         // undecimal amount of sell token you want to sell
         sellAmount: string,
         deadline?: string,
+
+        // default value is undefined
         // only sellToken is WBNB/WETH or other wrapped chain token (erc20 form), this field has meaning
-        // if strictERC20Token is true, you will provide sellToken from your existing wrapped chain token (erc20 form)
+        // - if strictERC20Token is undefined (recommend since sdk 1.2.0), sellToken will be regard as native token
+        // if sellToken.symbol is native token symbol (etc. ETH or BNB ...)
+        // - if strictERC20Token is true, you will provide sellToken from your existing wrapped native token (erc20 form)
         // and msg.value can be 0.
-        // if this field is false, msg.value should not be smaller than sellAmount, and the LimitOrderManager contract
-        // will transform your provided bnb/eth or other chain token to wrapped chain token form (erc20 form). 
+        // - if strictERC20Token is false, msg.value should not be smaller than sellAmount, and the LimitOrderManager contract
+        // will transform your provided bnb/eth or other chain token to wrapped native token form (erc20 form). 
         strictERC20Token?: boolean
     }
 
@@ -233,21 +282,7 @@ thirdly, call **getNewLimOrderCall** to get calling and options obj
         gasPrice
     )
 
-
-we should notice that, if tokenX or tokenY is chain token (like `ETH` on ethereum or `BNB` on bsc),
-we should specify one or some fields in `params` to indicate sdk paying in form of `Chain Token`
-or paying in form of `Wrapped Chain Token` (like `WETH` on ethereum or `WBNB` on bsc).
-
-In the sdk version 1.1.* or before, one should specify a field named `strictERC20Token` to indicate that.
-`true` for paying token in form of `Wrapped Chain Token`, `false` for paying in form of `Chain Token`.
-In the sdk version 1.2.* or later, you have two ways to indicate sdk. 
-
-The first way is as before, specifing `strictERC20Token` field.
-The second way is specifing `strictERC20Token` as undefined and specifying the corresponding token in this param as 
-`WETH` or `ETH`.
-
-
-7. approve (skip if you pay chain token directly)
+8. approve (skip if you sell native token directly)
 ------------------------------------------------------------
 
 before send transaction or estimate gas, you need to approve contract limitOrderManager to have authority to spend your token,
@@ -302,7 +337,7 @@ because you need transfer some sellToken to pool.
         await approveCalling.send({gas: Number(gasLimit)})
     }
 
-8.  estimate gas (optional)
+9.  estimate gas (optional)
 ---------------------------
 of course you can skip this step if you don't want to limit gas.
 before estimate gas and send transaction, make sure you have approve limitOrderAddress of sellToken
@@ -314,7 +349,7 @@ before estimate gas and send transaction, make sure you have approve limitOrderA
     // make sure you have approve limitOrderAddress of sellToken
     const gasLimit = await newLimOrderCalling.estimateGas(options)
 
-9. finally, send transaction!
+10. finally, send transaction!
 ------------------------------
 
 for metamask or other explorer's wallet provider, you can easily write 

@@ -42,6 +42,8 @@ And these are some imports for quoter and swap.
 Here **quoterSwapChainWithExactInput** will return amount of token acquired (N).
 **getSwapChainWithExactInputCall** will return calling for swapping with exact input.
 
+.. _initialization:
+
 2. Initialization
 -----------------------------------------------------------
 
@@ -272,60 +274,68 @@ Usually, we can fill **SwapChainWithExactInputParams** through following code
     } as SwapChainWithExactInputParams
 
 
-Notice that in this example, both tokens are ERC-20 compatible tokens and is the general case. However,
-if tokenX or tokenY is chain gas token (such as `ETH` on Ethereum or `BNB` on BSD),
-we should specify one or some fields in `swapParams` to indicate sdk paying/acquiring in form of `Chain Token`
-or paying/acquiring in form of `Wrapped Chain Token` (such as `WETH` on Ethereum or `WBNB` on BSC).
+**Notice:** In this example, both tokens are ERC-20 compatible tokens and is the general case. However,
+if token-to-pay (here is **testA**) or token-to-acquire (here is **testB**) is chain gas token (such as `ETH` on Ethereum or `BNB` on BSC), and you want to exchange
+them in form of native token or wrapped native token, you can refer to :ref:`following section<exchange_native_or_wrapped_native>`
 
-In that case, take **testA** to be BNB as example. 
+.. _exchange_native_or_wrapped_native:
 
-If you want to use BNB directly, just set testAAddress to be WBNB and `strictERC20Token` is `false` by default. 
+5. exchange with native or wrapped native
+------------------------------------------------------------
 
-.. code-block:: typescript
-    :linenos:
+In the sdk version 1.2.* or later, 
 
-    ...
+If you want to pay or buy in form of native token such as **BNB** on bsc, just replace corresponding token to **BNB**.
 
-    const testAAddress = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c' // WBNB
+In that case, take **testA** to be **BNB** as example. 
 
-    ...
-
-And the BNB need to pay (the value field in the transaction data) is set in the `options` return.
-
-
-If you want to use WBNB, first to set testAAddress to be WBNB and then to set `strictERC20Token` as `true`.
-
+If you want to use BNB directly, just set **testA** to be **BNB** and set **strictERC20Token** in **swapParams** as **undefined** by default. 
 
 .. code-block:: typescript
     :linenos:
 
     ...
 
-    const testAAddress = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c' // WBNB
+    const testA = {
+        chainId: ChainId.BSC,
+        symbol: 'BNB', // only difference with above code
+        // address of wbnb on bsc mainnet
+        address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+        decimal: 18,
+    } as TokenInfoFormatted;
 
     ...
 
-    const swapParams = {
-        ...
-        strictERC20Token: true
-        ...
-    } as SwapChainWithExactInputParams
+And the **BNB** need to pay (the value field in the transaction data) is set in the `options` return.
+
+
+If you want to use **WBNB**, just set **testA** to be BNB and set **strictERC20Token** in **swapParams** as **undefined** by default. 
+
+
+.. code-block:: typescript
+    :linenos:
+
+    ...
+
+    const testA = {
+        chainId: ChainId.BSC,
+        symbol: 'WBNB', // only difference with above code
+        // address of wbnb on bsc mainnet
+        address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+        decimal: 18,
+    } as TokenInfoFormatted;
 
     ...
 
 Now the swap will use WBNB instead of BNB.
 
-..
-    In the sdk version 1.1.* or before, one should specify a field named `strictERC20Token` to indicate that.
-    `true` for paying/acquiring token in form of `Wrapped Chain Token`, `false` for paying/acquiring in form of `Chain Token`.
-    In the sdk version 1.2.* or later, you have two ways to indicate sdk. 
 
-    The first way is as before, specifing `strictERC20Token` field.
-    The second way is specifing `strictERC20Token` as undefined and specifying the corresponding token in this param as 
-    `WETH` or `ETH`.
+In the sdk version 1.1.* or before, one should specify a field named `strictERC20Token` to indicate that.
+`true` for paying token in form of `Wrapped Chain Token`, `false` for paying in form of `Chain Token`.
+But we suggest you to upgrade your sdk to latest version.
 
 
-5. Approve (skip if you pay chain token directly)
+6. Approve (skip if you pay chain token directly)
 ---------------------------------------------------
 
 Before sending transaction or estimating gas, you need to approve contract Swap to have authority to spend your token.
@@ -383,7 +393,7 @@ If the allowance is enough or the input token is chain gas token, just skip this
         await approveCalling.send({gas: Number(gasLimit)})
     }
 
-6. Estimate gas (optional)
+7. Estimate gas (optional)
 --------------------------
 
 Before actually send the transaction, this is double check (or user experience enhancement measures) to check whether the gas spending is normal.
@@ -395,7 +405,7 @@ Before actually send the transaction, this is double check (or user experience e
     const gasLimit = await swapCalling.estimateGas(options)
     console.log('gas limit: ', gasLimit)
 
-7. Send transaction!
+8. Send transaction!
 --------------------
 
 Now, we can then send the transaction.

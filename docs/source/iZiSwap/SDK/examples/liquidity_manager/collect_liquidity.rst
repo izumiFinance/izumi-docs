@@ -55,6 +55,8 @@ The code above is nearly the same as :ref:`fetch_liquidities`, you can view more
 
 of course one can only collect his/her liquidity, cannot collect others.
 
+.. _set_max_amount_to_collect:
+
 3. Set max amount of tokenX and tokenY you would collect
 ------------------------------------------------------------------------------
 
@@ -73,6 +75,7 @@ of course one can only collect his/her liquidity, cannot collect others.
     console.log('maxAmountA: ', maxAmountA)
     console.log('maxAmountB: ', maxAmountB)
 
+.. _get_calling_of_getCollectLiquidityCall:
 
 4. Get calling of getCollectLiquidityCall
 ------------------------------------------------------------------------------
@@ -116,19 +119,68 @@ the function **getCollectLiquidityCall(...)** has following params
         gasPrice: number | string
     )
 
-we should notice that, if tokenX or tokenY is chain token (like `ETH` on ethereum or `BNB` on bsc),
-we should specify one or some fields in `CollectLiquidityParam` to indicate sdk collecting in form of `Chain Token`
-or collecting in form of `Wrapped Chain Token` (like `WETH` on ethereum or `WBNB` on bsc).
+
+**Notice:** if tokenX(tokenA) or tokenY(tokenB) is chain gas token (like **ETH** on ethereum or **BNB** on bsc),
+and you want to collect tokenX or tokenY in form of native or wrapped-native token,
+you can refer to
+:ref:`following section<liquidity_collect_native_or_wrapped_native>`
+
+
+.. _liquidity_collect_native_or_wrapped_native:
+
+5. collect native or wrapped native token
+------------------------------------------------------------
+
+In the sdk version 1.2.* or later, 
+
+If you want to collect in form of native token(like **BNB** on bsc or **ETH** on ethereum ...),
+you should replace define code of **tokenA** and **tokenB** in :ref:`section 2<set_max_amount_to_collect>` with following code (here we are working on bsc chain), and 
+fill **strictERC20Token** of **CollectLiquidityParam** in :ref:`section above<get_calling_of_getCollectLiquidityCall>` as **undefined** by default.
+
+.. code-block:: typescript
+    :linenos:
+
+    const BNBAddress = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c';
+    
+    const tokenA = liquidity0.tokenX
+    const tokenB = liquidity0.tokenY
+
+    if (params.tokenA.address.toLowerCase() === BNBAddress.toLowerCase()) {
+        params.tokenA.symbol = 'BNB';
+    }
+    if (params.tokenB.address.toLowerCase() === BNBAddress.toLowerCase()) {
+        params.tokenB.symbol = 'BNB';
+    }
+
+If you want to collect in form of wrapped-native token(like **WBNB** on bsc or **WETH** on ethereum ...),
+you should replace define code of **tokenA** and **tokenB** in :ref:`section 2<set_max_amount_to_collect>` with following code (here we are working on bsc chain), and 
+fill **strictERC20Token** of **CollectLiquidityParam** in :ref:`section above<get_calling_of_getCollectLiquidityCall>` as **undefined** by default.
+
+.. code-block:: typescript
+    :linenos:
+
+    const BNBAddress = '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c';
+    
+    const tokenA = liquidity0.tokenX
+    const tokenB = liquidity0.tokenY
+
+    if (params.tokenA.address.toLowerCase() === BNBAddress.toLowerCase()) {
+        params.tokenA.symbol = 'WBNB'; // only difference 
+    }
+    if (params.tokenB.address.toLowerCase() === BNBAddress.toLowerCase()) {
+        params.tokenB.symbol = 'WBNB'; // only difference 
+    }
+
+we can see that, the only difference of collection native token and wrapped-native token
+is **symbol** field of **tokenA** or **tokenB**.
+
 
 In the sdk version 1.1.* or before, one should specify a field named `strictERC20Token` to indicate that.
-`true` for collecting in form of `Wrapped Chain Token`, `false` for collecting in form of `Chain Token`.
-In the sdk version 1.2.* or later, you have two ways to indicate sdk. 
+`true` for collecting token in form of `Wrapped Chain Token`, `false` for paying in form of `Chain Token`.
+But we suggest you to upgrade your sdk to latest version.
 
-The first way is as before, specifing `strictERC20Token` field.
-The second way is specifing `strictERC20Token` as undefined and specifying the corresponding token in this param as 
-`WETH` or `ETH`.
 
-5. Estimate gas (optional)
+1. Estimate gas (optional)
 --------------------------
 
 of course you can skip this step if you don't want to limit gas
@@ -139,7 +191,7 @@ of course you can skip this step if you don't want to limit gas
     const gasLimit = await collectLiquidityCalling.estimateGas(options)
     console.log('gas limit: ', gasLimit)
 
-6. Send transaction!
+7. Send transaction!
 --------------------
 
 for metamask or other explorer's wallet provider, you can easily write
