@@ -231,7 +231,8 @@ And in the following code, params is an instance of **SwapExactInputParams**
     // BNB and USDT are defined above in section 2.
     params.tokenChain = [BNB, ... /* other mid tokens*/, USDT]
 
-"BNB" and "USDT" in above code can be defined by following code (or in example code of section 2)
+"BNB" and "USDT" in above code can be defined by following code (or in example code of section 2).
+And the **options** in :ref:`this section<get_universal_exact_in_calling>` will contain corresponding **msg.value**.
 
 .. code-block:: typescript
     :linenos:
@@ -322,6 +323,7 @@ The function **quoteExactInput** need 3 params:
 Now we have finished the Quoter part. 
 
 
+.. _get_universal_exact_in_calling:
 6. Use UniversalSwap to actually pay test token **USDT** to get test **BNB**
 -----------------------------------------------------------------------------
 

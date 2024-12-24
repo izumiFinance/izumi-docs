@@ -127,6 +127,7 @@ If you want to mint in form of native token(like **BNB** on bsc or **ETH** on et
 for simplification, you are ready to mint with pair **<BNB, testB, 2000>**,
 just simply replace **testA** in :ref:`section 4<specify_token_pair>` as **BNB** and 
 fill **strictERC20Token** of **mintParams** in :ref:`section 9<liquidity_manager_mint_calling>` as **undefined** by default.
+And the **options** calculated in :ref:`section 9<liquidity_manager_mint_calling>` will contain the corresponding **msg.value**.
 
 .. code-block:: typescript
     :linenos:
@@ -370,20 +371,12 @@ The function **getMintCall** returns 2 object, **mintCalling** and **options**.
 When **mintCalling** and **options** are ready, we can estimate gas.
 
 
-Notice that, if tokenX or tokenY is chain token (like `ETH` on ethereum or `BNB` on bsc),
-we should specify one or some fields in `mintParams` to indicate sdk paying in form of `Chain Token`
-or paying in form of `Wrapped Chain Token` (like `WETH` on ethereum or `WBNB` on bsc).
-
-In the sdk version 1.1.* or before, one should specify a field named `strictERC20Token` to indicate that.
-`true` for paying token in form of `Wrapped Chain Token`, `false` for paying in form of `Chain Token`.
-In the sdk version 1.2.* or later, you have two ways to indicate sdk. 
-
-The first way is as before, specifing `strictERC20Token` field.
-The second way is specifing `strictERC20Token` as undefined and specifying the corresponding token in this param as 
-`WETH` or `ETH`.
+Notice that, to mint with pair contains chain gas token (like `ETH` on ethereum or `BNB` on bsc),
+you can refer to :ref:`this section<mint_native_or_wrapped_native>`.
 
 
-10. Approve (skip if you mint with native token directly)
+
+10.  Approve (skip if you mint with native token directly)
 -------------------------------------------------------------
 
 Before estimate gas or send transaction, you need approve contract **liquidityManager** to have authority to spend your token,

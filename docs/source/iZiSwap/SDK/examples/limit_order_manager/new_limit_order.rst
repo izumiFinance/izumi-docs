@@ -125,7 +125,7 @@ notice that, usually we set **TokenInfoFormatted.wrapTokenAddress** as undefined
 
 .. _sell_native_or_wrapped_native:
 
-1. sell native or wrapped native
+5. sell native or wrapped native
 ------------------------------------------------------------
 
 In the sdk version 1.2.* or later, 
@@ -134,6 +134,7 @@ If you want to sell native token(like **BNB** on bsc or **ETH** on ethereum ...)
 you should replace **sellToken** in :ref:`section 4<specify_sell_earn_token_and_fee>` as **BNB** (suppose we are selling **BNB** here), and 
 fill **strictERC20Token** of **params** in :ref:`section 6<get_newlimitorder_calling>` as **undefined** by default.
 In a word, after you specify **sellToken** as native token, sdk will then help you sell native token.
+And the **options** calculated in :ref:`section 7<get_newlimitorder_calling>` will contain corresponding **msg.value**.
 
 .. code-block:: typescript
     :linenos:

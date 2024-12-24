@@ -88,6 +88,7 @@ In the sdk version 1.2.* or later,
 If you want to collect in form of native token(like **BNB** on bsc or **ETH** on ethereum ...),
 you should replace define of **params** in :ref:`section 2<select_an_order_to_collect_and_get_calling>` with following code (here we are working on bsc chain), and 
 fill **strictERC20Token** of **params** as **undefined** by default.
+And the **options** calculated in :ref:`section 2<select_an_order_to_collect_and_get_calling>` will contain corresponding **msg.value**.
 
 .. code-block:: typescript
     :linenos:

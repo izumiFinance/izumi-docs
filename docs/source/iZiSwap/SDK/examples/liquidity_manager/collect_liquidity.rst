@@ -136,6 +136,7 @@ In the sdk version 1.2.* or later,
 If you want to collect in form of native token(like **BNB** on bsc or **ETH** on ethereum ...),
 you should replace define code of **tokenA** and **tokenB** in :ref:`section 2<set_max_amount_to_collect>` with following code (here we are working on bsc chain), and 
 fill **strictERC20Token** of **CollectLiquidityParam** in :ref:`section above<get_calling_of_getCollectLiquidityCall>` as **undefined** by default.
+And the **options** calculated in :ref:`section above<get_calling_of_getCollectLiquidityCall>` will contain the corresponding **msg.value**.
 
 .. code-block:: typescript
     :linenos:
@@ -165,10 +166,10 @@ fill **strictERC20Token** of **CollectLiquidityParam** in :ref:`section above<ge
     const tokenB = liquidity0.tokenY
 
     if (params.tokenA.address.toLowerCase() === BNBAddress.toLowerCase()) {
-        params.tokenA.symbol = 'WBNB'; // only difference 
+        params.tokenA.symbol = 'WBNB'; // only difference to above code
     }
     if (params.tokenB.address.toLowerCase() === BNBAddress.toLowerCase()) {
-        params.tokenB.symbol = 'WBNB'; // only difference 
+        params.tokenB.symbol = 'WBNB'; // only difference to above code
     }
 
 we can see that, the only difference of collection native token and wrapped-native token
@@ -180,7 +181,7 @@ In the sdk version 1.1.* or before, one should specify a field named `strictERC2
 But we suggest you to upgrade your sdk to latest version.
 
 
-1. Estimate gas (optional)
+6. Estimate gas (optional)
 --------------------------
 
 of course you can skip this step if you don't want to limit gas

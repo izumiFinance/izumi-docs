@@ -298,12 +298,23 @@ If you want to use BNB directly, just set **testA** to be **BNB** and set **stri
 
     const testA = {
         chainId: ChainId.BSC,
-        symbol: 'BNB', // only difference with above code
+        symbol: 'BNB',
         // address of wbnb on bsc mainnet
         address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
         decimal: 18,
     } as TokenInfoFormatted;
 
+    ...
+    ...
+
+    const {swapCalling, options} = getSwapChainWithExactInputCall(
+        swapContract, 
+        account.address, 
+        chain, 
+        swapParams, 
+        gasPrice
+    )
+    ...
     ...
 
 And the **BNB** need to pay (the value field in the transaction data) is set in the `options` return.
