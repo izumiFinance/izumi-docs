@@ -214,16 +214,16 @@ you should fill the **tokenChain**, **feeTier** and **isV2** fields with followi
 
 .. _universal_quoter_swap_chain_with_exact_output_wrapped_or_native:
 
-3. Wrapped Native or Native token
+3. Exchange With Wrapped Native or Native token
 --------------------------------------------------------------------
 
 In sdk-interfaces of UniversalQuoter and UniversalSwapRouter, 
 if you want to pay or buy **wrapped native** or **native** token,
 just simply set **tokenChain.first()** or **tokenChain.last()** as **wrapped native** or **native** token.
-And we can also found that the only difference between **wrapped native** and **native** token is **symbol** field in **TokenInfoFormatted**
+And we can also found that the only difference between **wrapped native** and **native** token is **symbol** field in **TokenInfoFormatted**.
 
 If you want to pay test **BNB** to buy test **USDT**, you can use following code.
-And in the following code, params is an instance of **SwapExactOutputParams**
+And in the following code, params is an instance of **SwapExactInputParams**
 
 .. code-block:: typescript
     :linenos:
@@ -231,6 +231,27 @@ And in the following code, params is an instance of **SwapExactOutputParams**
     // objects in tokenChain are all TokenInfoFormatted
     // BNB and USDT are defined above in section 2.
     params.tokenChain = [BNB, ... /* other mid tokens*/, USDT]
+
+"BNB" and "USDT" in above code can be defined by following code (or in example code of section 2).
+And the **options** in :ref:`this section<get_universal_exact_in_calling>` will contain corresponding **msg.value**.
+
+.. code-block:: typescript
+    :linenos:
+
+    const USDT = {
+        chainId: chain.id,
+        symbol: 'USDT',
+        address: '0x6AECfe44225A50895e9EC7ca46377B9397D1Bb5b',
+        decimal: 6
+    } as TokenInfoFormatted;
+
+    const BNB = {
+        chainId: chain.id,
+        symbol: 'BNB', 
+        address: '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd',
+        decimal: 18,
+    } as TokenInfoFormatted;
+
 
 If you want to pay test **USDT** to buy test **WBNB**, you can use following code.
 
@@ -240,6 +261,18 @@ If you want to pay test **USDT** to buy test **WBNB**, you can use following cod
     // objects in tokenChain are all TokenInfoFormatted
     // WBNB and USDT are defined above in section 2.
     params.tokenChain = [USDT, ... /* other mid tokens*/, WBNB]
+
+"WBNB" in above code can be defined by following code (or in example code of section 2)
+
+.. code-block:: typescript
+    :linenos:
+
+    const WBNB = {
+        chainId: chain.id,
+        symbol: 'WBNB',  // here the only difference with "BNB"
+        address: '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd',
+        decimal: 18,
+    } as TokenInfoFormatted;
 
 more detail can be viewed in the code comment in :ref:`section 2<universal_quoter_swap_chain_with_exact_output_initialization>`.
 

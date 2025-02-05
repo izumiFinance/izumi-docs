@@ -265,8 +265,8 @@ Usually, we can fill **SwapChainWithExactOutputParams** through following code
         maxInputAmount: new BigNumber(amountA).times(1.015).toFixed(0)
     } as SwapChainWithExactOutputParams
 
-Again, if one of the tokens is the chain gas token (e.g., ETH on Ethereum), please refer to the previous section to check how to set 
-the `strictERC20Token` param.
+Again, if one of the input or output token is the chain gas token (e.g., ETH on Ethereum), please refer to the :ref:`previous section<exchange_native_or_wrapped_native>` to check how to deal with
+this situation.
 
 ..
     we should notice that, if tokenX or tokenY is chain token (like `ETH` on ethereum or `BNB` on bsc),
