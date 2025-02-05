@@ -1698,4 +1698,104 @@ Mainnet
       - multicall
       - 0x7a524c7e82874226F0b51aade60A1BE4D430Cf0F
 
+36. HashKey (chainId: 177) (updated on 2025-01-16):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x110dE362cc436D7f54210f96b8C7652C2617887D
+    * -
+      - swapX2YModule 
+      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+    * -
+      - swapY2XModule 
+      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+    * -
+      - liquidityModule
+      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+    * -
+      - limitOrderModule
+      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+    * - 
+      - flashModule
+      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x04830cfCED9772b8ACbAF76Cfc7A630Ad82c9148
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x2C6Df0fDbCE9D2Ded2B52A117126F2Dc991f770f
+    * - 
+      - swap
+      - 0x3F559139C2Fc7B97Ad6FE9B4d1f75149F551DB18
+    * -
+      - liquidityManager
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * - 
+      - limitOrderManager
+      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+    * - 
+      - locker
+      - 0x88867BF3bB3321d8c7Da71a8eAb70680037068E4
+    * -
+      - multicall
+      - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
+
+37. Plume (chainId: 98865) (updated on 2025-01-07):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x8c7d3063579BdB0b90997e18A770eaE32E1eBb08
+    * -
+      - swapX2YModule 
+      - 0x4d4673745AAC664eFB9758fdd571F40d78a87bfe
+    * -
+      - swapY2XModule 
+      - 0x32D02Fc7722E81F6Ac60B87ea8B4b63a52Ad2b55
+    * -
+      - liquidityModule
+      - 0xF4efDB5A1E852f78e807fAE7100B1d38351e38c7
+    * -
+      - limitOrderModule
+      - 0xe96526e92ee57bBD468DA1721987aa988b008768
+    * - 
+      - flashModule
+      - 0xbD6abA1Ef82A4cD6e15CB05e95f433ef48dfb5df
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x33531bDBFE34fa6Fd5963D0423f7699775AacaaF
+    * - 
+      - quoter (with 10000 ticks)
+      - 0x34bc1b87f60e0a30c0e24FD7Abada70436c71406
+    * - 
+      - swap
+      - 0x3EF68D3f7664b2805D4E88381b64868a56f88bC4
+    * -
+      - liquidityManager
+      - 0x19b683A2F45012318d9B2aE1280d68d3eC54D663
+    * - 
+      - limitOrderManager
+      - 0x02F55D53DcE23B4AA962CC68b0f685f26143Bdb2
+    * - 
+      - locker
+      - 0x2C6Df0fDbCE9D2Ded2B52A117126F2Dc991f770f
+    * -
+      - multicall
+      - 0x7a524c7e82874226F0b51aade60A1BE4D430Cf0F
+
       

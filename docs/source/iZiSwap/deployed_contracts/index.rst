@@ -76,6 +76,10 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Morph
 
+    * HashKey
+
+    * Plume
+
 
 *  Testnet:
 
@@ -93,6 +97,9 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Berachain bArtio Testnet
 
+    * Monad Testnet
+
+    * TAC Turin Testnet
 
 .. toctree::
 
