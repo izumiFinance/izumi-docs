@@ -419,3 +419,49 @@ Testnet
       - 0x6a7436775c0d0B70cfF4c5365404ec37c9d9aF4b
 
 
+10. EXPChain Testnet (chainId: 18880 ) (updated on 2025.03.10):
+
+.. list-table:: 
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * -  
+      - Name
+      - Address
+    * - Core
+      - factory
+      - 0x64c2F1306b4ED3183E7B345158fd01c19C0d8c5E
+    * -
+      - swapX2YModule 
+      - 0xED9b4E3ED8fe7e820B950F28f939AF848f98e995 
+    * -
+      - swapY2XModule 
+      - 0x706A11AF5bb5C2a50aB9802503ddbfF69373D1bd
+    * -
+      - liquidityModule
+      - 0x817EC83Fb6906ba0777E89110d5089313385F4A2
+    * -
+      - limitOrderModule
+      - 0xAF931D7AaB9643d1E63Ed2E1fB17911c65e09678
+    * - 
+      - flashModule
+      - 0x29b66280F0Ea5F5DfbD7C94D560FC060575360cd
+
+    * - Periphery
+      - quoter (without limit)
+      - 0x95c5F14106ab4d1dc0cFC9326225287c18c2d247
+    * - 
+      - quoter (within 10000 ticks )
+      - 0x4d140E612e476A6ba54EF1306b2bA398a5dEff09
+    * - 
+      - swap
+      - 0xEB122DE19FeA9eD039E2d087113db26017f5F91a
+    * -
+      - liquidityManager
+      - 0x77132b63429718Db2B6ad8D942eE13A198f6Ab49
+    * - 
+      - limitOrderManager
+      - 0xa9754f0D9055d14EB0D2d196E4C51d8B2Ee6f4d3
+    * -
+      - multicall
+      - 0x6a7436775c0d0B70cfF4c5365404ec37c9d9aF4b

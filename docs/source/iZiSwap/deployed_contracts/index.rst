@@ -80,6 +80,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
 
     * Plume
 
+    * Hemi
+
 
 *  Testnet:
 
@@ -100,6 +102,8 @@ Currently, iZiSwap core and periphery contracts are deployed on:
     * Monad Testnet
 
     * TAC Turin Testnet
+
+    * EXPChain (DAAS, named SugarSwap)
 
 .. toctree::
 
