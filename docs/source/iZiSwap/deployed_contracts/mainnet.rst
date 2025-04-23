@@ -1748,7 +1748,7 @@ Mainnet
       - multicall
       - 0x2db0AFD0045F3518c77eC6591a542e326Befd3D7
 
-37. Plume (chainId: 98866) (updated on 2025-03-13):
+37. Plume (chainId: 98866, new chain) (updated on 2025-03-13):
 
 .. list-table:: 
     :widths: 25 25 50
@@ -1797,6 +1797,13 @@ Mainnet
     * -
       - multicall
       - 0x14323AfbC2b82fE58F0D9c203830EE969B4d1bE2
+    * - V2 (the X*Y=K model)
+      - factory 
+      - 0x88867BF3bB3321d8c7Da71a8eAb70680037068E4
+    * -
+      - router
+      - 0x590b8e9A79B51cF8A62f082d2C248c1C5Bf77D34
+
 
 38. Hemi (chainId: 43111) (updated on 2025-02-06):
 
